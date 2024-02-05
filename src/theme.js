@@ -1,6 +1,7 @@
 export const theme = {
     color: {
-        white: "#FFFFFF"
+        white: "#FFFFFF",
+        whisper: "#F5F5FA"
     },
     breakpoint: {
         tablet: "767px",
