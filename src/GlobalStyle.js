@@ -13,4 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     ::before {
         box-sizing: inherit;
     }
+
+    body {
+        background: ${({ theme }) => theme.color.whisper}
+    }
 `;
