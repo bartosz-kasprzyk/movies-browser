@@ -13,4 +13,11 @@ export const GlobalStyle = createGlobalStyle`
     ::before {
         box-sizing: inherit;
     }
+
+    body {
+        padding: 16px;
+        font-family: 'Poppins', sans-serif;
+
+    }
 `;
+
