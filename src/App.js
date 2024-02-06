@@ -1,14 +1,12 @@
 import './App.css';
-import { GlobalStyle } from './GlobalStyle';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './theme';
+import { Container } from './components/Container';
+import MoviePage from './features/MoviePage';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      projekt
-    </ThemeProvider>
+    <Container>
+      <MoviePage />
+    </Container>
   );
 }
 
