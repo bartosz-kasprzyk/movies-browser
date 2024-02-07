@@ -6,13 +6,12 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
-    padding: 8px 0;
 `;
 
 export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 `;
 
 export const Year = styled.div`
@@ -25,7 +24,6 @@ export const Production = styled.p`
 
 export const Info = styled.span`
     color: ${({ theme }) => theme.color.stormGrey};
-    line-height: 21.6px;
     margin-right: 11px;
 `;
 
@@ -34,7 +32,7 @@ export const Tags = styled.ul`
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
-    margin: 16px -8px;
+    margin: -8px;
 `;
 
 export const Tag = styled.li`
@@ -62,15 +60,13 @@ export const Rating = styled.div`
 `;
 
 export const Shape = styled.div`
-    width: 24px;
-    height: 24px;
 `;
 
 export const Element = styled.img`
     margin: 2.5px 0 2.5px;
 `;
 
-export const Text = styled.span`
+export const Text = styled.div`
     font-size: 22px;
     font-weight: 500;
     line-height: 28.6px;
@@ -84,7 +80,6 @@ export const Item = styled.span`
 
 export const Description = styled.p`
     font-size: 20px;
-    margin: 24px 0 0 0;
     line-height: 1.6;
 `;
 
@@ -92,13 +87,31 @@ export const Cast = styled.div`
     margin-top: 64px;
 `;
 
-export const CastRow = styled.ul`
-    list-style: none;
-    display: flex;
-    flex-basis: 16.66%;
-    gap: 24px;
-    padding-left: 0;
+export const ImageTile = styled.li`
+    width: 208px;
+    height: 339px;
+    background: ${({ theme }) => theme.color.white};
 `;
 
-export const CaseRow = styled.ul`
+export const Picture = styled.img`
+    border-radius: 5px;
+    margin: 16px;
+`;
+
+export const Character = styled.div`
+    margin-top: -10px;
+`;
+
+export const Name = styled.div`
+    text-align: center;
+`;
+
+export const Role = styled.span`
+    color: ${({ theme }) => theme.color.waterloo};
+    font-size: 18px;
+    line-height: 40px;
+`;
+
+export const Crew = styled.div`
+    margin-top: 64px;
 `;
