@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
+export const Title = styled.header`
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 18px;
+`;
+
 export const Image = styled.img`
     width: 312px;
     height: 464px;
 `;
 
 export const Content = styled.div`
-`;
-
-export const Title = styled.header`
-    font-weight: 600;
-    font-size: 36px;
-    margin-bottom: 18px;
 `;
 
 export const Year = styled.div`
@@ -44,7 +44,6 @@ export const Tag = styled.li`
 `;
 
 export const Opinion = styled.p`
-    list-style: none;  
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -59,10 +58,7 @@ export const Rating = styled.div`
     margin: 9px 8px 3px 8px;
 `;
 
-export const Shape = styled.div`
-`;
-
-export const Element = styled.img`
+export const Vector = styled.img`
     margin: 2.5px 0 2.5px;
 `;
 
@@ -81,37 +77,4 @@ export const Item = styled.span`
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
-`;
-
-export const Cast = styled.div`
-    margin-top: 64px;
-`;
-
-export const ImageTile = styled.li`
-    width: 208px;
-    height: 339px;
-    background: ${({ theme }) => theme.color.white};
-`;
-
-export const Picture = styled.img`
-    border-radius: 5px;
-    margin: 16px;
-`;
-
-export const Character = styled.div`
-    margin-top: -10px;
-`;
-
-export const Name = styled.div`
-    text-align: center;
-`;
-
-export const Role = styled.span`
-    color: ${({ theme }) => theme.color.waterloo};
-    font-size: 18px;
-    line-height: 40px;
-`;
-
-export const Crew = styled.div`
-    margin-top: 64px;
 `;
