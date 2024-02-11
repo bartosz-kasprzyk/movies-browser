@@ -7,6 +7,14 @@ export const Tile = styled.article`
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 40px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        padding: 16px;
+        margin: auto;
+        gap: 16px;
+        width: 256px;
+        height: 400px;
+    }
 `;
 
 export const Row = styled.ul`
@@ -15,12 +23,20 @@ export const Row = styled.ul`
     flex-basis: 16.66%;
     padding-left: 0;
     gap: 24px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-left: 16px;
+    }
 `;
 
 export const PersonTile = styled.li`
-    width: 208px;
-    height: 339px;
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
     margin-top: 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin-top: 0;
+    }
 `;
