@@ -61,25 +61,27 @@ export const Info = styled.span`
 export const Tags = styled.ul`
     list-style: none;
     display: flex;
-    flex-flow: wrap;
+    flex-wrap: wrap;
     padding-left: 0;
     margin: 8px -8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        margin: 4px -8px;
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 4px -8px 20px;
     }
 `;
 
 export const Tag = styled.li`
     background: ${({ theme }) => theme.color.mystic};
     font-size: 14px;
-    padding: 8px 16px;
-    margin: 8px;
+    padding: 6px 16px;
+    margin: 10px 8px;
     border-radius: 5px;
         
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
        font-size: 10px;
-       padding: 4px 8px;
+       padding: 3px 8px;
        margin: 4px 4px 4px 8px;
     }
 `;
@@ -100,10 +102,11 @@ export const Rating = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-wrap: wrap;
+        flex-basis: 33%;
         gap: 8px;
         width: 64px;
         height: 29px;
-        margin: 9px 8px 3px 8px;
+        margin: -12.4px 8px -4px;
     }
 `;
 
@@ -143,11 +146,11 @@ export const Votes = styled.span`
     line-height: 33.6px;
     margin: 9px 12px 3px 0;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {  
-        font-size: 13px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};  
+        font-size: 13px;
         line-height: 0;
-        margin: 0;
+        margin: 0 -2px;
     }
 `;
 
