@@ -1,4 +1,4 @@
-import { Wrapper, MainInfo, MainTitle, Opinion, Rating, Item, Text, Vector } from './styled';
+import { Wrapper, MainInfo, MainTitle, Opinion, Rating, Ten, Votes, Text, Vector } from './styled';
 import star from '../images/star.svg';
 
 const Top = () => (
@@ -10,8 +10,8 @@ const Top = () => (
                     <Vector src={star} alt="" />
                     <Text>7,8</Text>
                 </Rating>
-                <Item>/ 10</Item>
-                <Item>335 votes</Item>
+                <Ten>/ 10</Ten>
+                <Votes>335 votes</Votes>
             </Opinion>
         </MainInfo>
     </Wrapper>
