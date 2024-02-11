@@ -21,5 +21,11 @@ export const StyledSpiner = styled(Spiner)`
     animation: ${rotate} 1s liner infinite;
     width: 91px;
     height: 91px;
+    margin: 120px;
 
+    @media (max-width: ${({theme}) => theme.breakpoint.phone}) {
+      width: 35px;
+      height: 35px;
+      margin: 24px;
+    }
 `;
