@@ -2,6 +2,7 @@ import { Content, Text, Title, ImageTile, Picture, Character, Name, Role } from 
 import { Row, PersonTile } from '../../../../components/Tile';
 import first from '../../images/1.png';
 import secend from '../../images/2.png';
+import profile from '../../images/profile.png';
 
 const Cast = () => (
     <Content>
@@ -77,7 +78,7 @@ const Cast = () => (
         <Row>
             <PersonTile>
                 <ImageTile>
-                    <Picture src={first} />
+                    <Picture src={profile} />
                     <Character>
                         <Name>
                             <Text>Liu Yifei</Text>
