@@ -17,6 +17,7 @@ export const Title = styled.header`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 20px;
         margin-bottom: -8px;
+        padding-left: 16px;
     }
 `;
 
