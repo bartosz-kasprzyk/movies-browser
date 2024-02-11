@@ -15,7 +15,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        padding: 16px;
         font-family: 'Poppins', sans-serif;
 
     }
