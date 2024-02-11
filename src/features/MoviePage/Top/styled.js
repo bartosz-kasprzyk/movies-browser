@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import background from "../images/poster big.png";
+import background from "../images/Poster big.png";
 import plexa from "../images/pleksa.png";
-import plexaPhone from "../images/pleksa min.png";
+import plexaPhone from "../images/Pleksa min.png";
 
 export const Wrapper = styled.main`
     background-image: url("${plexa}"), url("${background}");
