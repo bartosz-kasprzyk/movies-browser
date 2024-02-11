@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-export const Crew = styled.section`
+export const Content = styled.div`
     margin-top: 64px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        display: none;
+    }
 `;
 
 export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
     margin-bottom: 18px;
-`;
-
-export const Content = styled.div`
-    margin-top: 64px;
 `;
 
 export const ImageTile = styled.li`
