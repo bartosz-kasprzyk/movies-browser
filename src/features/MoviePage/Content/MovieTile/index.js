@@ -1,4 +1,4 @@
-import { Title, Content, Description, Image, Item, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, } from './styled';
+import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
 import { Tile } from '../../../../components/Tile';
@@ -10,7 +10,7 @@ const MovieTile = () => (
             <Title>Mulan</Title>
             <Year>2020</Year>
             <Production>
-                <div><Info>Production:</Info>China, United States of America</div>
+                <div><Info>Production:</Info>China, USA</div>
                 <div><Info>Release date:</Info>24.10.2020</div>
             </Production>
             <Tags>
@@ -23,8 +23,8 @@ const MovieTile = () => (
                     <Vector src={star} alt="" />
                     <Text>7,8</Text>
                 </Rating>
-                <Item>/ 10</Item>
-                <Item>335 votes</Item>
+                <Ten>/ 10</Ten>
+                <Votes>335 votes</Votes>
             </Opinion>
             <Description>
                 A young Chinese maiden disguises herself as a male warrior in order to save her father.
