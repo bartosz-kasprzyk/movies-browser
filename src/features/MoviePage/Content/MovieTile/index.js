@@ -1,4 +1,4 @@
-import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, TagMidlle, } from './styled';
+import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, TagMiddle, } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
 import { Tile } from '../../../../components/Tile';
@@ -15,7 +15,7 @@ const MovieTile = () => (
             </Production>
             <Tags>
                 <Tag>Action</Tag>
-                <TagMidlle><Tag>Adventure</Tag></TagMidlle>
+                <TagMiddle><Tag>Adventure</Tag></TagMiddle>
                 <Tag>Drama</Tag>
             </Tags>
             <Opinion>
@@ -27,8 +27,8 @@ const MovieTile = () => (
                 <Votes>335 votes</Votes>
             </Opinion>
             <Description>
-                A young Chinese maiden disguises herself as a male warrior in order to save her father.
-                Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
+                A young Chinese maiden disguises herself as a male warrior in order to save her father.<br/>
+                Disguises herself as a male warrior in order to save her father. A young Chinese maiden disguises herself as a male warrior in order to save her father.
             </Description>
         </Content>
     </Tile>

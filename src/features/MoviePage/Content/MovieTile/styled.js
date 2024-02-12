@@ -85,7 +85,7 @@ export const Tag = styled.li`
     }
 `;
 
-export const TagMidlle = styled.span`
+export const TagMiddle = styled.span`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         order: 1;
     }
