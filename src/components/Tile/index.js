@@ -13,7 +13,7 @@ export const Tile = styled.article`
         margin: auto;
         gap: 16px;
         width: 256px;
-        height: 400px;
+        height: 368px;
     }
 `;
 
