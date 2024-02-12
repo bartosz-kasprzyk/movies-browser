@@ -1,4 +1,4 @@
-import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, } from './styled';
+import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, TagMidlle, } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
 import { Tile } from '../../../../components/Tile';
@@ -15,7 +15,7 @@ const MovieTile = () => (
             </Production>
             <Tags>
                 <Tag>Action</Tag>
-                <Tag>Adventure</Tag>
+                <TagMidlle><Tag>Adventure</Tag></TagMidlle>
                 <Tag>Drama</Tag>
             </Tags>
             <Opinion>

@@ -66,8 +66,6 @@ export const Tags = styled.ul`
     margin: 8px -8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        display: grid;
-        grid-template-columns: auto auto;
         margin: 4px -8px 20px;
     }
 `;
@@ -80,9 +78,16 @@ export const Tag = styled.li`
     border-radius: 5px;
         
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-       font-size: 10px;
-       padding: 3px 8px;
-       margin: 4px 4px 4px 8px;
+        display: flex;
+        font-size: 10px;
+        padding: 3px 8px;
+        margin: 4px 0 4px 8px;
+    }
+`;
+
+export const TagMidlle = styled.span`
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        order: 1;
     }
 `;
 
