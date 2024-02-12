@@ -20,7 +20,6 @@ export const Tile = styled.article`
 export const Row = styled.ul`
     list-style: none;
     display: flex;
-    flex-basis: 16.66%;
     padding-left: 0;
     gap: 24px;
 
