@@ -47,5 +47,6 @@ export const ListTile = styled.li`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 288px;
         height: 201px;
+        margin-left: -16px;
 }
 `;
