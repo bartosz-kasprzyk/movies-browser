@@ -10,12 +10,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Pagination />
       <HashRouter>
         <Header />
         <Container>
           projekt
         </Container>
+        <Pagination />
       </HashRouter>
     </ThemeProvider>
   );
