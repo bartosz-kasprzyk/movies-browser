@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-export const Content = styled.span`
+export const Content = styled.main`
+    margin: 0 auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 288px;
+        height: 201px;
     }
 `;
 
 export const Header = styled.h1`
     font-size: 36px;
+    margin-bottom: 20px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 18px;
@@ -52,11 +56,11 @@ export const Year = styled.div`
 `;
 
 export const Tags = styled.ul`
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-padding-left: 0;
-margin: -8px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: -8px;
 
 @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
     margin: 4px -8px 20px;
