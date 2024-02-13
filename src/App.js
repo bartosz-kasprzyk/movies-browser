@@ -1,11 +1,12 @@
 import './App.css';
-import { Container } from './components/Container';
+import { Container } from './common/Container';
 import MoviePage from './features/MoviePage';
+import MovieList from './features/MovieList';
 
 function App() {
   return (
     <Container>
-      <MoviePage />
+      <MovieList />
     </Container>
   );
 }
