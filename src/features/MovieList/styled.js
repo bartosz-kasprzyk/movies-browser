@@ -18,17 +18,9 @@ export const Header = styled.h1`
     }
 `;
 
-export const Title = styled.header`
-    font-weight: 500;
-    font-size: 22px;
-    margin-top: -22px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 16px;
-    }
-`;
-
 export const Picture = styled.img`
+    width: 292px;
+    height: 434px;
     border-radius: 5px;
     margin: 16px;
 
@@ -38,28 +30,40 @@ export const Picture = styled.img`
     }
 `;
 
+export const Title = styled.header`
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: -16px;
+    margin-bottom: 4px;
+    line-height: 28.6px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 16px;
+    }
+`;
+
 export const Description = styled.span`
-    display: grid;
     margin: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin: 28px 0;
     }
 `;
 
 export const Year = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 16px;
-    line-height: 35px;
+    padding: 4px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
+        margin: -8px 0;
     }
 `;
 
 export const Tags = styled.ul`
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
     padding-left: 0;
     margin: -8px;
 
@@ -72,11 +76,12 @@ export const Tag = styled.li`
     background: ${({ theme }) => theme.color.mystic};
     font-size: 14px;
     padding: 8px 16px;
-    margin: 10px 8px;
+    margin: 12px 0 -12px 8px;
     border-radius: 5px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         display: flex;
+        flex-wrap: wrap;
         font-size: 10px;
         padding: 3px 8px;
         margin: 4px 0 4px 8px;
@@ -98,7 +103,7 @@ export const Opinion = styled.span`
 export const Rating = styled.div`
     display: flex;
     gap: 12px;
-    margin: 9px 8px 3px 8px;
+    margin: 0 8px 3px 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-wrap: wrap;
@@ -135,7 +140,7 @@ export const Text = styled.div`
 export const Votes = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 16px;
-    line-height: 28px;
+    line-height: 10.4px;
     margin: 9px 6px 3px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
