@@ -39,6 +39,7 @@ export const Picture = styled.img`
 `;
 
 export const Description = styled.span`
+    display: grid;
     margin: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
@@ -89,7 +90,8 @@ export const TagMiddle = styled.li`
 `;
 
 export const Opinion = styled.span`
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     margin: 8px;
 `;
 
