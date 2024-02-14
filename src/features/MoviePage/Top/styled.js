@@ -33,13 +33,14 @@ export const MainInfo = styled.div`
 export const MainTitle = styled.div`
         font-weight: 600;
         font-size: 64px;
+        padding-bottom: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 24px;
     }
 `;
 
-export const Opinion = styled.p` 
+export const Opinion = styled.span` 
     display: grid;
     grid-template-columns: 1fr 13fr;
 
