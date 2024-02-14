@@ -17,11 +17,10 @@ export const Tile = styled.article`
     }
 `;
 
-export const Row = styled.ul`
-    list-style: none;
+export const Row = styled.section`
     display: flex;
-    padding-left: 0;
     gap: 24px;
+    margin-bottom: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-wrap: wrap;
@@ -30,7 +29,7 @@ export const Row = styled.ul`
     }
 `;
 
-export const PersonTile = styled.li`
+export const PersonTile = styled.ul`
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
     margin-top: 8px;
@@ -40,8 +39,9 @@ export const PersonTile = styled.li`
     }
 `;
 
-export const ListTile = styled.li`
+export const ListTile = styled.article`
     background: ${({ theme }) => theme.color.white};
+    box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
