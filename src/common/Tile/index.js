@@ -43,10 +43,15 @@ export const ListTile = styled.article`
     background: ${({ theme }) => theme.color.white};
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
+    width: 324px;
+    height: 650px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 288px;
         height: 201px;
         margin-left: -16px;
+        display: flex;
 }
 `;
