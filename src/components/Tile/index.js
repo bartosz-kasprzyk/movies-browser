@@ -12,8 +12,8 @@ export const Tile = styled.article`
         padding: 16px;
         margin: auto;
         gap: 16px;
-        width: 256px;
-        height: 368px;
+        width: 288px;
+        height: 400px;
     }
 `;
 
