@@ -1,7 +1,7 @@
 import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tags, Year, Rating, Production, Info, Vector, TagMiddle, } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
-import { Tile } from '../../../../components/Tile';
+import { Tile } from '../../../../common/Tile';
 import { useScreenWidth } from '../../../../useScreenWidth';
 
 const MovieTile = () => {

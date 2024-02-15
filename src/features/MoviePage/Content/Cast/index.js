@@ -1,5 +1,5 @@
 import { Content, Text, Title, ImageTile, Picture, Character, Name, Role } from './styled';
-import { Row, PersonTile } from '../../../../components/Tile';
+import { Row, PersonTile } from '../../../../common/Tile';
 import first from '../../images/person.png';
 import secend from '../../images/person2.png';
 import profile from '../../images/profile.png';
