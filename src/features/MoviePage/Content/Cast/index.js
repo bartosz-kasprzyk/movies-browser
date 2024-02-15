@@ -4,7 +4,7 @@ import first from '../../images/1.png';
 import firstMobile from '../../images/1m.png';
 import secend from '../../images/2.png';
 import profile from '../../images/profile.png';
-import { useScreenWidth } from '../MovieTile/useScreenWidth';
+import { useScreenWidth } from '../../../../useScreenWidth';
 
 const Cast = () => {
     const screenWidth = useScreenWidth();

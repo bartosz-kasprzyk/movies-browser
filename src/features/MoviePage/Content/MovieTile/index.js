@@ -2,7 +2,7 @@ import { Title, Content, Description, Image, Ten, Votes, Opinion, Text, Tag, Tag
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
 import { Tile } from '../../../../components/Tile';
-import { useScreenWidth } from './useScreenWidth';
+import { useScreenWidth } from '../../../../useScreenWidth';
 
 const MovieTile = () => {
     const screenWidth = useScreenWidth();
