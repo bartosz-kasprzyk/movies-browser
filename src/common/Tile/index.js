@@ -19,14 +19,12 @@ export const Tile = styled.article`
 
 export const Row = styled.ul`
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     padding-left: 0;
-    padding-right: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
         padding-left: 16px;
     }
