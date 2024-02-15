@@ -33,6 +33,8 @@ export const ImageTile = styled.li`
 `;
 
 export const Picture = styled.img`
+    width: 176px;
+    height: 231px;
     border-radius: 5px;
     margin: 16px;
 
