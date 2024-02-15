@@ -17,13 +17,14 @@ export const Tile = styled.article`
     }
 `;
 
-export const Row = styled.section`
+export const Row = styled.ul`
+    list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
-    margin-bottom: 24px;
+    padding-left: 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        flex-wrap: wrap;
         gap: 16px;
         padding-left: 16px;
     }
@@ -52,6 +53,5 @@ export const ListTile = styled.article`
         width: 288px;
         height: 201px;
         margin-left: -16px;
-        display: flex;
 }
 `;
