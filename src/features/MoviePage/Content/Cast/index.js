@@ -74,8 +74,6 @@ const Cast = () => (
                     </Character>
                 </ImageTile>
             </PersonTile>
-        </Row>
-        <Row>
             <PersonTile>
                 <ImageTile>
                     <Picture src={profile} />
