@@ -9,7 +9,6 @@ import {
     Tag,
     TagMiddle,
     Tags,
-    Ten,
     Text,
     Title,
     Vector,
@@ -89,8 +88,6 @@ const MovieList = () => (
                     <Votes>335 votes</Votes>
                 </Opinion>
             </ListTile>
-        </Row>
-        <Row>
             <ListTile>
                 <Picture src={poster} />
                 <Description>
