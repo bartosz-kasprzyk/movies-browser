@@ -1,5 +1,5 @@
 import './App.css';
-import { Container } from './components/Container';
+import { Container } from './common/Container';
 import MoviePage from './features/MoviePage';
 
 function App() {
