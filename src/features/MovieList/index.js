@@ -7,7 +7,6 @@ import {
     Picture,
     Rating,
     Tag,
-    TagMiddle,
     Tags,
     Text,
     Title,
@@ -29,7 +28,7 @@ const MovieList = () => (
                     <Year>2020</Year>
                     <Tags>
                         <Tag>Action</Tag>
-                        <TagMiddle><Tag>Adventure</Tag></TagMiddle>
+                        <Tag>Adventure</Tag>
                         <Tag>Drama</Tag>
                     </Tags>
                 </Description>
@@ -95,7 +94,7 @@ const MovieList = () => (
                     <Year>2020</Year>
                     <Tags>
                         <Tag>Action</Tag>
-                        <TagMiddle><Tag>Adventure</Tag></TagMiddle>
+                        <Tag>Adventure</Tag>
                         <Tag>Drama</Tag>
                     </Tags>
                 </Description>
