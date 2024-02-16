@@ -8,8 +8,8 @@ export const PersonList = () => (
         <Grid>
             <Tile
                 image={poster}
-                title="Liu Yifei"
-                subtitle="Mulan" />
+                title="Liu YifeiLiu YifeiLiu Yifei"
+                subtitle="Mulan MulanMulan Mulan" />
             <Tile
                 image={poster}
                 title="Liu Yifei"

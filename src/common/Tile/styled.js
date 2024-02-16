@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     width: 208px;
-    height: 339px;
     background: ${({ theme }) => theme.color.white};
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;
-        height: 245px;
     }
 `;
 
@@ -40,6 +38,7 @@ export const Description = styled.div`
 
 export const StyledTitle = styled.div`
     text-align: center;
+    word-break: break-word;
     font-size: 22px;
     font-weight: 500;
     line-height: 29px;
@@ -52,6 +51,7 @@ export const StyledTitle = styled.div`
 
 export const StyledSubtitle = styled.div`
     text-align: center;
+    word-break: break-word;
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
     font-weight: 400;
