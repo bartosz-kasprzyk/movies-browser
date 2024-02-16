@@ -53,5 +53,6 @@ export const ListTile = styled.article`
         width: 288px;
         height: 201px;
         margin-left: -16px;
+        grid-template-columns: 114px 1fr;
 }
 `;
