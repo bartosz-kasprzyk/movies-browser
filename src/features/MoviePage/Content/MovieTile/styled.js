@@ -66,7 +66,6 @@ export const Tags = styled.ul`
     margin: 8px -8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        margin: 4px -8px 20px;
     }
 `;
 
@@ -91,7 +90,7 @@ export const TagMiddle = styled.span`
     }
 `;
 
-export const Opinion = styled.p`
+export const Opinion = styled.span`
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -124,7 +123,7 @@ export const Vector = styled.img`
     }
 `;
 
-export const Text = styled.div`
+export const Text = styled.span`
     font-size: 22px;
     font-weight: 500;
     line-height: 28.6px;
@@ -159,7 +158,7 @@ export const Votes = styled.span`
     }
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
     font-size: 20px;
     line-height: 1.6;
 
