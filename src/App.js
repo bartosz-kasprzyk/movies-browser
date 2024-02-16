@@ -5,7 +5,8 @@ import { Pagination } from './common/Pagination';
 import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
-import NoResults from './common/NoResults';
+import Error from './common/Error';
+
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <HashRouter>
         <Header />
         <Container>
-         <NoResults />
+         <Error />
         </Container>
         <Pagination />
       </HashRouter>
