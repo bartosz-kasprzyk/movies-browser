@@ -5,7 +5,6 @@ export const Content = styled.main`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 288px;
-        height: 201px;
     }
 `;
 
@@ -30,6 +29,14 @@ export const Picture = styled.img`
     }
 `;
 
+export const Description = styled.span`
+    margin: 16px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin-left: 32px;
+    }
+`;
+
 export const Title = styled.header`
     font-weight: 500;
     font-size: 22px;
@@ -39,14 +46,8 @@ export const Title = styled.header`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 16px;
-    }
-`;
-
-export const Description = styled.span`
-    margin: 16px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        margin: 28px 0;
+        margin: 0;
+        line-height: 20.8px;
     }
 `;
 
@@ -57,18 +58,19 @@ export const Year = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        margin: -8px 0;
+        margin-bottom: -4px;
     }
 `;
 
 export const Tags = styled.ul`
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     padding-left: 0;
-    margin: -8px;
+    gap: 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        margin: 4px -8px 20px;
+        margin: 8px 0;
 }
 `;
 
@@ -76,21 +78,14 @@ export const Tag = styled.li`
     background: ${({ theme }) => theme.color.mystic};
     font-size: 14px;
     padding: 8px 16px;
-    margin: 12px 0 -12px 8px;
     border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: -14px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        display: flex;
-        flex-wrap: wrap;
         font-size: 10px;
         padding: 3px 8px;
-        margin: 4px 0 4px 8px;
-}
-`;
-
-export const TagMiddle = styled.li`
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        order: 1;
+        margin: 0;
 }
 `;
 
@@ -98,6 +93,10 @@ export const Opinion = styled.span`
     display: grid;
     grid-template-columns: auto 1fr;
     margin: 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin: -64px 0 0 138px;
+    }
 `;
 
 export const Rating = styled.div`
@@ -106,12 +105,7 @@ export const Rating = styled.div`
     margin: 0 8px 3px 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        flex-wrap: wrap;
-        flex-basis: 33%;
-        gap: 8px;
-        width: 64px;
-        height: 29px;
-        margin: -12.4px 8px -4px;
+        gap: 8px; 
 }
 `;
 
@@ -132,8 +126,7 @@ export const Text = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        font-weight: 600;
-        line-height: 24.6px;
+        line-height: 16.9px;
 }
 `;
 
@@ -144,9 +137,8 @@ export const Votes = styled.div`
     margin: 9px 6px 3px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        color: ${({ theme }) => theme.color.waterloo};  
+        color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
-        line-height: 0;
-        margin: 0 -2px;
+        margin: 3px 0;
 }
 `;
