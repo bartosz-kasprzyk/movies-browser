@@ -5,9 +5,11 @@ export const theme = {
         mystic: "#E4E6F0",
         waterloo: "#7E839A",
         woodsmoke: "#18181B",
+        mineShaft: "#333333",
         stormGrey: "#74788B",
         heater: "#BAC7D5",
-        black: "#000000",
+        pattensBlue: "#D6E4FF",
+        scienceBlue: "#0044CC",
     },
     breakpoint: {
         phone: "767px",
