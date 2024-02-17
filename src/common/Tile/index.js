@@ -14,13 +14,19 @@ export const Row = styled.ul`
 `;
 
 export const PersonTile = styled.ul`
+    background: ${({ theme }) => theme.color.white};
+    width: 208px;
+    height: 339px;
     list-style: none;
-    padding-left: 0;
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
+    padding-left: 0;
     margin-top: 8px;
+    text-align: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 136px;
+        height: 245px;
         margin-top: 0;
     }
 `;

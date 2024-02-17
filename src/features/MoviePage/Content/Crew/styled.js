@@ -4,7 +4,8 @@ export const Content = styled.section`
     margin-top: 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        display: none;
+        width: 320px;
+        margin: 21px auto;
     }
 `;
 
@@ -12,12 +13,12 @@ export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
     margin-bottom: 18px;
-`;
 
-export const ImageTile = styled.li`
-    width: 208px;
-    height: 339px;
-    background: ${({ theme }) => theme.color.white};
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 20px;
+        margin-bottom: -8px;
+        padding-left: 16px;
+    }
 `;
 
 export const Picture = styled.img`
@@ -25,24 +26,32 @@ export const Picture = styled.img`
     height: 231px;
     border-radius: 5px;
     margin: 16px;
-`;
 
-export const Character = styled.div`
-    margin-top: -10px;
-`;
-
-export const Name = styled.div`
-    text-align: center;
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 120px;
+        height: 178px;
+        margin: 8px;
+    }
 `;
 
 export const Text = styled.div`
     font-size: 22px;
     font-weight: 500;
-    line-height: 28.6px;
+    margin-top: -12px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 14px;
+        margin-top: -7px;
+    }
 `;
 
 export const Role = styled.span`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
-    line-height: 40px;
+    line-height: 38px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 13px;
+        line-height: 28px;
+    }
 `;

@@ -1,4 +1,4 @@
-import { Content, Text, Title, ImageTile, Picture, Character, Name, Role } from './styled';
+import { Content, Text, Title, Picture, Role } from './styled';
 import { Row, PersonTile } from '../../../../common/Tile';
 import first from '../../images/person.png';
 import secend from '../../images/person2.png';
@@ -9,114 +9,54 @@ const Cast = () => (
         <Title>Cast</Title>
         <Row>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={secend} />
-                    <Character>
-                        <Name>
-                            <Text>Donnie Yen</Text>
-                            <Role>Komandor Tung</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={secend} />
+                <Text>Donnie Yen</Text>
+                <Role>Komandor Tung</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Jason Scott Lee</Text>
-                            <Role>Böri Khan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Jason Scott Lee</Text>
+                <Role>Böri Khan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Jet Li</Text>
-                            <Role>Böri Khan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Jet Li</Text>
+                <Role>Böri Khan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={profile} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={profile} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
             <PersonTile>
-                <ImageTile>
-                    <Picture src={first} />
-                    <Character>
-                        <Name>
-                            <Text>Liu Yifei</Text>
-                            <Role>Mulan</Role>
-                        </Name>
-                    </Character>
-                </ImageTile>
+                <Picture src={first} />
+                <Text>Liu Yifei</Text>
+                <Role>Mulan</Role>
             </PersonTile>
         </Row>
     </Content>

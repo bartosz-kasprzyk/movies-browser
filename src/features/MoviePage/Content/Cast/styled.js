@@ -21,17 +21,6 @@ export const Title = styled.header`
     }
 `;
 
-export const ImageTile = styled.li`
-    width: 208px;
-    height: 339px;
-    background: ${({ theme }) => theme.color.white};
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 136px;
-        height: 245px;
-    }
-`;
-
 export const Picture = styled.img`
     width: 176px;
     height: 231px;
@@ -45,32 +34,24 @@ export const Picture = styled.img`
     }
 `;
 
-export const Character = styled.div`
-    margin-top: -10px;
-`;
-
-export const Name = styled.div`
-    text-align: center;
-`;
-
 export const Text = styled.div`
     font-size: 22px;
     font-weight: 500;
-    line-height: 28.6px;
+    margin-top: -12px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 14px;
-        line-height: 24px;
+        margin-top: -7px;
     }
 `;
 
 export const Role = styled.span`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
-    line-height: 40px;
+    line-height: 38px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        line-height: 30px;
+        line-height: 28px;
     }
 `;
