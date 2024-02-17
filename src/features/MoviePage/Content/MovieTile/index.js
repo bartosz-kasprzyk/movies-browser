@@ -14,11 +14,11 @@ import {
     Production,
     Info,
     Vector,
-    TagMiddle
+    TagMiddle,
+    Tile
 } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
-import { Tile } from '../../../../common/Tile';
 import { useScreenWidth } from '../../../../useScreenWidth';
 
 const MovieTile = () => {
