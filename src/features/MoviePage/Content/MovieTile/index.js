@@ -15,10 +15,10 @@ import {
     Info,
     Vector,
     TagMiddle,
+    Tile,
 } from './styled';
 import poster from '../../images/poster.png';
 import star from '../../images/star.svg';
-import { Tile } from '../../../../common/Tile';
 
 const MovieTile = () => (
     <Tile>

@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+export const Tile = styled.article`
+    background: ${({ theme }) => theme.color.white};
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        padding: 16px;
+        margin: auto;
+        gap: 16px;
+        width: 288px;
+        height: 400px;
+    }
+`;
+
 export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
@@ -64,9 +82,6 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     padding-left: 0;
     margin: 8px -8px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-    }
 `;
 
 export const Tag = styled.li`

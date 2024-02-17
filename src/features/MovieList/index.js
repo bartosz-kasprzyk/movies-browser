@@ -1,7 +1,7 @@
-import { ListTile, Row } from '../../common/Tile';
+import { Row } from '../../common/Tile';
 import {
     Content,
-    Description,
+    ListTile,
     MainTitle,
     Opinion,
     Picture,
@@ -12,6 +12,7 @@ import {
     Title,
     Vector,
     Votes,
+    Wrapper,
     Year
 } from './styled';
 import poster from '../MoviePage/images/poster.png';
@@ -20,12 +21,12 @@ import star from '../MoviePage/images/star.svg';
 import { Pagination } from '../../common/Pagination';
 
 const MovieList = () => (
-    <Content>
+    <Wrapper>
         <MainTitle>Popular movies</MainTitle>
         <Row>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Year>2020</Year>
                     <Tags>
@@ -33,65 +34,65 @@ const MovieList = () => (
                         <Tag>Adventure</Tag>
                         <Tag>Drama</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Year>2020</Year>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={empty} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Tags>
                         <Tag>Action</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan long title long title Mulan long title long</Title>
                     <Year>2020</Year>
                     <Tags>
                         <Tag>Action</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Year>2020</Year>
                     <Tags>
@@ -99,65 +100,65 @@ const MovieList = () => (
                         <Tag>Adventure</Tag>
                         <Tag>Drama</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Year>2020</Year>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan</Title>
                     <Tags>
                         <Tag>Action</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
             <ListTile>
                 <Picture src={poster} />
-                <Description>
+                <Content>
                     <Title>Mulan long title long title Mulan long title long</Title>
                     <Year>2020</Year>
                     <Tags>
                         <Tag>Action</Tag>
                     </Tags>
-                </Description>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Votes>335 votes</Votes>
-                </Opinion>
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>7,8</Text>
+                        </Rating>
+                        <Votes>335 votes</Votes>
+                    </Opinion>
+                </Content>
             </ListTile>
         </Row>
         <Pagination />
-    </Content>
+    </Wrapper>
 );
 
 export default MovieList;

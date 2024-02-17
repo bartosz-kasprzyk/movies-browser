@@ -21,6 +21,18 @@ export const Title = styled.header`
     }
 `;
 
+export const PersonTile = styled.ul`
+    list-style: none;
+    padding-left: 0;
+    box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
+    margin-top: 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin-top: 0;
+    }
+`;
+
 export const ImageTile = styled.li`
     width: 208px;
     height: 339px;
