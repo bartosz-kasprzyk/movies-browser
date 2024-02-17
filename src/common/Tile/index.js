@@ -4,8 +4,9 @@ export const Tile = styled.article`
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
