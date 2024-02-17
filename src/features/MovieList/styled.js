@@ -138,8 +138,8 @@ export const Votes = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};
+        width: 100px;
         font-size: 13px;
         margin: 3px 0;
-        display: grid;
 }
 `;
