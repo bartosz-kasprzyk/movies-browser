@@ -15,6 +15,7 @@ import {
     Year
 } from './styled';
 import poster from '../MoviePage/images/poster.png';
+import empty from '../MoviePage/images/no poster.png';
 import star from '../MoviePage/images/star.svg';
 import { Pagination } from '../../common/Pagination';
 
@@ -56,7 +57,7 @@ const MovieList = () => (
                 </Opinion>
             </ListTile>
             <ListTile>
-                <Picture src={poster} />
+                <Picture src={empty} />
                 <Description>
                     <Title>Mulan</Title>
                     <Tags>

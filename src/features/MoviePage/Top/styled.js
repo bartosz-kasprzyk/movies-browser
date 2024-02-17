@@ -1,18 +1,16 @@
 import styled from "styled-components";
 import background from "../images/Poster big.png";
 import plexa from "../images/Pleksa.png";
-import plexaPhone from "../images/pleksa min.png";
 
 export const Wrapper = styled.main`
     background-image: url("${plexa}"), url("${background}");
     background-position: center;
-    width: 1920px;
+    width: auto;
     height: 770px;
-    margin: 0 0 64px -276px;
+    margin: 0 0 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        background-image: url("${plexaPhone}"), url("${background}");
-        background-size: contain;
+        background-size: cover, contain;
         width: 320px;
         height: 148px;
         margin: auto;
@@ -22,7 +20,7 @@ export const Wrapper = styled.main`
 
 export const MainInfo = styled.div`
     color: ${({ theme }) => theme.color.white};
-    padding: 528px 276px;
+    padding: 528px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         padding: 88px 16px;
@@ -33,13 +31,14 @@ export const MainInfo = styled.div`
 export const MainTitle = styled.div`
         font-weight: 600;
         font-size: 64px;
+        padding-bottom: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 24px;
     }
 `;
 
-export const Opinion = styled.p` 
+export const Opinion = styled.span` 
     display: grid;
     grid-template-columns: 1fr 13fr;
 

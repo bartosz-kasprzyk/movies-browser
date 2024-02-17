@@ -1,7 +1,7 @@
 import { Content, Text, Title, ImageTile, Picture, Character, Name, Role } from './styled';
 import { Row, PersonTile } from '../../../../common/Tile';
-import first from '../../images/1.png';
-import secend from '../../images/2.png';
+import first from '../../images/person.png';
+import secend from '../../images/person2.png';
 
 const Crew = () => (
     <Content>
