@@ -8,7 +8,7 @@ export const Content = styled.main`
     }
 `;
 
-export const Header = styled.h1`
+export const MainTitle = styled.h1`
     font-size: 36px;
     margin-bottom: 20px;
 
@@ -140,5 +140,6 @@ export const Votes = styled.div`
         color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
         margin: 3px 0;
+        display: grid;
 }
 `;

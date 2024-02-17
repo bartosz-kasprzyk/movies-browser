@@ -23,10 +23,12 @@ export const Row = styled.ul`
     flex-wrap: wrap;
     gap: 24px;
     padding-left: 0;
+    margin-bottom: 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         gap: 16px;
         padding-left: 16px;
+        margin-bottom: 32px;
     }
 `;
 

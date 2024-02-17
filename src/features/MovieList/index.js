@@ -2,7 +2,7 @@ import { ListTile, Row } from '../../common/Tile';
 import {
     Content,
     Description,
-    Header,
+    MainTitle,
     Opinion,
     Picture,
     Rating,
@@ -16,10 +16,11 @@ import {
 } from './styled';
 import poster from '../MoviePage/images/poster.png';
 import star from '../MoviePage/images/star.svg';
+import { Pagination } from '../../common/Pagination';
 
 const MovieList = () => (
     <Content>
-        <Header>Popular movies</Header>
+        <MainTitle>Popular movies</MainTitle>
         <Row>
             <ListTile>
                 <Picture src={poster} />
@@ -154,6 +155,7 @@ const MovieList = () => (
                 </Opinion>
             </ListTile>
         </Row>
+        <Pagination />
     </Content>
 );
 
