@@ -8,10 +8,12 @@ export const theme = {
         mineShaft: "#333333",
         pattensBlue: "#D6E4FF",
         scienceBlue: "#0044CC",
-        woodsmoke: "#18181B"
     },
     breakpoint: {
+        laptop: "1480px",
         tablet: "1278px",
+        tabletPortrait: "990px",
         phone: "767px",
+        phonePortrait: "481px"
     }
 };
