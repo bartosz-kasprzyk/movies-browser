@@ -5,9 +5,9 @@ import plexa from "../images/Pleksa.png";
 export const Wrapper = styled.main`
     background-image: url("${plexa}"), url("${background}");
     background-position: center;
-    width: 1920px;
+    width: auto;
     height: 770px;
-    margin: 0 0 64px -276px;
+    margin: 0 0 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         background-size: cover, contain;
@@ -20,7 +20,7 @@ export const Wrapper = styled.main`
 
 export const MainInfo = styled.div`
     color: ${({ theme }) => theme.color.white};
-    padding: 528px 276px;
+    padding: 528px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         padding: 88px 16px;
