@@ -5,6 +5,10 @@ export const Heading = styled.header`
     font-weight: 600;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 28px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 20px;
     }
 `;
@@ -32,6 +36,12 @@ export const Grid = styled.div`
         grid-template-columns: repeat(3, auto);
         grid-gap: 18px;
         padding-top: 18px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 16px;
+        padding-top: 12px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
