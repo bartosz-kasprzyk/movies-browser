@@ -5,7 +5,7 @@ import { Pagination } from './common/Pagination';
 import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
-import Loading from './common/Loading/script';
+import { PersonList } from './features/PersonList';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <HashRouter>
         <Header />
         <Container>
-         <Loading />
+          <PersonList />
         </Container>
         <Pagination />
       </HashRouter>
