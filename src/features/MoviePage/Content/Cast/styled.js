@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Content = styled.section`
@@ -19,6 +20,10 @@ export const Title = styled.header`
         margin-bottom: -8px;
         padding-left: 16px;
     }
+`;
+
+export const PersonNavLink = styled(NavLink)`
+    text-decoration: none;
 `;
 
 export const Picture = styled.img`

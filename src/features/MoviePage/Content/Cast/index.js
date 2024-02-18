@@ -1,4 +1,4 @@
-import { Content, Text, Title, Picture, Role } from './styled';
+import { Content, Text, Title, Picture, Role, PersonNavLink } from './styled';
 import { Row, PersonTile } from '../../../../common/Tile';
 import first from '../../images/person.png';
 import secend from '../../images/person2.png';
@@ -8,11 +8,13 @@ const Cast = () => (
     <Content>
         <Title>Cast</Title>
         <Row>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Liu Yifei</Text>
-                <Role>Mulan</Role>
-            </PersonTile>
+            <PersonNavLink>
+                <PersonTile>
+                    <Picture src={first} />
+                    <Text>Liu Yifei</Text>
+                    <Role>Mulan</Role>
+                </PersonTile>
+            </PersonNavLink>
             <PersonTile>
                 <Picture src={secend} />
                 <Text>Donnie Yen</Text>
