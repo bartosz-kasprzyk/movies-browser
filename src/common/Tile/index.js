@@ -21,7 +21,6 @@ export const PersonTile = styled.ul`
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
     padding-left: 0;
-    margin-top: 8px;
     text-align: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {

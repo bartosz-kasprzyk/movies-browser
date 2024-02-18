@@ -13,7 +13,7 @@ export const Content = styled.section`
 export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
-    margin-bottom: 18px;
+    margin-bottom: 26px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 20px;
@@ -29,6 +29,7 @@ export const PersonNavLink = styled(NavLink)`
 export const Picture = styled.img`
     width: 176px;
     height: 231px;
+    object-fit: cover;
     border-radius: 5px;
     margin: 16px;
 
@@ -40,6 +41,7 @@ export const Picture = styled.img`
 `;
 
 export const Text = styled.div`
+    color: ${({ theme }) => theme.color.black};
     font-size: 22px;
     font-weight: 500;
     margin-top: -4px;
