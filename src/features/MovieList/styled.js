@@ -4,7 +4,7 @@ export const Wrapper = styled.main`
     margin: 0 auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 320px;
+        width: 288px;
     }
 `;
 
@@ -26,7 +26,6 @@ export const ListTile = styled.article`
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
@@ -48,7 +47,6 @@ export const Picture = styled.img`
 `;
 
 export const Content = styled.div`
-
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
     }
 `;
@@ -73,7 +71,7 @@ export const Year = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        margin-top: 3px;
+        margin-top: 6px;
     }
 `;
 
@@ -94,11 +92,11 @@ export const Tag = styled.li`
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 10px;
-        padding: 3px 8px;
+        padding: 4px 8px;
 }
 `;
 
-export const Opinion = styled.span`
+export const Opinion = styled.div`
     display: flex;
     gap: 12px;
     margin: 10px 0 -2px;
@@ -106,7 +104,6 @@ export const Opinion = styled.span`
 
 export const Rating = styled.div`
     display: flex;
-    align-items: end;
     gap: 12px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
