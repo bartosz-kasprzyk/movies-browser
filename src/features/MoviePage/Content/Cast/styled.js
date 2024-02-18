@@ -37,21 +37,21 @@ export const Picture = styled.img`
 export const Text = styled.div`
     font-size: 22px;
     font-weight: 500;
-    margin-top: -12px;
+    margin-top: -4px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 14px;
-        margin-top: -7px;
+        margin-top: -2px;
     }
 `;
 
 export const Role = styled.span`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
-    line-height: 38px;
+    line-height: 44px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        line-height: 28px;
+        line-height: 34px;
     }
 `;
