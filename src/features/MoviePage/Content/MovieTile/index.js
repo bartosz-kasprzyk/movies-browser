@@ -14,7 +14,6 @@ import {
     Production,
     Info,
     Vector,
-    TagMiddle,
     Tile
 } from './styled';
 import poster from '../../images/poster.png';
@@ -36,7 +35,7 @@ const MovieTile = () => {
                 </Production>
                 <Tags>
                     <Tag>Action</Tag>
-                    <TagMiddle><Tag>Adventure</Tag></TagMiddle>
+                    <Tag>Adventure</Tag>
                     <Tag>Drama</Tag>
                 </Tags>
                 <Opinion>
