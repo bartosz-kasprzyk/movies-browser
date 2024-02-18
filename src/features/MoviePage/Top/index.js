@@ -4,7 +4,7 @@ import star from '../images/star.svg';
 const Top = () => (
     <Wrapper>
         <MainInfo>
-            <MainTitle>Mulan long title</MainTitle>
+            <MainTitle>Mulan longer title</MainTitle>
             <Opinion>
                 <Rating>
                     <Vector src={star} alt="" />
