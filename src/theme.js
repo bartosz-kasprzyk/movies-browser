@@ -8,6 +8,7 @@ export const theme = {
         mineShaft: "#333333",
         pattensBlue: "#D6E4FF",
         scienceBlue: "#0044CC",
+        black: "#000000"
     },
     breakpoint: {
         tablet: "1278px",
