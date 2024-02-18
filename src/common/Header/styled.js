@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-    background: ${({ theme }) => theme.color.woodsmoke};
+    background: ${({ theme }) => theme.color.black};
 `
 
 export const Wrapper = styled.div`
