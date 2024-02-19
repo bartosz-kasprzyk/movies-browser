@@ -1,6 +1,6 @@
 # Demo
 
-https://bartek-kasprzyk.github.io/movies-browser/index.html
+https://bartek-kasprzyk.github.io/movies-browser/
 
 # Getting Started with Create React App
 
