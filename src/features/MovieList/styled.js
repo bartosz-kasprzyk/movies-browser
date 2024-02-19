@@ -47,6 +47,7 @@ export const Picture = styled.img`
 `;
 
 export const Content = styled.div`
+    flex: 1;
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
     }
 `;
