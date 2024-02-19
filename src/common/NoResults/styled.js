@@ -12,7 +12,8 @@ export const StyledImages = styled(Picture)`
     margin: 0 auto;
 
     @media (min-width: 768px) {
-        margin: 0 0 20px 300px;
+        margin-left: 20%;
+        margin-right: 20%;
     }
 
 `;
