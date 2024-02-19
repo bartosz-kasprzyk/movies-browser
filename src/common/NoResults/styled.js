@@ -6,16 +6,16 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledImages = styled(Picture)`
-    width: 90%;
-    max-width: 668px;
-    height: auto;
-    margin: 0 auto;
+ display: flex;
+ width: 100%;
+ height: auto;
+ justify-content: center;
+ position: relative;
 
-    @media (min-width: 768px) {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
+ @media (max-width: ${({ theme }) => theme.breakpoint.phone}){
+    margin: auto;
+    max-width: 100%;
+ }
 `;
 
 export const NoResultsText = styled.p`
@@ -26,5 +26,6 @@ font-weight: 600;
 
 @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
     margin: auto;
+    font-size: 14px;
 }
 `;
