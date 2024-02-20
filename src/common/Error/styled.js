@@ -5,7 +5,12 @@ import { ReactComponent as Danger } from "../../images/Danger.svg";
 export const StyledDanger = styled(Danger)`
     width: 120px;
     height: 120px;
-    margin-top: 274px;
+    margin-top: 180px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 50px;
+        height: 50px;
+    }
 `;
 
 export const ErrorMasege = styled.div`
@@ -21,6 +26,10 @@ export const Warning = styled.h1`
     line-height: 43.2px;
     margin: auto;
     text-align: center;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    font-size: 18px;
+    }
 `;
 
 export const Recomendation = styled.h2`
@@ -29,13 +38,17 @@ export const Recomendation = styled.h2`
     line-height: 28.6px;
     text-align: center;
     margin: auto;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
+       font-size: 11px; 
+    }
 `;
 
 export const Button = styled(NavLink)`
     padding: 16px 24px 16px 24px;
     border-radius: 5px;
-    background-color: ${({theme}) =>theme.color.blue};
-    color: ${({theme}) =>theme.color.white};
+    background-color: ${({ theme }) => theme.color.scienceBlue};
+    color: ${({ theme }) => theme.color.white};
     border: none;
     text-decoration: none;
     font-size: 14px;
