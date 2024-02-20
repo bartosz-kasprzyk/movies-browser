@@ -8,8 +8,8 @@ export const StyledDanger = styled(Danger)`
     margin-top: 180px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
 `;
 
@@ -28,7 +28,7 @@ export const Warning = styled.h1`
     text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-    font-size: 18px;
+    font-size: 26px;
     }
 `;
 
@@ -40,7 +40,7 @@ export const Recomendation = styled.h2`
     margin: auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-       font-size: 11px; 
+       font-size: 15px; 
     }
 `;
 
