@@ -19,11 +19,10 @@ export const Poster = styled.span`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         background-size: contain;
-        width: 100%;
+        width: auto;
         max-width: 480px;
         height: 148px;
-        margin: auto;
-        margin-bottom: 16px;
+        margin-bottom: -8px;
     }
 `;
 
@@ -31,11 +30,9 @@ export const MainInfo = styled.div`
     color: ${({ theme }) => theme.color.white};
     padding: 56px 160px;
     align-self: flex-end;
-    width: 100%;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         padding: 8px 96px;
-        margin-left: auto;
     }
 `;
 
@@ -50,11 +47,14 @@ export const MainTitle = styled.div`
     }
 `;
 
-export const Opinion = styled.section` 
+export const Opinion = styled.section`
+    width: 200px;
+    height: 75px;
     display: flex;
     flex-wrap: wrap;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        height: 18px;
     }
 `;
 
@@ -94,11 +94,10 @@ export const Text = styled.div`
 
 export const Ten = styled.span`
     font-size: 16px;
-    margin: 21px 1242px 0 0;
+    margin-top: 21px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 10px;
-        font-weight: 400;
         margin: -4px 20px 0 -4px;
     }
 `;
@@ -109,7 +108,6 @@ export const Votes = styled.span`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 10px;
-        font-weight: 400;
         margin: -4px 0 0 -12px;
     }
 `;
