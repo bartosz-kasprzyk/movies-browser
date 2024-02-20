@@ -1,44 +1,40 @@
-import { Content, Text, Title, Picture, Role } from './styled';
-import { Row, PersonTile } from '../../../../common/Tile';
+import { Title, PersonNavLink, Row } from './styled';
 import first from '../../images/person.png';
 import secend from '../../images/person2.png';
+import { PersonTile } from '../../../../common/PersonTile';
 
-const Crew = () => (
-    <Content>
-        <Title>Crew</Title>
+const Cast = () => (
+    <>
+        <Title>Cast</Title>
         <Row>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Liu Yifei</Text>
-                <Role>Mulan</Role>
-            </PersonTile>
-            <PersonTile>
-                <Picture src={secend} />
-                <Text>Donnie Yen</Text>
-                <Role>Komandor Tung</Role>
-            </PersonTile>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Jason Scott Lee</Text>
-                <Role>Böri Khan</Role>
-            </PersonTile>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Jet Li</Text>
-                <Role>Böri Khan</Role>
-            </PersonTile>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Liu Yifei</Text>
-                <Role>Mulan</Role>
-            </PersonTile>
-            <PersonTile>
-                <Picture src={first} />
-                <Text>Liu Yifei</Text>
-                <Role>Mulan</Role>
-            </PersonTile>
+            <PersonNavLink>
+                <PersonTile
+                    image={first}
+                    title="Liu Yifei"
+                    subtitle="Mulan" />
+            </PersonNavLink>
+            <PersonTile
+                image={secend}
+                title="Donnie Yen"
+                subtitle="Komandor Tung" />
+            <PersonTile
+                image={first}
+                title="Jason Scott Lee"
+                subtitle="Böri Khan" />
+            <PersonTile
+                image={first}
+                title="Jet Li"
+                subtitle="Böri Khan" />
+            <PersonTile
+                image={first}
+                title="Liu Yifei"
+                subtitle="Mulan" />
+            <PersonTile
+                image={first}
+                title="Liu Yifei"
+                subtitle="Mulan" />
         </Row>
-    </Content>
+    </>
 );
 
-export default Crew;
+export default Cast;

@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const Row = styled.ul`
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding-left: 0;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        gap: 16px;
-        padding-left: 16px;
-    }
-`;
-
 export const PersonTile = styled.ul`
     background: ${({ theme }) => theme.color.white};
     width: 208px;

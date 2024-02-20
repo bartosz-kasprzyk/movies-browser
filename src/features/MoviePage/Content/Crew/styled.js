@@ -1,57 +1,36 @@
 import styled from "styled-components";
-
-export const Content = styled.section`
-    margin-top: 64px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 320px;
-        margin: 21px auto;
-    }
-`;
+import { NavLink } from "react-router-dom";
 
 export const Title = styled.header`
     font-weight: 600;
     font-size: 36px;
-    margin-bottom: 18px;
+    margin-top: 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 288px;
+        margin: 0 auto;
         font-size: 20px;
-        margin-bottom: -8px;
+        margin-top: 21px; 
+    }
+`;
+
+export const PersonNavLink = styled(NavLink)`
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
+`;
+
+export const Row = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-left: 0;
+
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 320px;
+        gap: 16px;
         padding-left: 16px;
-    }
-`;
-
-export const Picture = styled.img`
-    width: 176px;
-    height: 231px;
-    border-radius: 5px;
-    margin: 16px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 120px;
-        height: 178px;
-        margin: 8px;
-    }
-`;
-
-export const Text = styled.div`
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: -4px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 14px;
-        margin-top: -2px;
-    }
-`;
-
-export const Role = styled.span`
-    color: ${({ theme }) => theme.color.waterloo};
-    font-size: 18px;
-    line-height: 44px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 13px;
-        line-height: 34px;
     }
 `;
