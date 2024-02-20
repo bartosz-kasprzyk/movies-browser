@@ -53,4 +53,8 @@ export const Button = styled(NavLink)`
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
+       font-size: 10px;
+    }
 `;
