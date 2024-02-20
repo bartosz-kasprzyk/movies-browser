@@ -3,30 +3,39 @@ import background from "../images/Poster big.png";
 import plexa from "../images/Pleksa.png";
 
 export const Wrapper = styled.main`
+    width: 100%;
+    max-width: auto;
+    background-color: ${({ theme }) => theme.color.black};
+`;
+
+export const Poster = styled.span`
     background-image: url("${plexa}"), url("${background}");
     background-position: center;
-    width: 1920px;
+    width: auto;
+    max-width: 1920px;
     height: 770px;
-    margin: -56px 0 64px -276px;
+    margin: 0 auto;
     display: flex;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        background-size: cover, contain;
-        width: 320px;
+        background-size: contain;
+        width: 100%;
+        max-width: 480px;
         height: 148px;
         margin: auto;
-        margin-top: -24px;
         margin-bottom: 16px;
     }
 `;
 
 export const MainInfo = styled.div`
     color: ${({ theme }) => theme.color.white};
-    padding: 56px 276px;
+    padding: 56px 160px;
     align-self: flex-end;
+    width: 100%;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        padding: 8px 16px;
+        padding: 8px 96px;
+        margin-left: auto;
     }
 `;
 
@@ -41,7 +50,7 @@ export const MainTitle = styled.div`
     }
 `;
 
-export const Opinion = styled.span` 
+export const Opinion = styled.section` 
     display: flex;
     flex-wrap: wrap;
 
