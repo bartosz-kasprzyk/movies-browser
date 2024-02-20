@@ -7,7 +7,7 @@ export const StyledHeader = styled.div`
 
 export const StyledImages = styled(Picture)`
  display: flex;
- width: 100%;
+ width: 90%;
  height: auto;
  justify-content: center;
  position: relative;
