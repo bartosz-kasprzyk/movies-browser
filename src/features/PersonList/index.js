@@ -1,4 +1,4 @@
-import { Tile } from '../../common/Tile';
+import { PersonTile } from '../../common/PersonTile';
 import { Grid, Heading } from './styled';
 import poster from "./poster.png"
 
@@ -6,31 +6,31 @@ export const PersonList = () => (
     <>
         <Heading>Popular People</Heading>
         <Grid>
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
-            <Tile
+            <PersonTile
                 image={poster}
                 title="Liu Yifei"
                 subtitle="Mulan" />
