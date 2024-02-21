@@ -18,7 +18,7 @@ export const PersonNavLink = styled(NavLink)`
     text-decoration: none;
 `;
 
-export const Row = styled.ul`
+export const Row = styled.span`
     display: flex;
     flex-wrap: wrap;
     grid-gap: 24px;
