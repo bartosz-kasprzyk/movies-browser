@@ -1,7 +1,6 @@
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
-import { Pagination } from './common/Pagination';
 import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
@@ -16,7 +15,6 @@ function App() {
         <Container>
           <PersonList />
         </Container>
-        <Pagination />
       </HashRouter>
     </ThemeProvider>
   );
