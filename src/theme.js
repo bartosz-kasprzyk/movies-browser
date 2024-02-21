@@ -12,7 +12,10 @@ export const theme = {
         scienceBlue: "#0044CC",
     },
     breakpoint: {
+        laptop: "1480px",
         tablet: "1278px",
+        tabletPortrait: "990px",
         phone: "767px",
+        phonePortrait: "481px"
     }
 };
