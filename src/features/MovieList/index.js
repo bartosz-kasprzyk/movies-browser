@@ -1,20 +1,5 @@
-import { Row } from '../../common/Tile';
-import {
-    Content,
-    ListTile,
-    MainTitle,
-    Opinion,
-    Picture,
-    Rating,
-    Tag,
-    Tags,
-    Text,
-    Title,
-    Vector,
-    Votes,
-    Wrapper,
-    Year
-} from './styled';
+import { MainTitle, Row, Wrapper } from './styled';
+import { MovieTile } from '../../common/MovieTile';
 import poster from '../MoviePage/images/poster.png';
 import empty from '../MoviePage/images/no poster.png';
 import star from '../MoviePage/images/star.svg';
@@ -24,138 +9,78 @@ const MovieList = () => (
     <Wrapper>
         <MainTitle>Popular movies</MainTitle>
         <Row>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Year>2020</Year>
-                    <Tags>
-                        <Tag>Action</Tag>
-                        <Tag>Adventure</Tag>
-                        <Tag>Drama</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Year>2020</Year>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={empty} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Tags>
-                        <Tag>Action</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan long title long title Mulan long title long</Title>
-                    <Year>2020</Year>
-                    <Tags>
-                        <Tag>Action</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Year>2020</Year>
-                    <Tags>
-                        <Tag>Action</Tag>
-                        <Tag>Adventure</Tag>
-                        <Tag>Drama</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Year>2020</Year>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan</Title>
-                    <Tags>
-                        <Tag>Action</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
-            <ListTile>
-                <Picture src={poster} />
-                <Content>
-                    <Title>Mulan long title long title Mulan long title long</Title>
-                    <Year>2020</Year>
-                    <Tags>
-                        <Tag>Action</Tag>
-                    </Tags>
-                    <Opinion>
-                        <Rating>
-                            <Vector src={star} alt="" />
-                            <Text>7,8</Text>
-                        </Rating>
-                        <Votes>335 votes</Votes>
-                    </Opinion>
-                </Content>
-            </ListTile>
+            <MovieTile
+                image={poster}
+                title="Mulan"
+                year="2020"
+                genreOne="Action"
+                genreTwo="Adveture"
+                genreThree="Drama"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+            <MovieTile
+                image={poster}
+                title="Mulan"
+                year="2020"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+            <MovieTile
+                image={empty}
+                title="Mulan"
+                genreOne="Action"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+             <MovieTile
+                image={poster}
+                title="Mulan long title long title Mulan long title long"
+                year="2020"
+                genreOne="Action"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+            <MovieTile
+                image={poster}
+                title="Mulan"
+                year="2020"
+                genreOne="Action"
+                genreTwo="Adveture"
+                genreThree="Drama"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+            <MovieTile
+                image={poster}
+                title="Mulan"
+                year="2020"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+            <MovieTile
+                image={empty}
+                title="Mulan"
+                genreOne="Action"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
+             <MovieTile
+                image={poster}
+                title="Mulan long title long title Mulan long title long"
+                year="2020"
+                genreOne="Action"
+                star={star}
+                rating="7,8"
+                votes="335"
+            />
         </Row>
         <Pagination />
     </Wrapper>
