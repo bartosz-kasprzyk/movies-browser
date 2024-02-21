@@ -5,7 +5,7 @@ import { PersonTile } from '../../../../common/PersonTile';
 
 const Cast = () => (
     <>
-        <Title>Cast</Title>
+        <Title>Crew</Title>
         <Row>
             <PersonNavLink>
                 <PersonTile
