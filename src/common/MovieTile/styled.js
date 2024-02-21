@@ -42,6 +42,7 @@ export const Title = styled.header`
     font-weight: 500;
     font-size: 22px;
     line-height: 28.6px;
+    margin: 16px 0 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 16px;
@@ -53,11 +54,12 @@ export const Title = styled.header`
 export const Year = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 16px;
-    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        margin-top: 6px;
+        margin-bottom: 0;
     }
 `;
 
@@ -67,7 +69,11 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     gap: 8px;
     padding-left: 0;
-    margin: 8px 0;
+    margin: 0;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin: 6px 0 8px;
+}
 `;
 
 export const Tag = styled.li`
