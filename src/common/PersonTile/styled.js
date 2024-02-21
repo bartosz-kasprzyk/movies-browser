@@ -19,7 +19,7 @@ export const Grid = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-gap: 8px;
-        margin: 8px;
+        padding: 8px;
     }
 `;
 
