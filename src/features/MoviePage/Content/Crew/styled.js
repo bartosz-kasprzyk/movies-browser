@@ -10,7 +10,7 @@ export const Title = styled.header`
         width: 288px;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 21px; 
+        margin-top: 21px;
     }
 `;
 
@@ -19,18 +19,40 @@ export const PersonNavLink = styled(NavLink)`
     text-decoration: none;
 `;
 
-export const Row = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 24px;
-    margin: 0 auto;
-    padding-top: 12px;
-    padding-left: 0;
+export const Row = styled.span`
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 24px;
+    justify-content: center;
+    padding-top: 32px;
 
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 22px;
+        padding-top: 22px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 20px;
+        padding-top: 20px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 18px;
+        padding-top: 18px;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 320px;
-        gap: 16px;
-        padding-left: 16px;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 16px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 16px;
+        padding-top: 12px;
     }
 `;
