@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.main`
@@ -27,10 +28,14 @@ export const Row = styled.span`
     margin-bottom: 40px;
     padding-left: 0;
 
-
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 320px;
         gap: 16px;
         margin-bottom: 32px;
     }
+`;
+
+export const MovieNavLink = styled(NavLink)`
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 `;

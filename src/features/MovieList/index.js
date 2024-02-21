@@ -1,4 +1,4 @@
-import { MainTitle, Row, Wrapper } from './styled';
+import { MainTitle, MovieNavLink, Row, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import poster from '../MoviePage/images/poster.png';
 import empty from '../MoviePage/images/no poster.png';
@@ -9,17 +9,19 @@ const MovieList = () => (
     <Wrapper>
         <MainTitle>Popular movies</MainTitle>
         <Row>
-            <MovieTile
-                image={poster}
-                title="Mulan"
-                year="2020"
-                genreOne="Action"
-                genreTwo="Adveture"
-                genreThree="Drama"
-                star={star}
-                rating="7,8"
-                votes="335"
-            />
+            <MovieNavLink>
+                <MovieTile
+                    image={poster}
+                    title="Mulan"
+                    year="2020"
+                    genreOne="Action"
+                    genreTwo="Adveture"
+                    genreThree="Drama"
+                    star={star}
+                    rating="7,8"
+                    votes="335"
+                />
+            </MovieNavLink>
             <MovieTile
                 image={poster}
                 title="Mulan"
@@ -36,7 +38,7 @@ const MovieList = () => (
                 rating="7,8"
                 votes="335"
             />
-             <MovieTile
+            <MovieTile
                 image={poster}
                 title="Mulan long title long title Mulan long title long"
                 year="2020"
@@ -72,7 +74,7 @@ const MovieList = () => (
                 rating="7,8"
                 votes="335"
             />
-             <MovieTile
+            <MovieTile
                 image={poster}
                 title="Mulan long title long title Mulan long title long"
                 year="2020"
