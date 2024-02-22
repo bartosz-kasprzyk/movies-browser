@@ -4,7 +4,9 @@ import { theme } from './theme';
 import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
-import { PersonList } from './features/PersonList';
+import { Pagination } from './common/Pagination';
+import SearchResults from './common/SerchResults';
+
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
       <HashRouter>
         <Header />
         <Container>
-          <PersonList />
+         <SearchResults />
         </Container>
+        <Pagination />
       </HashRouter>
     </ThemeProvider>
   );
