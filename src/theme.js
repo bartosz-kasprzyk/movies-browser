@@ -10,6 +10,7 @@ export const theme = {
         heater: "#BAC7D5",
         pattensBlue: "#D6E4FF",
         scienceBlue: "#0044CC",
+        black: "#000000",
     },
     breakpoint: {
         laptop: "1480px",
