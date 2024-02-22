@@ -3,7 +3,6 @@ import {
     Description,
     Image,
     Info,
-    Item,
     Opinion,
     Production,
     Rating,
