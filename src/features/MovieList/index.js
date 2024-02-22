@@ -9,7 +9,7 @@ const MovieList = () => (
     <Wrapper>
         <MainTitle>Popular movies</MainTitle>
         <Row>
-            <MovieNavLink>
+            <MovieNavLink to="/movie">
                 <MovieTile
                     image={poster}
                     title="Mulan"
