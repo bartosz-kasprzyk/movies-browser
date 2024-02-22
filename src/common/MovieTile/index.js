@@ -1,4 +1,4 @@
-import { 
+import {
     Content,
     Image,
     Opinion,
@@ -13,16 +13,19 @@ import {
     Year
 } from './styled';
 
-export const MovieTile = ({ image, title, year, genreOne, genreTwo, genreThree, star, rating, votes }) => (
+export const MovieTile = ({ image, title, year, genres, star, rating, votes }) => (
     <Wrapper>
         <Image src={image} />
         <Content>
             <Title>{title}</Title>
             <Year>{year}</Year>
             <Tags>
-                <Tag>{genreOne}</Tag>
-                <Tag>{genreTwo}</Tag>
-                <Tag>{genreThree}</Tag>
+                {genres
+                    ? (genres.map((genre) => (
+                        <Tag key={genre}>{genre}</Tag>
+                    )))
+                    : ""
+                }
             </Tags>
             <Opinion>
                 <Rating>
