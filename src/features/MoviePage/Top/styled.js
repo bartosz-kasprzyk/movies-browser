@@ -11,7 +11,6 @@ export const Wrapper = styled.main`
 export const Poster = styled.span`
     background-image: url("${plexa}"), url("${background}");
     background-position: center;
-    width: auto;
     max-width: 1920px;
     height: 770px;
     margin: 0 auto;
@@ -19,10 +18,14 @@ export const Poster = styled.span`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         background-size: contain;
-        width: auto;
+        max-width: 798px;
+        height: 246px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        background-size: contain;
         max-width: 480px;
         height: 148px;
-        margin-bottom: -8px;
     }
 `;
 
@@ -32,6 +35,10 @@ export const MainInfo = styled.div`
     align-self: flex-end;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        padding: 0 0 0 160px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         padding: 8px 96px;
     }
 `;
@@ -42,8 +49,12 @@ export const MainTitle = styled.div`
         padding-bottom: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 36px;
+        padding-bottom: 4px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 24px;
-        padding-bottom: 13px;
     }
 `;
 
@@ -54,6 +65,10 @@ export const Opinion = styled.section`
     flex-wrap: wrap;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        height: 40px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         height: 18px;
     }
 `;
@@ -64,6 +79,10 @@ export const Rating = styled.div`
     margin-right: 7px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        gap: 6px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         gap: 4px;
     }
 `;
@@ -74,6 +93,11 @@ export const Vector = styled.img`
     margin: 2.5px 0 2.5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 16px;
         height: 16px;
         margin-top: -9px;
@@ -86,8 +110,13 @@ export const Text = styled.div`
     line-height: 50px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 600;
+        line-height: 30px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        font-size: 14px;
         line-height: 0;
     }
 `;
@@ -97,6 +126,11 @@ export const Ten = styled.span`
     margin-top: 21px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 13px;
+        margin: 10px 20px 0 0;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
         margin: -4px 20px 0 -4px;
     }
@@ -107,6 +141,11 @@ export const Votes = styled.span`
     margin: 10px 12px 0 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 14px;
+        margin-left: -6px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
         margin: -4px 0 0 -12px;
     }

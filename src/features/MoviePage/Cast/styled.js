@@ -7,6 +7,12 @@ export const Title = styled.header`
     margin-top: 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin-left: 24px;
+        font-size: 24px;
+        margin: 40px 0 0 120px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 288px;
         margin: 0 auto;
         font-size: 20px;
