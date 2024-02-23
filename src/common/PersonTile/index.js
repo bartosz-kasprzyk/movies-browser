@@ -1,6 +1,6 @@
 import { Description, Grid, StyledImage, StyledSubtitle, StyledTitle, Wrapper } from './styled';
 
-export const Tile = ({ image, title, subtitle }) => (
+export const PersonTile = ({ image, title, subtitle }) => (
     <Wrapper>
         <Grid>
             <StyledImage src={image} />
