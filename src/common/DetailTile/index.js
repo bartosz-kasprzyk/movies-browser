@@ -1,4 +1,4 @@
-import { 
+import {
     Content,
     Description,
     Image,
@@ -25,9 +25,7 @@ export const DetailTile = ({
     infoSubtitle,
     contentTitle,
     contentSubtitle,
-    genreOne,
-    genreTwo,
-    genreThree,
+    genres,
     star,
     rating,
     votes,
@@ -35,27 +33,27 @@ export const DetailTile = ({
 }) => (
     <Wrapper>
         <Image src={image} />
-            <Content>
-                <Title>{title}</Title>
-                <Year>{year}</Year>
-                <Production>
-                    <div><Info>{infotitle}</Info>{contentTitle}</div>
-                    <div><Info>{infoSubtitle}</Info>{contentSubtitle}</div>
-                </Production>
-                <Tags>
-                    <Tag>{genreOne}</Tag>
-                    <Tag>{genreTwo}</Tag>
-                    <Tag>{genreThree}</Tag>
-                </Tags>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} />
-                        <Text>{rating}</Text>
-                    </Rating>
-                    <Ten>/ 10</Ten>
-                    <Votes>{votes} votes</Votes>
-                </Opinion>
-                <Description>{description}</Description>
-            </Content>
+        <Content>
+            <Title>{title}</Title>
+            <Year>{year}</Year>
+            <Production>
+                <div><Info>{infotitle}</Info>{contentTitle}</div>
+                <div><Info>{infoSubtitle}</Info>{contentSubtitle}</div>
+            </Production>
+            <Tags>
+                {genres ? genres.map((genre) =>
+                    <Tag key={genre}>{genre}</Tag>
+                ) : ""}
+            </Tags>
+            <Opinion>
+                <Rating>
+                    <Vector src={star} />
+                    <Text>{rating}</Text>
+                </Rating>
+                <Ten>/ 10</Ten>
+                <Votes>{votes} votes</Votes>
+            </Opinion>
+            <Description>{description}</Description>
+        </Content>
     </Wrapper>
 );
