@@ -20,12 +20,9 @@ export const MovieTile = ({ image, title, year, genres, star, rating, votes }) =
             <Title>{title}</Title>
             <Year>{year}</Year>
             <Tags>
-                {genres
-                    ? (genres.map((genre) => (
-                        <Tag key={genre}>{genre}</Tag>
-                    )))
-                    : ""
-                }
+                {genres ? genres.map((genre) =>
+                    <Tag key={genre}>{genre}</Tag>
+                ) : ""}
             </Tags>
             <Opinion>
                 <Rating>
