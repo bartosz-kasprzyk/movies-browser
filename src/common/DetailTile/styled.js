@@ -120,7 +120,6 @@ export const Rating = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-wrap: wrap;
-        flex-basis: 33%;
         gap: 8px;
         width: 64px;
         height: 29px;
@@ -168,7 +167,7 @@ export const Votes = styled.span`
         color: ${({ theme }) => theme.color.waterloo};  
         font-size: 13px;
         line-height: 0;
-        margin: 0 -2px;
+        margin: 0 -2px 0 -22px;
     }
 `;
 
