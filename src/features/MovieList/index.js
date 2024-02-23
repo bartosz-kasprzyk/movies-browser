@@ -1,4 +1,4 @@
-import { MainTitle, MovieNavLink, Row, Wrapper } from './styled';
+import { MainTitle, MovieNavLink, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import poster from '../MoviePage/images/poster.png';
 import empty from '../MoviePage/images/no poster.png';
@@ -10,9 +10,9 @@ const MovieList = () => {
     return (
         <Wrapper>
             <MainTitle>Popular movies</MainTitle>
-            <Row>
+            <Content>
                 <MovieNavLink to="/movie">
-                    <MovieTile
+                    <MovieTile movies
                         image={poster}
                         title="Mulan"
                         year="2020"
@@ -81,7 +81,7 @@ const MovieList = () => {
                     rating="7,8"
                     votes="335"
                 />
-            </Row>
+            </Content>
             <Pagination />
         </Wrapper>
     )
