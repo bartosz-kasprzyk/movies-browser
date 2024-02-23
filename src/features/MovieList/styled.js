@@ -20,7 +20,7 @@ export const MainTitle = styled.h1`
     }
 `;
 
-export const Row = styled.span`
+export const Content = styled.span`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
