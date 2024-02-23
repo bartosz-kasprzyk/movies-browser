@@ -1,8 +1,8 @@
 import { Title, PersonNavLink, Row } from './styled';
-import first from '../../images/person.png';
-import secend from '../../images/person2.png';
-import profile from '../../images/profile.png';
-import { PersonTile } from '../../../../common/PersonTile';
+import first from '../images/person.png';
+import secend from '../images/person2.png';
+import profile from '../images/profile.png';
+import { PersonTile } from '../../../common/PersonTile';
 
 const Cast = () => (
     <>
