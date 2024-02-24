@@ -39,9 +39,6 @@ export const StyledImage = styled.img`
 
 export const Description = styled.div`
     text-align: center;
-`;
-
-export const StyledTitle = styled.div`
     word-break: break-word;
 `;
 
