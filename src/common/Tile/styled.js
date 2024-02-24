@@ -24,6 +24,9 @@ export const Grid = styled.div`
 `;
 
 export const StyledImage = styled.img`
+    width: 176px;
+    height: 231px;
+    object-fit: cover;
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
