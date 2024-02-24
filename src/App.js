@@ -6,6 +6,7 @@ import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
 import MoviePage from './features/MoviePage';
 import Top from './features/MoviePage/Top';
+import { PersonList } from './features/PersonList';
 
 function App() {
   return (
