@@ -15,11 +15,11 @@ export const Grid = styled.div`
     display: grid;
     grid-template-rows: auto auto;
     grid-gap: 12px;
-    margin: 16px;
+    padding: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-gap: 8px;
-        margin: 8px;
+        padding: 8px;
     }
 `;
 
@@ -36,11 +36,10 @@ export const StyledImage = styled.img`
 `;
 
 export const Description = styled.div`
-    
+    text-align: center;
 `;
 
 export const StyledTitle = styled.div`
-    text-align: center;
     word-break: break-word;
     font-size: 22px;
     font-weight: 500;
@@ -53,7 +52,6 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledSubtitle = styled.div`
-    text-align: center;
     word-break: break-word;
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
