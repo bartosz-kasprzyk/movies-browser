@@ -5,7 +5,7 @@ import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
 import { Pagination } from './common/Pagination';
-import SearchResults from './common/SerchResults';
+import SearchResults from './common/SearchResults';
 
 
 function App() {
