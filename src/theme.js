@@ -6,12 +6,17 @@ export const theme = {
         waterloo: "#7E839A",
         woodsmoke: "#18181B",
         mineShaft: "#333333",
+        stormGrey: "#74788B",
+        heater: "#BAC7D5",
         pattensBlue: "#D6E4FF",
         scienceBlue: "#0044CC",
-        black: "#000000"
+        black: "#000000",
     },
     breakpoint: {
+        laptop: "1480px",
         tablet: "1278px",
+        tabletPortrait: "990px",
         phone: "767px",
+        phonePortrait: "481px"
     }
 };

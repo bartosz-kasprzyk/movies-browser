@@ -26,6 +26,9 @@ export const Grid = styled.div`
 `;
 
 export const StyledImage = styled.img`
+    width: 176px;
+    height: 231px;
+    object-fit: cover;
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
@@ -35,11 +38,14 @@ export const StyledImage = styled.img`
 `;
 
 export const Description = styled.div`
-    
+    text-align: center;
 `;
 
 export const StyledTitle = styled.div`
-    text-align: center;
+    word-break: break-word;
+`;
+
+export const StyledTitle = styled.div`
     font-size: 22px;
     font-weight: 500;
     line-height: 29px;
@@ -51,7 +57,6 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledSubtitle = styled.div`
-    text-align: center;
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
     font-weight: 400;
