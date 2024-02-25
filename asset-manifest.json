@@ -1,23 +1,20 @@
 {
   "files": {
     "main.css": "/movies-browser/static/css/main.e6c13ad2.css",
-    "main.js": "/movies-browser/static/js/main.ca133db8.js",
+    "main.js": "/movies-browser/static/js/main.5e0071d2.js",
     "static/js/592.181a2fc8.chunk.js": "/movies-browser/static/js/592.181a2fc8.chunk.js",
-    "static/media/Poster big.png": "/movies-browser/static/media/Poster big.59f44261778a399eb1e3.png",
-    "static/media/Pleksa.png": "/movies-browser/static/media/Pleksa.82e49c9670b3254c3635.png",
-    "static/media/poster.png": "/movies-browser/static/media/poster.e28e2cca7fac8dc5f109.png",
-    "static/media/person2.png": "/movies-browser/static/media/person2.152e9051f2d459c6d332.png",
-    "static/media/person.png": "/movies-browser/static/media/person.a43157fa1aee14ae84ed.png",
+    "static/media/poster.png": "/movies-browser/static/media/poster.8b56259e7263048e47a7.png",
     "static/media/star.svg": "/movies-browser/static/media/star.6666ab69561e6d50d181c5591ca1fcf4.svg",
     "index.html": "/movies-browser/index.html",
+    "static/media/Vector.svg": "/movies-browser/static/media/Vector.fa6204a8d9a75bbaf59d0f097debef52.svg",
     "static/media/Video.svg": "/movies-browser/static/media/Video.64519bacc48e8f0f2a39675e55643d9b.svg",
     "static/media/Search.svg": "/movies-browser/static/media/Search.5c656f71852cf9b69968a77e3dca61d9.svg",
     "main.e6c13ad2.css.map": "/movies-browser/static/css/main.e6c13ad2.css.map",
-    "main.ca133db8.js.map": "/movies-browser/static/js/main.ca133db8.js.map",
+    "main.5e0071d2.js.map": "/movies-browser/static/js/main.5e0071d2.js.map",
     "592.181a2fc8.chunk.js.map": "/movies-browser/static/js/592.181a2fc8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.ca133db8.js"
+    "static/js/main.5e0071d2.js"
   ]
 }
