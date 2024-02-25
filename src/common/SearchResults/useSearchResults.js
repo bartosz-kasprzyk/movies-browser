@@ -30,7 +30,7 @@ export const useSearchResults = () => {
 
         getSearchResults();
 
-    }, [query, page, moviesPage]);
+    }, [query, page, moviesPage, fetchingURL]);
 
     return { searchResults, loading, error };
 };
