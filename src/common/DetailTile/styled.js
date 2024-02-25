@@ -74,9 +74,9 @@ export const Year = styled.div`
         color: ${({ theme }) => theme.color.waterloo};
         font-size: 18px;
         margin-bottom: 8px;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
     }
 `;
@@ -163,6 +163,7 @@ export const Vector = styled.img`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 20px;
         height: 20px;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 16px;
