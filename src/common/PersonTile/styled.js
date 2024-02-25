@@ -17,11 +17,11 @@ export const Grid = styled.div`
     display: grid;
     grid-template-rows: auto auto;
     grid-gap: 12px;
-    margin: 16px;
+    padding: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-gap: 8px;
-        margin: 8px;
+        padding: 8px;
     }
 `;
 
