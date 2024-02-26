@@ -10,7 +10,7 @@ import {
     Vector,
     Poster
 } from './styled';
-import star from '../../images/star.svg';
+import star from '../../../images/star.svg';
 
 const Top = () => (
     <Wrapper>

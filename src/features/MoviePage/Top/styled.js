@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import background from "../images/Poster big.png";
-import plexa from "../images/Pleksa.png";
+import background from "../../../images/poster big.png";
+import plexa from "../../../images/pleksa.png";
 
 export const Wrapper = styled.main`
     width: 100%;
