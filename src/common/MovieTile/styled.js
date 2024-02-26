@@ -11,7 +11,7 @@ export const Wrapper = styled.article`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
-        width: 288px;
+        width: 100%;
         height: 201px;
         gap: 16px;
 }
