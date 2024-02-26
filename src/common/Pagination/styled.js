@@ -6,10 +6,11 @@ export const Wrapper = styled.div`
     gap: 24px;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 56px auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
         gap: 8px;
+        margin: 50px auto;
     }
 `;
 
