@@ -25,32 +25,38 @@ export const PartOfCast = () => {
                         votes="335"
                     />
                 </MovieNavLink>
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    genres={genreList2}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    genres={genreList3}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan long title long title Mulan long title long"
-                    role="Mulan"
-                    genres={genreList4}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
+                <MovieNavLink to="/movie">
+                    <MovieTile
+                        image={poster}
+                        title="Mulan"
+                        year="2020"
+                        genres={genreList2}
+                        star={star}
+                        rating="7,8"
+                        votes="335"
+                    />
+                </MovieNavLink>
+                <MovieNavLink to="/movie">
+                    <MovieTile
+                        image={poster}
+                        title="Mulan"
+                        genres={genreList3}
+                        star={star}
+                        rating="7,8"
+                        votes="335"
+                    />
+                </MovieNavLink>
+                <MovieNavLink to="/movie">
+                    <MovieTile
+                        image={poster}
+                        title="Mulan long title long title Mulan long title long"
+                        role="Mulan"
+                        genres={genreList4}
+                        star={star}
+                        rating="7,8"
+                        votes="335"
+                    />
+                </MovieNavLink>
             </Grid>
         </>
     )

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Heading = styled.header`
     font-size: 36px;
@@ -49,4 +50,9 @@ export const Grid = styled.div`
         grid-gap: 16px;
         padding-top: 12px;
     }
+`;
+
+export const PersonNavLink = styled(NavLink)`
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 `;

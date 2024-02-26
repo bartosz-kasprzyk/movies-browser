@@ -1,39 +1,46 @@
 import { PersonTile } from '../../common/PersonTile';
-import { Grid, Heading } from './styled';
+import { Grid, Heading, PersonNavLink } from './styled';
 import person from "../../images/person.png"
 
 export const PersonList = () => (
     <>
-        <Heading>Popular People</Heading>
+        <Heading>Popular people</Heading>
         <Grid>
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei"
-                subtitle="Mulan" />
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
+            <PersonNavLink to="/person">
+                <PersonTile
+                    image={person}
+                    title="Liu Yifei" />
+            </PersonNavLink>
         </Grid>
     </>
 );
