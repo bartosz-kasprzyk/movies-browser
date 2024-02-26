@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { ReactComponent as Spiner } from "../../features/MoviePage/images/icon-spinner.svg"
+import { ReactComponent as Spiner } from "../../images/icon-spinner.svg"
 
 const rotate = keyframes`
   from {
