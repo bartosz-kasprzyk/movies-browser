@@ -11,9 +11,11 @@ export const Wrapper = styled.div`
     align-items: center;
     padding: 23px;
     margin: 0 auto;
+    margin-bottom: 56px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) { 
         flex-direction: column;
         padding: 16px;
+        margin-bottom: 24px;
     }
 `
