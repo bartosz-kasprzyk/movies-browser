@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
     }
 
     *,
@@ -17,5 +16,6 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         background: ${({ theme }) => theme.color.whisper};
+        font-family: 'Poppins', sans-serif;
     }
 `;

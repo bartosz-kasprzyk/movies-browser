@@ -1,4 +1,4 @@
-import { useScreenWidth } from "./useScreenWidth";
+import { useScreenWidth } from "../../useScreenWidth";
 import {
     Wrapper,
     Left,
