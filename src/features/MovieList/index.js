@@ -1,8 +1,8 @@
 import { MainTitle, MovieNavLink, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
-import poster from '../MoviePage/images/poster.png';
-import empty from '../MoviePage/images/no poster.png';
-import star from '../MoviePage/images/star.svg';
+import poster from '../../images/poster.png';
+import empty from '../../images/no poster.png';
+import star from '../../images/star.svg';
 import { Pagination } from '../../common/Pagination';
 
 const MovieList = () => {

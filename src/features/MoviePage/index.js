@@ -2,8 +2,8 @@ import Cast from './Cast';
 import Crew from './Crew';
 import { useScreenWidth } from '../../useScreenWidth';
 import { DetailTile } from '../../common/DetailTile';
-import poster from './images/poster.png';
-import star from './images/star.svg';
+import poster from '../../images/poster.png';
+import star from '../../images/star.svg';
 
 const MoviePage = () => {
     const screenWidth = useScreenWidth();

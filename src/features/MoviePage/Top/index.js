@@ -1,5 +1,16 @@
-import { Wrapper, MainInfo, MainTitle, Opinion, Rating, Ten, Votes, Text, Vector, Poster } from './styled';
-import star from '../images/star.svg';
+import {
+    Wrapper,
+    MainInfo,
+    MainTitle,
+    Opinion,
+    Rating,
+    Ten,
+    Votes,
+    Text,
+    Vector,
+    Poster
+} from './styled';
+import star from '../../images/star.svg';
 
 const Top = () => (
     <Wrapper>
