@@ -16,7 +16,7 @@ export const MainTitle = styled.h1`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 18px;
-        margin: 0 0 12px 16px;
+        margin-bottom: 12px;
     }
 `;
 
@@ -25,9 +25,7 @@ export const Content = styled.span`
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     gap: 24px;
-    margin: 0 auto;
     margin-bottom: 40px;
-    padding-left: 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.notebook}) {
         grid-template-columns: repeat(3, auto);
@@ -45,7 +43,7 @@ export const Content = styled.span`
         grid-template-columns: repeat(1, auto);
         width: 320px;
         gap: 16px;
-        margin-bottom: 32px;
+        margin: 0 -16px 32px;
     }
 `;
 
