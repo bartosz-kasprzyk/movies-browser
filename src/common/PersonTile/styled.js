@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     width: 208px;
+    height: 339px;
     background: ${({ theme }) => theme.color.white};
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;
+        height: 245px;
     }
 `;
 
