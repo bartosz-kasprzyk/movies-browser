@@ -1,3 +1,4 @@
+import Top from './Top';
 import Cast from './Cast';
 import Crew from './Crew';
 import { useScreenWidth } from '../../useScreenWidth';
@@ -10,6 +11,7 @@ const MoviePage = () => {
 
     return (
         <>
+            <Top />
             <DetailTile
                 image={poster}
                 title="Mulan"

@@ -1,8 +1,10 @@
 import { Container } from './common/Container';
 import { Header } from './common/Header';
-import { HashRouter } from 'react-router-dom';
-import { PersonPage } from './features/PersonPage';
 import MovieList from './features/MovieList';
+import MoviePage from './features/MoviePage';
+import { PersonPage } from './features/PersonPage';
+import { PersonList } from './features/PersonList';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Redirect to="/movies" />
+          </Route>
+          <Route path="/movies">
+            <MovieList />
           </Route>
           <Route path="/movie">
             <MoviePage />
