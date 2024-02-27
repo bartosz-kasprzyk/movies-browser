@@ -1,4 +1,5 @@
 import { PersonTile } from '../../common/PersonTile';
+import {Pagination} from '../../common/Pagination';
 import { Grid, Heading, PersonNavLink } from './styled';
 import person from "../../images/person.png"
 
@@ -42,5 +43,6 @@ export const PersonList = () => (
                     title="Liu Yifei" />
             </PersonNavLink>
         </Grid>
+        <Pagination />
     </>
 );
