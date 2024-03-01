@@ -12,35 +12,43 @@ import {
     Wrapper,
     Subtitle
 } from './styled';
+import star from '../../images/star.svg';
+import { useScreenWidth } from '../../useScreenWidth';
 
-export const MovieTile = ({ image, title, role, year, genres, star, rating, votes }) => (
-    <Wrapper>
-        <Image src={image} />
-        <Content>
-            <Title>{title}</Title>
+export const MovieTile = ({ image, title, role, year, genres, rating, votes }) => {
+    const screenWidth = useScreenWidth();
 
-            {role
-                ? (year
-                    ? <Subtitle>{role} ({year})</Subtitle>
-                    : <Subtitle>{role}</Subtitle>)
-                : <Subtitle>{year}</Subtitle>
-            }
+    return (
+        <Wrapper>
+            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342/" : "w154/") + image} />
+            <Content>
+                <Title>{title}</Title>
 
-            <Tags>
-                {genres
-                    ? genres.map((genre) =>
-                        <Tag key={genre}>{genre}</Tag>)
-                    : ""
-                }
-            </Tags>
+                <Subtitle>
+                    {role
+                        ? (year
+                            ? { role } + "(" + (new Date(year).getFullYear()) + ")"
+                            : { role })
+                        : (new Date(year).getFullYear())
+                    }
+                </Subtitle>
 
-            <Opinion>
-                <Rating>
-                    <Vector src={star} />
-                    <Text>{rating}</Text>
-                </Rating>
-                <Votes>{votes} votes</Votes>
-            </Opinion>
-        </Content>
-    </Wrapper>
-);
+                <Tags>
+                    {genres
+                        ? genres.map((genre) =>
+                            <Tag key={genre}>{genre}</Tag>)
+                        : ""
+                    }
+                </Tags>
+
+                <Opinion>
+                    <Rating>
+                        <Vector src={star} />
+                        <Text>{rating}</Text>
+                    </Rating>
+                    <Votes>{votes} votes</Votes>
+                </Opinion>
+            </Content>
+        </Wrapper>
+    )
+};
