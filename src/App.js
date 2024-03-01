@@ -2,13 +2,14 @@ import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
 import { PersonPage } from './features/PersonPage';
+import MovieList from './features/MovieList';
 
 function App() {
   return (
     <HashRouter>
       <Header />
       <Container>
-        <PersonPage />
+        <MovieList />
       </Container>
     </HashRouter>
   );
