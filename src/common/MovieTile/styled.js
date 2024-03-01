@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.article`
+export const Wrapper = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
     width: 324px;
     height: 650px;
@@ -8,13 +9,15 @@ export const Wrapper = styled.article`
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
     flex-direction: column;
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
         width: 100%;
         height: 201px;
         gap: 16px;
-}
+    }
 `;
 
 export const Image = styled.img`
