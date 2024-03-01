@@ -1,89 +1,51 @@
 import { MainTitle, MovieNavLink, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
-import poster from '../../images/poster.png';
-import empty from '../../images/no poster.png';
-import star from '../../images/star.svg';
+import Loading from '../../common/Loading';
 import { Pagination } from '../../common/Pagination';
+import { usePopularMovies } from './usePopularMovies';
+import { useGenres } from '../../useGenres';
 
 const MovieList = () => {
+    const { popularMovies } = usePopularMovies();
+    const movie_list = popularMovies.data;
+    const { genres } = useGenres();
+    const genre_list = genres.data;
 
     return (
-        <Wrapper>
-            <MainTitle>Popular movies</MainTitle>
-            <Content>
-                <MovieNavLink to="/movie">
-                    <MovieTile movies
-                        image={poster}
-                        title="Mulan"
-                        year="2020"
-                        genres={["Action", "Adventure", "Drama"]}
-                        star={star}
-                        rating="7,8"
-                        votes="335"
-                    />
-                </MovieNavLink>
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={empty}
-                    title="Mulan"
-                    genres={["Action"]}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan long title long title Mulan long title long"
-                    year="2020"
-                    genres={["Action"]}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    genres={["Action", "Adventure", "Drama"]}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={empty}
-                    title="Mulan"
-                    genres={["Action"]}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-                <MovieTile
-                    image={poster}
-                    title="Mulan long title long title Mulan long title long"
-                    year="2020"
-                    genres={["Action"]}
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-            </Content>
-            <Pagination />
-        </Wrapper>
+        <>
+            {popularMovies.status === "loading" ? (
+                <Loading />
+            )
+                : popularMovies.status === "error" ? (
+                    "Error while fetching data from external API"
+                )
+                    : (
+                        <Wrapper>
+                            <MainTitle>Popular movies</MainTitle>
+                            <Content>
+                                {console.log(movie_list)}
+                                {movie_list && movie_list.map((movie) => (
+                                    <MovieTile
+                                        key={movie.id}
+                                        image={movie.poster_path}
+                                        title={movie.title}
+                                        year={movie.release_date}
+                                        genres={
+                                            movie.genre_ids.map((number) =>
+                                                genre_list.find((item) =>
+                                                    item.id === number).name
+                                            )
+                                        }
+                                        rating={movie.vote_average}
+                                        votes={movie.vote_count}
+                                    />
+                                ))}
+                            </Content>
+                            <Pagination />
+                        </Wrapper>
+                    )
+            }
+        </>
     )
 };
 
