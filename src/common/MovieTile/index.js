@@ -44,7 +44,7 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                 <Opinion>
                     <Rating>
                         <Vector src={star} />
-                        <Text>{rating}</Text>
+                        <Text>{rating.toLocaleString()}</Text>
                     </Rating>
                     <Votes>{votes} votes</Votes>
                 </Opinion>
