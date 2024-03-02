@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
@@ -15,6 +16,11 @@ export const Wrapper = styled.article`
         height: 201px;
         gap: 16px;
 }
+`;
+
+export const MovieNavLink = styled(NavLink)`
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 `;
 
 export const Image = styled.img`

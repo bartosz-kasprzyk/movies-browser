@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -9,8 +10,13 @@ export const Wrapper = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;
-        height: 245px;
+        min-height: 245px;
     }
+`;
+
+export const PersonNavLink = styled(NavLink)`
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 `;
 
 export const Grid = styled.div`

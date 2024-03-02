@@ -1,3 +1,4 @@
+import { toMovie } from '../../routes';
 import {
     Content,
     Image,
@@ -10,37 +11,43 @@ import {
     Vector,
     Votes,
     Wrapper,
-    Subtitle
+    Subtitle,
+    MovieNavLink
 } from './styled';
 
-export const MovieTile = ({ image, title, role, year, genres, star, rating, votes }) => (
-    <Wrapper>
-        <Image src={image} />
-        <Content>
-            <Title>{title}</Title>
+export const MovieTile = ({ image, title, role, year, genres, star, rating, votes }) => {
 
-            {role
-                ? (year
-                    ? <Subtitle>{role} ({year})</Subtitle>
-                    : <Subtitle>{role}</Subtitle>)
-                : <Subtitle>{year}</Subtitle>
-            }
+    return (
+        <Wrapper>
+            <MovieNavLink to={toMovie()}>
+                <Image src={image} />
+                <Content>
+                    <Title>{title}</Title>
 
-            <Tags>
-                {genres
-                    ? genres.map((genre) =>
-                        <Tag key={genre}>{genre}</Tag>)
-                    : ""
-                }
-            </Tags>
+                    {role
+                        ? (year
+                            ? <Subtitle>{role} ({year})</Subtitle>
+                            : <Subtitle>{role}</Subtitle>)
+                        : <Subtitle>{year}</Subtitle>
+                    }
 
-            <Opinion>
-                <Rating>
-                    <Vector src={star} />
-                    <Text>{rating}</Text>
-                </Rating>
-                <Votes>{votes} votes</Votes>
-            </Opinion>
-        </Content>
-    </Wrapper>
-);
+                    <Tags>
+                        {genres
+                            ? genres.map((genre) =>
+                                <Tag key={genre}>{genre}</Tag>)
+                            : ""
+                        }
+                    </Tags>
+
+                    <Opinion>
+                        <Rating>
+                            <Vector src={star} />
+                            <Text>{rating}</Text>
+                        </Rating>
+                        <Votes>{votes} votes</Votes>
+                    </Opinion>
+                </Content>
+            </MovieNavLink>
+        </Wrapper>
+    );
+}
