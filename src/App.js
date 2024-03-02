@@ -4,32 +4,33 @@ import MovieList from './features/MovieList';
 import MoviePage from './features/MoviePage';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { toMovie, toMovies, toPeople, toPerson } from './routes';
 
 function App() {
   return (
     <HashRouter basename="/movies-browser">
       <Header />
 
-      <Container>
-        <Switch>
+      <Switch>
+        <Route path={toMovie()}>
+          <MoviePage />
+        </Route>
+        <Container>
           <Route exact path="/">
-            <Redirect to="/movies" />
+            <Redirect to={toMovies()} />
           </Route>
-          <Route path="/movies">
+          <Route path={toMovies()}>
             <MovieList />
           </Route>
-          <Route path="/movie">
-            <MoviePage />
-          </Route>
-          <Route path="/people">
+          <Route path={toPeople()}>
             <PersonList />
           </Route>
-          <Route path="/person">
+          <Route path={toPerson()}>
             <PersonPage />
           </Route>
-        </Switch>
-      </Container>
+        </Container>
+      </Switch>
     </HashRouter>
   )
 };
