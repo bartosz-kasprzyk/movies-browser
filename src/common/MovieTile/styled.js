@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.article`
+export const MovieNavLink = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
     width: 324px;
     height: 650px;
     padding: 16px;
@@ -16,11 +18,6 @@ export const Wrapper = styled.article`
         height: 201px;
         gap: 16px;
 }
-`;
-
-export const MovieNavLink = styled(NavLink)`
-    color: ${({ theme }) => theme.color.black};
-    text-decoration: none;
 `;
 
 export const Image = styled.img`
@@ -72,7 +69,7 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     gap: 8px;
     padding-left: 0;
-    margin: 0;
+    margin: 0 0 8px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         margin: 6px 0 8px;
