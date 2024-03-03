@@ -32,4 +32,7 @@ export const {
     goToTheLastPage
 } = paginationSlice.actions;
 
+export const selectPage = state => state.pagination.page;
+export const selectPageSize = state => state.pagination.pageSize;
+
 export default paginationSlice.reducer;
