@@ -20,9 +20,9 @@ export const useSearchResults = () => {
             try {
                 setLoading(true);
                 const response = await fetchAPI(fetchingURL);
-                setSearchResults(response);
+                setSearchResults(response.results);
             } catch (error) {
-                setError("Error while fetching data from external API", error);
+                setError({ message: "Error while fetching data from external API", details: error });
             } finally {
                 setLoading(false);
             }
@@ -30,7 +30,7 @@ export const useSearchResults = () => {
 
         getSearchResults();
 
-    }, [query, page, moviesPage, fetchingURL]);
+    }, [query, page, movieOrPerson]);
 
     return { searchResults, loading, error };
 };
