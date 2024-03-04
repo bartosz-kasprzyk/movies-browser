@@ -1,9 +1,9 @@
-import { toHomepage, toMovies, toPeople } from "../../../routes";
+import { toMovies, toPeople } from "../../../routes";
 import { LogoIcon, LogoText, LogoWrapper, NavSection, StyledNavLink, StyledNavigation } from "./styled";
 
 export const Navigation = () => (
     <StyledNavigation>
-        <LogoWrapper to={toHomepage}>
+        <LogoWrapper to={toMovies()}>
             <LogoIcon />
             <LogoText>Movies Browser</LogoText>
         </LogoWrapper>

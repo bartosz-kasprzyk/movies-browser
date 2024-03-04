@@ -6,7 +6,6 @@ import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { toHomepage, toMovie, toMovies, toPeople, toPerson } from './routes';
-import Homepage from './Homepage';
 
 function App() {
   return (
@@ -19,9 +18,6 @@ function App() {
         </Route>
         
         <Container>
-          <Route path={toHomepage()}>
-            <Homepage />
-          </Route>
           <Route path={toMovies()}>
             <MovieList />
           </Route>
@@ -32,7 +28,7 @@ function App() {
             <PersonPage />
           </Route>
           <Route exact path="/">
-            <Redirect to={toHomepage()} />
+            <Redirect to={toMovies()} />
           </Route>
         </Container>
       </Switch>
