@@ -20,7 +20,7 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
 
     return (
         <Wrapper>
-            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342/" : "w154/") + image} />
+            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
             <Content>
                 <Title>{title}</Title>
 
@@ -44,7 +44,7 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                 <Opinion>
                     <Rating>
                         <Vector src={star} />
-                        <Text>{rating.toLocaleString()}</Text>
+                        <Text>{rating.toFixed(1).replace(".", ",")}</Text>
                     </Rating>
                     <Votes>{votes} votes</Votes>
                 </Opinion>
