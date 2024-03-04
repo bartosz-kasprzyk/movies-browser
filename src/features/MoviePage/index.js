@@ -1,33 +1,64 @@
 import Cast from './Cast';
 import Crew from './Crew';
-import { useScreenWidth } from '../../useScreenWidth';
+import Loading from '../../common/Loading';
 import { DetailTile } from '../../common/DetailTile';
-import poster from '../../images/poster.png';
-import star from '../../images/star.svg';
+import { useMovieDetails } from './useMovieDetails';
+import Top from './Top';
+import { Container } from '../../common/Container';
 
 const MoviePage = () => {
-    const screenWidth = useScreenWidth();
+    const { movieDetails } = useMovieDetails();
+    const movie = movieDetails.data;
 
     return (
         <>
-            <DetailTile
-                image={poster}
-                title="Mulan"
-                year="2020"
-                infotitle="Production:"
-                infoSubtitle="Release date:"
-                contentTitle={screenWidth > 767 ? "China, United States of America" : "China, USA"}
-                contentSubtitle="24.10.2020"
-                genres={["Action", "Adventure", "Drama"]}
-                star={star}
-                rating="7,8"
-                votes="335"
-                description="A young Chinese maiden disguises herself as a male warrior in order to save her father.
-            Disguises herself as a male warrior in order to save her father. 
-            A young Chinese maiden disguises herself as a male warrior in order to save her father."
-            />
-            <Cast />
-            <Crew />
+            {movieDetails.status === "loading" ? (
+                <Loading />
+            )
+                : movieDetails.status === "error" ? (
+                    "Error while fetching data from external API"
+                )
+                    : (
+                        <>
+                            <Top
+                                poster={movie.backdrop_path}
+                                title={movie.title}
+                                rating={movie.vote_average}
+                                votes={movie.vote_count}
+                            />
+                            <Container>
+                                <DetailTile
+                                    image={movie.poster_path}
+                                    title={movie.title}
+                                    year={movie.release_date}
+                                    production_countries={movie.production_countries}
+                                    production={
+                                        movie.production_countries.map(
+                                            (place) => place.name
+                                        )
+                                    }
+                                    production_short={
+                                        movie.production_countries.map(
+                                            (place) => place.iso_3166_1
+                                        )
+                                    }
+                                    date={movie.release_date}
+                                    genres={
+                                        movie.genres.map((genre) =>
+                                            genre.name
+                                        )
+                                    }
+                                    rating={movie.vote_average}
+                                    votes={movie.vote_count}
+                                    description={movie.overview}
+                                />
+
+                                <Cast />
+                                <Crew />
+                            </Container>
+                        </>
+                    )
+            }
         </>
     )
 };
