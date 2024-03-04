@@ -25,7 +25,7 @@ export const PersonNavLink = styled(NavLink)`
     text-decoration: none;
 `;
 
-export const Row = styled.span`
+export const Grid = styled.span`
     display: grid;
     grid-template-columns: repeat(6, auto);
     gap: 24px;

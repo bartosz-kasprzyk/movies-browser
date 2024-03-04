@@ -1,4 +1,4 @@
-import { MainTitle, MovieNavLink, Content, Wrapper } from './styled';
+import { MainTitle, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import Loading from '../../common/Loading';
 import { Pagination } from '../../common/Pagination';
@@ -23,7 +23,6 @@ const MovieList = () => {
                         <Wrapper>
                             <MainTitle>Popular movies</MainTitle>
                             <Content>
-                                {console.log(movie_list)}
                                 {movie_list && movie_list.map((movie) => (
                                     <MovieTile
                                         key={movie.id}

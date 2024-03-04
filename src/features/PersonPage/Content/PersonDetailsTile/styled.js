@@ -91,6 +91,7 @@ export const Birth = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 15px;
+        gap: 2px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
