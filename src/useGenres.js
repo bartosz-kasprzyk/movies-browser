@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { genres_movielist } from "../src/common/API/requests";
+import { url_back, url_front_genre } from "../src/common/API/requests";
+
+const url = `${url_front_genre}${url_back}`;
 
 export const useGenres = () => {
     const [genres, setGenres] = useState({
@@ -10,7 +12,7 @@ export const useGenres = () => {
     useEffect(() => {
         const getGenres = async () => {
             try {
-                const response = await axios.get(genres_movielist);
+                const response = await axios.get(url);
                 setGenres({
                     data: response.data.genres,
                 });

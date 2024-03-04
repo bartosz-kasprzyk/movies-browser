@@ -2,33 +2,32 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { url_back, url_front_movie } from "../../common/API/requests";
 
-const page = "1";
-const url = `${url_front_movie}popular${url_back}&page=${page}`;
+const url = `${url_front_movie}1096197/credits${url_back}`;
 
-export const usePopularMovies = () => {
-    const [popularMovies, setPopularMovies] = useState({
+export const useMovieCredits = () => {
+    const [movieCredits, setMovieCredits] = useState({
         status: "loading",
         data: [],
     });
 
     useEffect(() => {
-        const getPopularMovies = async () => {
+        const getMovieCredits = async () => {
             try {
                 const response = await axios.get(url);
-                setPopularMovies({
+                setMovieCredits({
                     status: "success",
-                    data: response.data.results,
+                    data: response.data,
                 });
             } catch (error) {
-                setPopularMovies({
+                setMovieCredits({
                     status: "error"
                 });
                 console.log(error);
             }
         };
 
-        setTimeout(getPopularMovies, 300);
+        setTimeout(getMovieCredits, 0);
     }, []);
 
-    return { popularMovies };
+    return { movieCredits };
 };
