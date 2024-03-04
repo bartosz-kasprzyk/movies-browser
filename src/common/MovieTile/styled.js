@@ -135,7 +135,6 @@ export const Votes = styled.div`
     line-height: 28px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
         margin: -5.6px;
 }
