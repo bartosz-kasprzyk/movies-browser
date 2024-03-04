@@ -1,14 +1,16 @@
 import { Container } from './common/Container';
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
-import { PersonPage } from './features/PersonPage';
+import { SearchResults } from '../src/common/searchResults';
+
 
 function App() {
+
   return (
     <HashRouter>
       <Header />
       <Container>
-        <PersonPage />
+        <SearchResults />
       </Container>
     </HashRouter>
   );
