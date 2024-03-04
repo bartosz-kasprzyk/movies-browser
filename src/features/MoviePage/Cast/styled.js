@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 export const Title = styled.header`
     font-weight: 600;
@@ -20,12 +19,7 @@ export const Title = styled.header`
     }
 `;
 
-export const PersonNavLink = styled(NavLink)`
-    color: ${({ theme }) => theme.color.black};
-    text-decoration: none;
-`;
-
-export const Row = styled.span`
+export const Grid = styled.span`
     display: grid;
     grid-template-columns: repeat(6, auto);
     gap: 24px;
