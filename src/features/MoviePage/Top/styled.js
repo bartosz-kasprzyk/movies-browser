@@ -1,45 +1,97 @@
 import styled from "styled-components";
-import background from "../../../images/poster big.png";
-import plexa from "../../../images/pleksa.png";
 
-export const Wrapper = styled.main`
+export const BlackBar = styled.div`
     width: 100%;
-    max-width: auto;
-    background-color: ${({ theme }) => theme.color.black};
-`;
+    background: ${({ theme }) => theme.color.black};
+    margin-top: -56px;
 
-export const Poster = styled.span`
-    background-image: url("${plexa}"), url("${background}");
-    background-position: center;
-    max-width: 1920px;
-    height: 770px;
-    margin: 0 auto;
-    display: flex;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        background-size: contain;
-        max-width: 798px;
-        height: 246px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        margin-top: -40px;
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        background-size: contain;
-        max-width: 480px;
-        height: 148px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        margin-top: -24px;
+    }
+`;
+
+export const Wrapper = styled.div`
+    max-width: 1368px;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        max-width: 980px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        max-width: 780px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        width: 100%;
+    }
+`;
+
+export const Poster = styled.img`
+    max-width: 1368px;
+    height: 770px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        max-width: 980px;
+        height: 560px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        max-width: 780px;
+        height: 460px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        width: 100%;
+        height: auto;
+    }
+`;
+
+export const Plexa = styled.img`
+    max-width: 1368px;
+    height: 770px;
+    position: absolute;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        max-width: 980px;
+        height: 560px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        max-width: 780px;
+        height: 460px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        width: 100%;
+        height: auto;
     }
 `;
 
 export const MainInfo = styled.div`
     color: ${({ theme }) => theme.color.white};
-    padding: 56px 160px;
-    align-self: flex-end;
+	bottom: 0;
+	left: 0;
+    position: absolute;
+    padding-bottom: 56px; 
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        padding: 0 0 0 160px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        padding-bottom: 24px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        padding-left: 24px; 
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        padding: 8px 96px;
+        padding-bottom: 8px;
+        padding-left: 16px;
     }
 `;
 
@@ -48,7 +100,7 @@ export const MainTitle = styled.div`
         font-size: 64px;
         padding-bottom: 24px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 36px;
         padding-bottom: 4px;
     }
@@ -64,7 +116,7 @@ export const Opinion = styled.section`
     display: flex;
     flex-wrap: wrap;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         height: 40px;
     }
 
@@ -78,7 +130,7 @@ export const Rating = styled.div`
     gap: 8px;
     margin-right: 7px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         gap: 6px;
     }
 
@@ -92,7 +144,7 @@ export const Vector = styled.img`
     height: 40px;
     margin: 2.5px 0 2.5px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         width: 24px;
         height: 24px;
     }
@@ -100,7 +152,7 @@ export const Vector = styled.img`
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 16px;
         height: 16px;
-        margin-top: -9px;
+        margin-top: -3px;
     }
 `;
 
@@ -109,7 +161,7 @@ export const Text = styled.div`
     font-weight: 500;
     line-height: 50px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
@@ -117,22 +169,29 @@ export const Text = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
-        line-height: 0;
+        line-height: 0.8;
     }
 `;
 
 export const Ten = styled.span`
     font-size: 16px;
-    margin-top: 21px;
+    margin-top: 19px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        margin-right: 20px;
+        margin-top: 19px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 13px;
-        margin: 10px 20px 0 0;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
-        margin: -4px 20px 0 -4px;
+        margin-top: 1px;
+        margin-left: -2px;
     }
 `;
 
@@ -140,13 +199,13 @@ export const Votes = styled.span`
     font-size: 16px;
     margin: 10px 12px 0 0;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 14px;
-        margin-left: -6px;
+        margin: 9px 0 0 -6px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
-        margin: -4px 0 0 -12px;
+        margin: 1px 0 0 -10px;
     }
 `;
