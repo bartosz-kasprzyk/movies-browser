@@ -38,13 +38,9 @@ const Details = () => {
                             <div><Info>Release date:</Info>{(new Date(movie.release_date).toLocaleDateString())}</div>
                         </Production>
                         <Tags>
-                            {movie.genre_ids ?
-                                <Tag> genres={
-                                    movie.genres.map((genre) =>
-                                        genre.name
-                                    )
-                                }</Tag>
-                                : ""}
+                            {movie.genres.map((genre) =>
+                                <Tag key={genre}>{genre.name}</Tag>) || []
+                            }
                         </Tags>
                         <Opinion>
                             <Rating>
