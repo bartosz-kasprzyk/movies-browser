@@ -23,7 +23,6 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
             <Image src={"https://image.tmdb.org/t/p/" + (useScreenWidth > 767 ? "w342/" : "w154/") + image} />
             <Content>
                 <Title>{title}</Title>
-
                 <Subtitle>
                     {role
                         ? (year
@@ -32,7 +31,6 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                         : new Date(year).getFullYear()
                     }
                 </Subtitle>
-
                 <Tags>
                     {genres
                         ? genres.map((genre) =>
@@ -40,7 +38,6 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                         : ""
                     }
                 </Tags>
-
                 <Opinion>
                     <Rating>
                         <Vector src={star} />
