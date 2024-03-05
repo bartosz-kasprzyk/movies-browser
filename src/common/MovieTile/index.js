@@ -44,9 +44,14 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                 <Opinion>
                     <Rating>
                         <Vector src={star} />
-                        <Text>{rating.toFixed(1)}</Text>
+                        <Text>{rating.toLocaleString(undefined, {
+                            minimumFractionDigits: 1,
+                            maximumFractionDigits: 1,
+                        })}</Text>
                     </Rating>
-                    <Votes>{votes} votes</Votes>
+                    <Votes>{votes.toLocaleString(undefined, {
+                        useGrouping: true,
+                    })} votes</Votes>
                 </Opinion>
             </Content>
         </MovieNavLink>
