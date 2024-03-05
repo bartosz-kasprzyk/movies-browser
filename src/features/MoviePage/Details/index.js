@@ -34,7 +34,14 @@ const Details = () => {
                         <Title>{movie.title}</Title>
                         <Year>{(new Date(movie.release_date).getFullYear())}</Year>
                         <Production>
-                            <div><Info>Production:</Info>{screenWidth > 767 ? "United States of America" : "USA"}</div>
+                            <div><Info>Production:</Info>
+                                {movie.production_countries
+                                    ? screenWidth > 767
+                                        ? movie.production_countries.map((production) => production.name).join(", ")
+                                        : movie.production_countries.map((production) => production.iso_3166_1).join(", ")
+                                    : "Unknown"
+                                }
+                            </div>
                             <div><Info>Release date:</Info>{(new Date(movie.release_date).toLocaleDateString())}</div>
                         </Production>
                         <Tags>
@@ -51,10 +58,8 @@ const Details = () => {
                                 })}</Text>
                             </Rating>
                             <Ten>/ 10</Ten>
-                            <Votes>{movie.vote_count.toLocaleString('pl-PL', {
+                            <Votes>{movie.vote_count.toLocaleString(undefined, {
                                 useGrouping: true,
-                                minimumFractionDigits: 0,
-                                maximumFractionDigits: 0,
                             })} votes</Votes>
                         </Opinion>
                         <Description>{movie.overview}</Description>
