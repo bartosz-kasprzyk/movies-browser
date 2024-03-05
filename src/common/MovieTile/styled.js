@@ -9,6 +9,7 @@ export const MovieNavLink = styled(NavLink)`
     height: 650px;
     padding: 16px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
 
