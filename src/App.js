@@ -5,7 +5,7 @@ import MoviePage from './features/MoviePage';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { toHomepage, toMovie, toMovies, toPeople, toPerson } from './routes';
+import { toMovie, toMovies, toPeople, toPerson } from './routes';
 
 function App() {
   return (
