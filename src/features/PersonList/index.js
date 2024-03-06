@@ -23,6 +23,7 @@ export const PersonList = () => {
                                 <Grid>
                                     {people_list && people_list.map((person) => (
                                         <PersonTile
+                                            key={person.id}
                                             image={person.profile_path}
                                             title={person.original_name}
                                         />
