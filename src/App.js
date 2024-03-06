@@ -1,12 +1,15 @@
 import { Header } from './common/Header';
 import { HashRouter } from 'react-router-dom';
-import MoviePage from './features/MoviePage';
+import { PersonList } from './features/PersonList';
+import { Container } from './common/Container';
 
 function App() {
   return (
     <HashRouter>
       <Header />
-      <MoviePage />
+      <Container>
+        <PersonList />
+      </Container>
     </HashRouter>
   );
 }
