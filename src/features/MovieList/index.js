@@ -5,7 +5,7 @@ import { Pagination } from '../../common/Pagination';
 import { usePopularMovies } from './usePopularMovies';
 import { useGenres } from '../../useGenres';
 
-const MovieList = () => {
+export const MovieList = () => {
     const { popularMovies } = usePopularMovies();
     const movie_list = popularMovies.data;
     const { genres } = useGenres();
@@ -47,5 +47,3 @@ const MovieList = () => {
         </>
     )
 };
-
-export default MovieList;

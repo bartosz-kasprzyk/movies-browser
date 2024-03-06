@@ -6,7 +6,7 @@ import { useMovieDetails } from './useMovieDetails';
 import Top from './Top';
 import { Container } from '../../common/Container';
 
-const MoviePage = () => {
+export const MoviePage = () => {
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
@@ -62,5 +62,3 @@ const MoviePage = () => {
         </>
     )
 };
-
-export default MoviePage;
