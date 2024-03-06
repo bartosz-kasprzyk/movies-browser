@@ -11,7 +11,6 @@ export const PartOfCrew = () => {
 
     return (
         <>
-            {console.log(person_crew)}
             <Title>Movies - Crew ({person_crew ? person_crew.length : ""})</Title>
             <Grid>
                 {person_crew && person_crew.map((movie) => (
