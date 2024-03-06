@@ -21,7 +21,7 @@ export const useGenres = () => {
             }
         };
 
-        setTimeout(getGenres, 300);
+        setTimeout(getGenres, 0);
     }, []);
 
     return { genres };

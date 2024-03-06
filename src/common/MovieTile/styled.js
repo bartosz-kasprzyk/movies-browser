@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Wrapper = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
     width: 324px;
-    min-height: 650px;
     padding: 16px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
