@@ -13,6 +13,7 @@ import {
     Subtitle
 } from './styled';
 import star from '../../images/star.svg';
+import no_poster from '../../images/no poster.png'
 import { useScreenWidth } from '../../useScreenWidth';
 
 export const MovieTile = ({ image, title, role, year, genres, rating, votes }) => {
@@ -20,16 +21,21 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
 
     return (
         <Wrapper>
-            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
+            {image
+                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
+                : <Image src={no_poster} />
+            }
             <Content>
                 <Title>{title}</Title>
 
                 <Subtitle>
                     {role
                         ? (year
-                            ? { role } + "(" + (new Date(year).getFullYear()) + ")"
-                            : { role })
-                        : (new Date(year).getFullYear())
+                            ? (role + " (" + (new Date(year).getFullYear()) + ")")
+                            : role)
+                        : (year
+                            ? (new Date(year).getFullYear())
+                            : "")
                     }
                 </Subtitle>
 
