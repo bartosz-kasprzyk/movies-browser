@@ -12,7 +12,6 @@ const Cast = () => {
             <Grid>
                 {movie_cast && movie_cast.map((person) => (
                     <PersonTile
-                        to={`/people/${person.credit_id}`}
                         key={person.credit_id}
                         image={person.profile_path}
                         title={person.name}
