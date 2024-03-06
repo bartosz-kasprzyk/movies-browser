@@ -32,7 +32,6 @@ export const Wrapper = styled.article`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        flex-wrap: wrap;
         padding: 16px;
         gap: 16px;
     }
@@ -246,6 +245,7 @@ export const Description = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
+        margin-top: 30px;
         margin-left: -130px;
     }
 `;
