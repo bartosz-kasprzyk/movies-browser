@@ -1,5 +1,5 @@
 import { Wrapper, SearchIcon, SearchInput } from "./styled";
-import { useLocation } from "react-router-dom/cjs/react-router-dom";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { toMovie, toMovies } from "../../../routes";
 
 export const SearchBar = () => {
