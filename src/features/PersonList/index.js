@@ -1,35 +1,39 @@
-import { PersonTile } from '../../common/PersonTile';
+import Error from '../../common/Error';
+import Loading from '../../common/Loading';
 import { Pagination } from '../../common/Pagination';
+import { PersonTile } from '../../common/PersonTile';
 import { Grid, Heading } from './styled';
-import person from "../../images/person.png"
+import { usePopularPeople } from './usePopularPeople';
 
-export const PersonList = () => (
-    <>
-        <Heading>Popular people</Heading>
-        <Grid>
+export const PersonList = () => {
+    const { popularPeople } = usePopularPeople();
+    const people_list = popularPeople.data?.results;
 
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-            <PersonTile
-                image={person}
-                title="Liu Yifei" />
-        </Grid>
-        <Pagination />
-    </>
-);
+    return (
+        <>
+            {
+                popularPeople.status === "loading" ? (
+                    <Loading />
+                )
+                    : popularPeople.status === "error" ? (
+                        <Error />
+                    )
+                        : (
+                            <>
+                                <Heading>Popular people</Heading>
+                                <Grid>
+                                    {people_list.map((person) => (
+                                        <PersonTile
+                                            key={person.id}
+                                            image={person.profile_path}
+                                            title={person.original_name}
+                                        />
+                                    ))}
+                                </Grid>
+                                <Pagination />
+                            </>
+                        )
+            }
+        </>
+    )
+};
