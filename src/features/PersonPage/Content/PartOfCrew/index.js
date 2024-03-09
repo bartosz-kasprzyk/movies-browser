@@ -1,51 +1,37 @@
-import { Title, MovieNavLink, Grid } from './styled';
-import poster from '../../../../images/poster.png';
-import star from '../../../../images/star.svg';
+import { Title, Grid } from './styled';
 import { MovieTile } from '../../../../common/MovieTile';
+import { usePersonCredits } from '../../usePersonCredits';
+import { useGenres } from '../../../../useGenres';
 
-export const PartOfCrew = () => (
-    <>
-        <Title>Movies - Crew (4)</Title>
-        <Grid>
-            <MovieNavLink to="/movie">
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-            </MovieNavLink>
-            <MovieNavLink to="/movie">
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    year="2020"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-            </MovieNavLink>
-            <MovieNavLink to="/movie">
-                <MovieTile
-                    image={poster}
-                    title="Mulan"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-            </MovieNavLink>
-            <MovieNavLink to="/movie">
-                <MovieTile
-                    image={poster}
-                    title="Mulan long title long title Mulan long title long"
-                    year="2020"
-                    star={star}
-                    rating="7,8"
-                    votes="335"
-                />
-            </MovieNavLink>
-        </Grid>
-    </>
-);
+export const PartOfCrew = () => {
+    const { personCredits } = usePersonCredits();
+    const person_crew = personCredits.data?.crew;
+    const { genres } = useGenres();
+    const genre_list = genres.data;
+
+    return (
+        <>
+            <Title>Movies - Crew ({person_crew ? person_crew.length : ""})</Title>
+            <Grid>
+                {person_crew && person_crew.map((movie) => (
+                    <MovieTile
+                        key={movie.credit_id}
+                        id={movie.id}
+                        image={movie.poster_path}
+                        title={movie.title}
+                        role={movie.job}
+                        year={movie.release_date}
+                        genres={
+                            movie.genre_ids.map((number) =>
+                                genre_list.find((item) =>
+                                    item.id === number).name
+                            )
+                        }
+                        rating={movie.vote_average}
+                        votes={movie.vote_count}
+                    />
+                ))}
+            </Grid>
+        </>
+    )
+};

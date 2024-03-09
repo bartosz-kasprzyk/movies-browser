@@ -1,62 +1,36 @@
-import { Title, MovieNavLink, Grid } from './styled';
-import poster from '../../../../images/poster.png';
-import star from '../../../../images/star.svg';
+import { Title, Grid } from './styled';
 import { MovieTile } from '../../../../common/MovieTile';
+import { usePersonCredits } from '../../usePersonCredits';
+import { useGenres } from '../../../../useGenres';
 
 export const PartOfCast = () => {
-    const genreList1 = [];
-    const genreList2 = ["Action"];
-    const genreList3 = ["Action", "Adventure"];
-    const genreList4 = ["Action", "Adventure", "Drama"];
+    const { personCredits } = usePersonCredits();
+    const person_cast = personCredits.data?.cast;
+    const { genres } = useGenres();
+    const genre_list = genres.data;
 
     return (
         <>
-            <Title>Movies - Cast (4)</Title>
+            <Title>Movies - Cast ({person_cast ? person_cast.length : ""})</Title>
             <Grid>
-                <MovieNavLink to="/movie">
+                {person_cast && person_cast.map((movie) => (
                     <MovieTile
-                        image={poster}
-                        title="Mulan"
-                        role="Mulan"
-                        year="2020"
-                        genres={genreList1}
-                        star={star}
-                        rating="7,8"
-                        votes="335"
+                        key={movie.credit_id}
+                        id={movie.id}
+                        image={movie.poster_path}
+                        title={movie.title}
+                        role={movie.character}
+                        year={movie.release_date}
+                        genres={
+                            movie.genre_ids.map((number) =>
+                                genre_list.find((item) =>
+                                    item.id === number).name
+                            )
+                        }
+                        rating={movie.vote_average}
+                        votes={movie.vote_count}
                     />
-                </MovieNavLink>
-                <MovieNavLink to="/movie">
-                    <MovieTile
-                        image={poster}
-                        title="Mulan"
-                        year="2020"
-                        genres={genreList2}
-                        star={star}
-                        rating="7,8"
-                        votes="335"
-                    />
-                </MovieNavLink>
-                <MovieNavLink to="/movie">
-                    <MovieTile
-                        image={poster}
-                        title="Mulan"
-                        genres={genreList3}
-                        star={star}
-                        rating="7,8"
-                        votes="335"
-                    />
-                </MovieNavLink>
-                <MovieNavLink to="/movie">
-                    <MovieTile
-                        image={poster}
-                        title="Mulan long title long title Mulan long title long"
-                        role="Mulan"
-                        genres={genreList4}
-                        star={star}
-                        rating="7,8"
-                        votes="335"
-                    />
-                </MovieNavLink>
+                ))}
             </Grid>
         </>
     )
