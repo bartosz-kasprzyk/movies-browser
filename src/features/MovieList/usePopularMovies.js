@@ -17,7 +17,7 @@ export const usePopularMovies = () => {
                 const response = await axios.get(url);
                 setPopularMovies({
                     status: "success",
-                    data: response.data.results,
+                    data: response.data,
                 });
             } catch (error) {
                 setPopularMovies({
