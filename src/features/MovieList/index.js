@@ -1,13 +1,14 @@
 import { MainTitle, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import Loading from '../../common/Loading';
+import Error from '../../common/Error';
 import { Pagination } from '../../common/Pagination';
 import { usePopularMovies } from './usePopularMovies';
 import { useGenres } from '../../useGenres';
 
 export const MovieList = () => {
     const { popularMovies } = usePopularMovies();
-    const movie_list = popularMovies.data;
+    const movie_list = popularMovies.data.results;
     const { genres } = useGenres();
     const genre_list = genres.data;
 
@@ -17,7 +18,7 @@ export const MovieList = () => {
                 <Loading />
             )
                 : popularMovies.status === "error" ? (
-                    "Error while fetching data from external API"
+                    <Error />
                 )
                     : (
                         <Wrapper>

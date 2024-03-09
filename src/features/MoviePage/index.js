@@ -1,6 +1,7 @@
 import Cast from './Cast';
 import Crew from './Crew';
 import Loading from '../../common/Loading';
+import Error from '../../common/Error';
 import { DetailTile } from '../../common/DetailTile';
 import { useMovieDetails } from './useMovieDetails';
 import Top from './Top';
@@ -16,7 +17,7 @@ export const MoviePage = () => {
                 <Loading />
             )
                 : movieDetails.status === "error" ? (
-                    "Error while fetching data from external API"
+                    <Error />
                 )
                     : (
                         <>

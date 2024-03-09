@@ -1,4 +1,5 @@
 import Loading from '../../common/Loading';
+import Error from '../../common/Error';
 import { Pagination } from '../../common/Pagination';
 import { PersonTile } from '../../common/PersonTile';
 import { Grid, Heading } from './styled';
@@ -15,7 +16,7 @@ export const PersonList = () => {
                     <Loading />
                 )
                     : popularPeople.status === "error" ? (
-                        "Error while fetching data from external API"
+                        <Error />
                     )
                         : (
                             <>
