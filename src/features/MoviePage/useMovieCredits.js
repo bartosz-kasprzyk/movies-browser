@@ -3,33 +3,34 @@ import { useState, useEffect } from "react";
 import { url_back, url_front_movie } from "../../movies/api";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-export const useMovieDetails = () => {
+export const useMovieCredits = () => {
     const movie = useParams();
 
-    const url = `${url_front_movie}${movie.id}${url_back}`;
+    const url = `${url_front_movie}${movie.id}/credits${url_back}`;
 
-    const [movieDetails, setMovieDetails] = useState({
+    const [movieCredits, setMovieCredits] = useState({
         status: "loading",
+        data: [],
     });
 
     useEffect(() => {
-        const getMovieDetails = async () => {
+        const getMovieCredits = async () => {
             try {
                 const response = await axios.get(url);
-                setMovieDetails({
+                setMovieCredits({
                     status: "success",
                     data: response.data,
                 });
             } catch (error) {
-                setMovieDetails({
+                setMovieCredits({
                     status: "error"
                 });
                 console.log(error);
             }
         };
 
-        setTimeout(getMovieDetails, 1000);
+        setTimeout(getMovieCredits, 1000);
     }, [url]);
 
-    return { movieDetails };
+    return { movieCredits };
 };

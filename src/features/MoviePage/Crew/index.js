@@ -1,55 +1,27 @@
-import { Title, Row } from './styled';
-import first from '../../../images/person.png';
-import secend from '../../../images/person2.png';
-import profile from '../../../images/profile.png';
+import { Title, Grid } from './styled';
 import { PersonTile } from '../../../common/PersonTile';
+import { useMovieCredits } from '../useMovieCredits';
 
-const Cast = () => (
-    <>
-        <Title>Crew</Title>
-        <Row>
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={secend}
-                title="Donnie Yen"
-                subtitle="Komandor Tung" />
-            <PersonTile
-                image={first}
-                title="Jason Scott Lee"
-                subtitle="Böri Khan" />
-            <PersonTile
-                image={first}
-                title="Jet Li"
-                subtitle="Böri Khan" />
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={profile}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-            <PersonTile
-                image={first}
-                title="Liu Yifei"
-                subtitle="Mulan" />
-        </Row>
-    </>
-);
+const Crew = () => {
+    const { movieCredits } = useMovieCredits();
+    const movie_crew = movieCredits.data?.crew;
 
-export default Cast;
+    return (
+        <>
+            <Title>Crew</Title>
+            <Grid>
+                {movie_crew && movie_crew.map((person) => (
+                    <PersonTile
+                        key={person.credit_id}
+                        id={person.id}
+                        image={person.profile_path}
+                        title={person.name}
+                        subtitle={person.character}
+                    />
+                ))}
+            </Grid>
+        </>
+    )
+};
+
+export default Crew;
