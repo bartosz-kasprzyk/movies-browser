@@ -1,5 +1,5 @@
-import Error from '../../common/Error';
 import Loading from '../../common/Loading';
+import Error from '../../common/Error';
 import { Pagination } from '../../common/Pagination';
 import { PersonTile } from '../../common/PersonTile';
 import { Grid, Heading } from './styled';
@@ -7,7 +7,7 @@ import { usePopularPeople } from './usePopularPeople';
 
 export const PersonList = () => {
     const { popularPeople } = usePopularPeople();
-    const people_list = popularPeople.data?.results;
+    const people_list = popularPeople.data.results;
 
     return (
         <>
@@ -22,7 +22,7 @@ export const PersonList = () => {
                             <>
                                 <Heading>Popular people</Heading>
                                 <Grid>
-                                    {people_list.map((person) => (
+                                    {people_list && people_list.map((person) => (
                                         <PersonTile
                                             key={person.id}
                                             id={person.id}
@@ -36,5 +36,5 @@ export const PersonList = () => {
                         )
             }
         </>
-    );
+    )
 };

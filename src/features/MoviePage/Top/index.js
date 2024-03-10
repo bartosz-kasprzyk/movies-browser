@@ -8,26 +8,31 @@ import {
     Votes,
     Text,
     Vector,
-    Poster
+    Poster,
+    Plexa,
+    BlackBar
 } from './styled';
 import star from '../../../images/star.svg';
+import plexa from "../../../images/plexa.png";
 
-const Top = () => (
-    <Wrapper>
-        <Poster>
+const Top = ({ poster, title, rating, votes }) => (
+    <BlackBar>
+        <Wrapper>
+            <Poster src={"https://image.tmdb.org/t/p/original" + poster} />
+            <Plexa src={plexa} />
             <MainInfo>
-                <MainTitle>Mulan longer title</MainTitle>
+                <MainTitle>{title}</MainTitle>
                 <Opinion>
                     <Rating>
                         <Vector src={star} alt="" />
-                        <Text>7,8</Text>
+                        <Text>{rating.toFixed(1).replace(".", ",")}</Text>
                     </Rating>
                     <Ten>/ 10</Ten>
-                    <Votes>335 votes</Votes>
+                    <Votes>{votes} votes</Votes>
                 </Opinion>
             </MainInfo>
-        </Poster>
-    </Wrapper>
+        </Wrapper>
+    </BlackBar>
 );
 
 export default Top;

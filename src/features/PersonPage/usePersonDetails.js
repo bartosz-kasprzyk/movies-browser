@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_person } from "../../api";
+import { url_back, url_front_person } from "../../common/API/requests";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const usePersonDetails = () => {

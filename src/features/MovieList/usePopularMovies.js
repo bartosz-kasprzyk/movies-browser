@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_movie } from "../../movies/api";
+import { url_back, url_front_movie } from "../../common/API/requests";
+
+const page = "1";
+const url = `${url_front_movie}popular${url_back}&page=${page}`;
 
 export const usePopularMovies = () => {
-
-    const url = `${url_front_movie}popular${url_back}`;
-
     const [popularMovies, setPopularMovies] = useState({
         status: "loading",
         data: [],
@@ -15,7 +15,6 @@ export const usePopularMovies = () => {
         const getPopularMovies = async () => {
             try {
                 const response = await axios.get(url);
-
                 setPopularMovies({
                     status: "success",
                     data: response.data,

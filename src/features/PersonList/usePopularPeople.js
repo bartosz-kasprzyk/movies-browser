@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_person } from "../../movies/api";
+import { url_back, url_front_person } from "../../common/API/requests";
 
 const page = "1";
 const url = `${url_front_person}popular${url_back}&page=${page}`;

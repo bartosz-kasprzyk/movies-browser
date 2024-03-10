@@ -8,7 +8,8 @@ export const PersonNavLink = styled(NavLink)`
     width: 208px;
     min-height: 339px;
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
-    border-radius: 5px;
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;

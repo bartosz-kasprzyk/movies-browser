@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_movie } from "../../movies/api";
+import { url_back, url_front_movie } from "../../common/API/requests";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const useMovieCredits = () => {
@@ -29,8 +29,8 @@ export const useMovieCredits = () => {
             }
         };
 
-        setTimeout(getMovieCredits, 1000);
-    }, [url]);
+        setTimeout(getMovieCredits, 0);
+    }, []);
 
     return { movieCredits };
 };

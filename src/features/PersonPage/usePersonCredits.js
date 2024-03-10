@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_person } from "../../movies/api";
+import { url_back, url_front_person } from "../../common/API/requests";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const usePersonCredits = () => {
     const person = useParams();
 
     const url = `${url_front_person}${person.id}/movie_credits${url_back}`;
-    
+
     const [personCredits, setPersonCredits] = useState({
         status: "loading",
         data: [],

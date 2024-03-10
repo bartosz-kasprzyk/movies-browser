@@ -12,13 +12,15 @@ export const MovieNavLink = styled(NavLink)`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
         width: 100%;
         height: 201px;
         gap: 16px;
-}
+    }
 `;
 
 export const Image = styled.img`
@@ -70,7 +72,8 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     gap: 8px;
     padding-left: 0;
-    margin: 0 0 8px;
+    margin: 0;
+    margin-bottom: 8px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         margin: 6px 0 8px;

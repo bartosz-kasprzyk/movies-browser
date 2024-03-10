@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
+    width: 1368px;
+    justify-content: center;
+    margin: auto;
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
@@ -9,20 +12,28 @@ export const Wrapper = styled.article`
     align-items: flex-start;
     gap: 40px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        padding: 28px;
-        margin: auto;
-        gap: 28px;
-        width: 432px;
-        height: 100%;
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        width: 1016px;
+    }
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        width: 898px;
+        padding: 32px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        width: 660px;
+        padding: 32px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 100%;
+        padding: 24px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         padding: 16px;
         gap: 16px;
-        width: 288px;
-        height: 400px;
     }
 `;
 
@@ -42,8 +53,7 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
-    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-    }
+    
 `;
 
 export const Title = styled.header`
@@ -226,16 +236,16 @@ export const Votes = styled.span`
 export const Description = styled.div`
     font-size: 20px;
     line-height: 1.6;
-
+    
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 17px;
-        width: 376px;
-        margin-left: -200px;
+        margin-top: 40px;
+        margin-left: -205px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
-        width: 256px;
+        margin-top: 30px;
         margin-left: -130px;
     }
 `;

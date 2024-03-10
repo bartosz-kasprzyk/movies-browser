@@ -5,7 +5,7 @@ import { useGenres } from '../../../../useGenres';
 
 export const PartOfCrew = () => {
     const { personCredits } = usePersonCredits();
-    const person_crew = personCredits.data?.crew;
+    const person_crew = personCredits.data.crew;
     const { genres } = useGenres();
     const genre_list = genres.data;
 

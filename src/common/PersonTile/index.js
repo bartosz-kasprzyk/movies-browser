@@ -8,10 +8,11 @@ export const PersonTile = ({ id, image, title, subtitle }) => {
 
     return (
         <PersonNavLink to={toPerson({ id })}>
-            <Grid>{image
-                ? <StyledImage src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
-                : <StyledImage src={no_poster} />
-            }
+            <Grid>
+                {image
+                    ? <StyledImage src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
+                    : <StyledImage src={no_poster} />
+                }
                 <Description>
                     <StyledTitle>{title}</StyledTitle>
                     <StyledSubtitle>{subtitle}</StyledSubtitle>
