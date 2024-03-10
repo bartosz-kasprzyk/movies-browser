@@ -9,18 +9,19 @@ import {
     Title,
     Vector,
     Votes,
-    Wrapper,
-    Subtitle
+    Subtitle,
+    MovieNavLink
 } from './styled';
 import star from '../../images/star.svg';
 import no_poster from '../../images/no poster.png'
 import { useScreenWidth } from '../../useScreenWidth';
+import { toMovie } from '../../routes';
 
-export const MovieTile = ({ image, title, role, year, genres, rating, votes }) => {
+export const MovieTile = ({ id, image, title, role, year, genres, rating, votes }) => {
     const screenWidth = useScreenWidth();
 
     return (
-        <Wrapper>
+        <MovieNavLink to={toMovie({ id })}>
             {image
                 ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
                 : <Image src={no_poster} />
@@ -52,9 +53,11 @@ export const MovieTile = ({ image, title, role, year, genres, rating, votes }) =
                         <Vector src={star} />
                         <Text>{rating.toFixed(1).replace(".", ",")}</Text>
                     </Rating>
-                    <Votes>{votes} votes</Votes>
+                    <Votes>{votes.toLocaleString(undefined, {
+                        useGrouping: true,
+                    })} votes</Votes>
                 </Opinion>
             </Content>
-        </Wrapper>
+        </MovieNavLink>
     )
 };

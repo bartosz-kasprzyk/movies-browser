@@ -22,7 +22,7 @@ export const MainTitle = styled.h1`
 export const Content = styled.span`
     width: 1368px;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(auto-fill, 324px);
     justify-content: center;
     grid-gap: 24px;
     margin-bottom: 40px;

@@ -1,12 +1,12 @@
 import { MainTitle, Content, Wrapper } from './styled';
 import { MovieTile } from '../../common/MovieTile';
-import Loading from '../../common/Loading';
-import Error from '../../common/Error';
 import { Pagination } from '../../common/Pagination';
 import { usePopularMovies } from './usePopularMovies';
 import { useGenres } from '../../useGenres';
+import Loading from '../../common/Loading';
+import Error from '../../common/Error';
 
-export const MovieList = () => {
+const MovieList = () => {
     const { popularMovies } = usePopularMovies();
     const movie_list = popularMovies.data.results;
     const { genres } = useGenres();
@@ -21,12 +21,13 @@ export const MovieList = () => {
                     <Error />
                 )
                     : (
-                        <Wrapper>
+                        < Wrapper >
                             <MainTitle>Popular movies</MainTitle>
                             <Content>
-                                {movie_list && movie_list.map((movie) => (
+                                {movie_list && movie_list.map(movie => (
                                     <MovieTile
                                         key={movie.id}
+                                        id={movie.id}
                                         image={movie.poster_path}
                                         title={movie.title}
                                         year={movie.release_date}
@@ -48,3 +49,5 @@ export const MovieList = () => {
         </>
     )
 };
+
+export default MovieList;

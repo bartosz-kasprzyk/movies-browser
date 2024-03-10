@@ -16,6 +16,7 @@ export const PartOfCrew = () => {
                 {person_crew && person_crew.map((movie) => (
                     <MovieTile
                         key={movie.credit_id}
+                        id={movie.id}
                         image={movie.poster_path}
                         title={movie.title}
                         role={movie.job}

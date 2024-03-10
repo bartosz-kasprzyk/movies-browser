@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { url_back, url_front_person } from "../../common/API/requests";
-
-const url = `${url_front_person}976/movie_credits${url_back}`;
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const usePersonCredits = () => {
+    const person = useParams();
+
+    const url = `${url_front_person}${person.id}/movie_credits${url_back}`;
+
     const [personCredits, setPersonCredits] = useState({
         status: "loading",
         data: [],
@@ -27,7 +30,7 @@ export const usePersonCredits = () => {
         };
 
         setTimeout(getPersonCredits, 0);
-    }, []);
+    }, [url]);
 
     return { personCredits };
 };

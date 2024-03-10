@@ -16,6 +16,7 @@ export const PartOfCast = () => {
                 {person_cast && person_cast.map((movie) => (
                     <MovieTile
                         key={movie.credit_id}
+                        id={movie.id}
                         image={movie.poster_path}
                         title={movie.title}
                         role={movie.character}

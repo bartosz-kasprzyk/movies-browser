@@ -17,7 +17,7 @@ export const usePopularPeople = () => {
                 const response = await axios.get(url);
                 setPopularPeople({
                     status: "success",
-                    data: response.data.results,
+                    data: response.data,
                 });
             } catch (error) {
                 setPopularPeople({

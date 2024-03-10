@@ -1,13 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { url_back, url_front_movie } from "../../common/API/requests";
-
-const url = `${url_front_movie}1096197${url_back}`;
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const useMovieDetails = () => {
+    const movie = useParams();
+
+    const url = `${url_front_movie}${movie.id}${url_back}`;
+
     const [movieDetails, setMovieDetails] = useState({
         status: "loading",
-        data: [],
+        data: []
     });
 
     useEffect(() => {
@@ -27,7 +30,7 @@ export const useMovieDetails = () => {
         };
 
         setTimeout(getMovieDetails, 1000);
-    }, []);
+    }, [url]);
 
     return { movieDetails };
 };

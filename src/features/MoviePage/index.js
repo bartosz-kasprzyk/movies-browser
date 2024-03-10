@@ -1,13 +1,13 @@
+import Top from './Top';
 import Cast from './Cast';
 import Crew from './Crew';
 import Loading from '../../common/Loading';
 import Error from '../../common/Error';
-import { DetailTile } from '../../common/DetailTile';
+import Details from './Details';
 import { useMovieDetails } from './useMovieDetails';
-import Top from './Top';
 import { Container } from '../../common/Container';
 
-export const MoviePage = () => {
+const MoviePage = () => {
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
@@ -28,7 +28,7 @@ export const MoviePage = () => {
                                 votes={movie.vote_count}
                             />
                             <Container>
-                                <DetailTile
+                                <Details
                                     image={movie.poster_path}
                                     title={movie.title}
                                     year={movie.release_date}
@@ -63,3 +63,5 @@ export const MoviePage = () => {
         </>
     )
 };
+
+export default MoviePage;

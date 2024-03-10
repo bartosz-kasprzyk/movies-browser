@@ -7,7 +7,7 @@ import { usePopularPeople } from './usePopularPeople';
 
 export const PersonList = () => {
     const { popularPeople } = usePopularPeople();
-    const people_list = popularPeople.data;
+    const people_list = popularPeople.data.results;
 
     return (
         <>
@@ -25,6 +25,7 @@ export const PersonList = () => {
                                     {people_list && people_list.map((person) => (
                                         <PersonTile
                                             key={person.id}
+                                            id={person.id}
                                             image={person.profile_path}
                                             title={person.original_name}
                                         />
