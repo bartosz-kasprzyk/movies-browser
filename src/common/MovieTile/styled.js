@@ -1,11 +1,15 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.article`
+export const MovieNavLink = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
     width: 324px;
-    height: 650px;
+    height: auto;
     padding: 16px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
 
@@ -66,7 +70,7 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     gap: 8px;
     padding-left: 0;
-    margin: 0;
+    margin: 0 0 8px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         margin: 6px 0 8px;
@@ -132,7 +136,6 @@ export const Votes = styled.div`
     line-height: 28px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
         margin: -5.6px;
 }

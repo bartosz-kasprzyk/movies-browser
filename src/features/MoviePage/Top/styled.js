@@ -3,9 +3,9 @@ import background from "../../../images/poster big.png";
 import plexa from "../../../images/pleksa.png";
 
 export const Wrapper = styled.main`
+    background-color: ${({ theme }) => theme.color.black};
     width: 100%;
     max-width: auto;
-    background-color: ${({ theme }) => theme.color.black};
 `;
 
 export const Poster = styled.span`
@@ -13,19 +13,21 @@ export const Poster = styled.span`
     background-position: center;
     max-width: 1920px;
     height: 770px;
-    margin: 0 auto;
     display: flex;
+    margin: -56px 0 64px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         background-size: contain;
         max-width: 798px;
         height: 246px;
+        margin: -24px 0 44px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         background-size: contain;
         max-width: 480px;
         height: 148px;
+        margin-bottom: 16px;
     }
 `;
 

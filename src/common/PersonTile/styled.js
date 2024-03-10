@@ -1,13 +1,18 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-    width: 208px;
+export const PersonNavLink = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.black};
+    text-decoration: none;
+    width: 208px;
+    min-height: 339px;
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;
+        min-height: 245px;
     }
 `;
 

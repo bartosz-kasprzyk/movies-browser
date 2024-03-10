@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 export const Title = styled.header`
     width: 1368px;
@@ -20,11 +19,6 @@ export const Title = styled.header`
         margin: 0 auto;
         font-size: 20px;
         margin-top: 21px;   }
-`;
-
-export const MovieNavLink = styled(NavLink)`
-    color: ${({ theme }) => theme.color.black};
-    text-decoration: none;
 `;
 
 export const Grid = styled.div`
