@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const usePersonDetails = () => {
     const person = useParams();
-    console.log("PERSON", person);
 
     const url = `${url_front_person}${person.id}${url_back}`;
 

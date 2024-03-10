@@ -16,16 +16,16 @@ function App() {
         <Route path={toMovie()}>
           <MoviePage />
         </Route>
-        
+        <Route path={toPerson()}>
+          <PersonPage />
+        </Route>
+
         <Container>
           <Route path={toMovies()}>
             <MovieList />
           </Route>
           <Route path={toPeople()}>
             <PersonList />
-          </Route>
-          <Route path={toPerson()}>
-            <PersonPage />
           </Route>
           <Route exact path="/">
             <Redirect to={toMovies()} />
