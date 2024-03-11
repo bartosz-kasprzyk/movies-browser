@@ -22,16 +22,28 @@ const Top = ({ poster, title, rating, votes }) => (
             <Plexa src={plexa} />
             <MainInfo>
                 <MainTitle>{title}</MainTitle>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>{rating.toFixed(1).replace(".", ",")}</Text>
-                    </Rating>
-                    <Ten>/ 10</Ten>
-                    <Votes>{votes.toLocaleString(undefined, {
-                        useGrouping: true,
-                    })} votes</Votes>
-                </Opinion>
+
+                {votes
+                    ? <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>{rating.toFixed(1).replace(".", ",")}</Text>
+                        </Rating>
+                        <Ten>/ 10</Ten>
+                        <Votes>
+                            {votes.toLocaleString(undefined, {
+                                useGrouping: true,
+                            })}
+                            {votes.toLocaleString() === "1"
+                                ? " vote"
+                                : " votes"}
+                        </Votes>
+                    </Opinion>
+                    : <Opinion>
+                        <Votes>No votes yet</Votes>
+                    </Opinion>
+                }
+
             </MainInfo>
         </Wrapper>
     </BlackBar>

@@ -201,7 +201,7 @@ export const Text = styled.span`
 export const Ten = styled.span`
     font-size: 14px;
     line-height: 37px;
-    margin: 9px 12px 3px 0;
+    margin: 9px 4px 3px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 12px;
@@ -217,7 +217,7 @@ export const Ten = styled.span`
 export const Votes = styled.span`
     font-size: 14px;
     line-height: 37px;
-    margin: 9px 12px 3px 0;
+    margin: 9px 12px 3px 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};  
@@ -227,7 +227,25 @@ export const Votes = styled.span`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        color: ${({ theme }) => theme.color.waterloo};
+        line-height: 0;
+        margin: 0 -2px 0 -22px;
+    }
+`;
+
+
+export const NoVotes = styled.span`
+    color: ${({ theme }) => theme.color.waterloo}; 
+    font-size: 14px;
+    line-height: 37px;
+    margin: 9px 12px 3px 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 13px;
+        line-height: 32px;
+        margin-left: -4px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         line-height: 0;
         margin: 0 -2px 0 -22px;
     }

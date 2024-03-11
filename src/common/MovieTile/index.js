@@ -48,15 +48,26 @@ export const MovieTile = ({ id, image, title, role, year, genres, rating, votes 
                     }
                 </Tags>
 
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} />
-                        <Text>{rating.toFixed(1).replace(".", ",")}</Text>
-                    </Rating>
-                    <Votes>{votes.toLocaleString(undefined, {
-                        useGrouping: true,
-                    })} votes</Votes>
-                </Opinion>
+                {votes
+                    ? <Opinion>
+                        <Rating>
+                            <Vector src={star} />
+                            <Text>{rating.toFixed(1).replace(".", ",")}</Text>
+                        </Rating>
+                        <Votes>
+                            {votes.toLocaleString(undefined, {
+                                useGrouping: true,
+                            })}
+                            {votes.toLocaleString() === "1"
+                                ? " vote"
+                                : " votes"}
+                        </Votes>
+                    </Opinion>
+                    : <Opinion>
+                        <Votes>No votes yet</Votes>
+                    </Opinion>
+                }
+
             </Content>
         </MovieNavLink>
     )

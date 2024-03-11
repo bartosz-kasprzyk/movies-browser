@@ -6,6 +6,7 @@ import {
     Description,
     Image,
     Info,
+    NoVotes,
     Opinion,
     Production,
     Rating,
@@ -60,19 +61,28 @@ const Details = ({ image, title, year, production_countries, production, product
                         <Tag key={genre}>{genre}</Tag>) || []
                     }
                 </Tags>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} />
-                        <Text>{rating.toLocaleString(undefined, {
-                            minimumFractionDigits: 1,
-                            maximumFractionDigits: 1,
-                        })}</Text>
-                    </Rating>
-                    <Ten>/ 10</Ten>
-                    <Votes>{votes.toLocaleString(undefined, {
-                        useGrouping: true,
-                    })} votes</Votes>
-                </Opinion>
+
+                {votes
+                    ? <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>{rating.toFixed(1).replace(".", ",")}</Text>
+                        </Rating>
+                        <Ten>/ 10</Ten>
+                        <Votes>
+                            {votes.toLocaleString(undefined, {
+                                useGrouping: true,
+                            })}
+                            {votes.toLocaleString() === "1"
+                                ? " vote"
+                                : " votes"}
+                        </Votes>
+                    </Opinion>
+                    : <Opinion>
+                        <NoVotes> No votes yet</NoVotes>
+                    </Opinion>
+                }
+
                 <Description>{description}</Description>
             </Content>
         </Wrapper>

@@ -175,7 +175,7 @@ export const Text = styled.div`
 
 export const Ten = styled.span`
     font-size: 16px;
-    margin-right: 5px;
+    margin-right: 35px;
     margin-top: 19px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {

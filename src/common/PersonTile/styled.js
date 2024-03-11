@@ -10,6 +10,11 @@ export const PersonNavLink = styled(NavLink)`
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;
+    transition: transform ease 300ms;
+
+    &:hover {
+        transform: translate(0, -10px);
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 136px;
@@ -61,10 +66,12 @@ export const StyledSubtitle = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 18px;
     font-weight: 400;
-    line-height: 35px;
+    line-height: 29px;
+    margin-top: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
-        line-height: 25px;
+        line-height: 18px;
+        margin-top: 3px;
     }
 `;

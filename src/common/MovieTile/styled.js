@@ -14,6 +14,11 @@ export const MovieNavLink = styled(NavLink)`
     flex-direction: column;
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;
+    transition: transform ease 300ms;
+
+    &:hover {
+        transform: translate(0, -10px);
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
@@ -21,6 +26,8 @@ export const MovieNavLink = styled(NavLink)`
         height: 201px;
         gap: 16px;
     }
+
+    
 `;
 
 export const Image = styled.img`
