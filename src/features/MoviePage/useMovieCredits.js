@@ -9,8 +9,8 @@ export const useMovieCredits = () => {
     const url = `${url_front_movie}${movie.id}/credits${url_back}`;
 
     const [movieCredits, setMovieCredits] = useState({
-        status: "loading",
         data: [],
+        status: "loading",
     });
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export const useMovieCredits = () => {
             try {
                 const response = await axios.get(url);
                 setMovieCredits({
-                    status: "success",
                     data: response.data,
+                    status: "success",
                 });
             } catch (error) {
                 setMovieCredits({
@@ -30,7 +30,7 @@ export const useMovieCredits = () => {
         };
 
         setTimeout(getMovieCredits, 0);
-    }, []);
+    }, [url]);
 
     return { movieCredits };
 };

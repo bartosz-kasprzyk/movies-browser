@@ -7,6 +7,7 @@ const url = `${url_front_genre}${url_back}`;
 export const useGenres = () => {
     const [genres, setGenres] = useState({
         data: [],
+        status: "loading",
     });
 
     useEffect(() => {
@@ -15,8 +16,12 @@ export const useGenres = () => {
                 const response = await axios.get(url);
                 setGenres({
                     data: response.data.genres,
+                    status: "success",
                 });
             } catch (error) {
+                setGenres({
+                    status: "error"
+                });
                 console.log(error);
             }
         };

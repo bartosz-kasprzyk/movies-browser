@@ -9,8 +9,8 @@ export const usePersonCredits = () => {
     const url = `${url_front_person}${person.id}/movie_credits${url_back}`;
 
     const [personCredits, setPersonCredits] = useState({
-        status: "loading",
         data: [],
+        status: "loading",
     });
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export const usePersonCredits = () => {
             try {
                 const response = await axios.get(url);
                 setPersonCredits({
-                    status: "success",
                     data: response.data,
+                    status: "success",
                 });
             } catch (error) {
                 setPersonCredits({

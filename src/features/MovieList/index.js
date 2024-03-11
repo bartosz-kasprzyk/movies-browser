@@ -1,10 +1,11 @@
-import { MainTitle, Content, Wrapper } from './styled';
+import { MainTitle, Content } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import { Pagination } from '../../common/Pagination';
 import { usePopularMovies } from './usePopularMovies';
 import { useGenres } from '../../useGenres';
 import Loading from '../../common/Loading';
 import Error from '../../common/Error';
+import { Container } from '../../common/Container';
 
 const MovieList = () => {
     const { popularMovies } = usePopularMovies();
@@ -21,7 +22,7 @@ const MovieList = () => {
                     <Error />
                 )
                     : (
-                        < Wrapper >
+                        <Container>
                             <MainTitle>Popular movies</MainTitle>
                             <Content>
                                 {movie_list && movie_list.map(movie => (
@@ -43,7 +44,7 @@ const MovieList = () => {
                                 ))}
                             </Content>
                             <Pagination />
-                        </Wrapper>
+                        </Container>
                     )
             }
         </>

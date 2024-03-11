@@ -9,8 +9,8 @@ export const useMovieDetails = () => {
     const url = `${url_front_movie}${movie.id}${url_back}`;
 
     const [movieDetails, setMovieDetails] = useState({
+        data: [],
         status: "loading",
-        data: []
     });
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export const useMovieDetails = () => {
             try {
                 const response = await axios.get(url);
                 setMovieDetails({
-                    status: "success",
                     data: response.data,
+                    status: "success",
                 });
             } catch (error) {
                 setMovieDetails({

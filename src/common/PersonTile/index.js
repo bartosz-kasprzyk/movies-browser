@@ -1,7 +1,7 @@
 import { toPerson } from '../../routes';
 import { useScreenWidth } from '../../useScreenWidth';
 import { Description, Grid, PersonNavLink, StyledImage, StyledSubtitle, StyledTitle } from './styled';
-import no_poster from '../../images/no poster.png';
+import no_poster from '../../images/profile.png';
 
 export const PersonTile = ({ id, image, title, subtitle }) => {
     const screenWidth = useScreenWidth();

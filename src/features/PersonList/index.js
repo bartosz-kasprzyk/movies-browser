@@ -4,6 +4,7 @@ import { Pagination } from '../../common/Pagination';
 import { PersonTile } from '../../common/PersonTile';
 import { Grid, Heading } from './styled';
 import { usePopularPeople } from './usePopularPeople';
+import { Container } from '../../common/Container';
 
 export const PersonList = () => {
     const { popularPeople } = usePopularPeople();
@@ -19,7 +20,7 @@ export const PersonList = () => {
                         <Error />
                     )
                         : (
-                            <>
+                            <Container>
                                 <Heading>Popular people</Heading>
                                 <Grid>
                                     {people_list && people_list.map((person) => (
@@ -32,7 +33,7 @@ export const PersonList = () => {
                                     ))}
                                 </Grid>
                                 <Pagination />
-                            </>
+                            </Container>
                         )
             }
         </>

@@ -9,6 +9,7 @@ export const Wrapper = styled.article`
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
     flex-direction: row;
+    
     align-items: flex-start;
     gap: 40px;
 
@@ -23,7 +24,6 @@ export const Wrapper = styled.article`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         width: 660px;
-        padding: 32px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
@@ -53,7 +53,7 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
-    
+    flex-grow: 1;
 `;
 
 export const Title = styled.header`

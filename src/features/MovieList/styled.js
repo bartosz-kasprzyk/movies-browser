@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
-    margin: 0 auto;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        width: 288px;
-    }
-`;
-
 export const MainTitle = styled.h1`
     font-weight: 600;
     font-size: 36px;

@@ -28,7 +28,9 @@ const Top = ({ poster, title, rating, votes }) => (
                         <Text>{rating.toFixed(1).replace(".", ",")}</Text>
                     </Rating>
                     <Ten>/ 10</Ten>
-                    <Votes>{votes} votes</Votes>
+                    <Votes>{votes.toLocaleString(undefined, {
+                        useGrouping: true,
+                    })} votes</Votes>
                 </Opinion>
             </MainInfo>
         </Wrapper>

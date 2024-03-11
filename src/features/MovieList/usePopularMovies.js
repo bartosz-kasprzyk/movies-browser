@@ -7,8 +7,8 @@ const url = `${url_front_movie}popular${url_back}&page=${page}`;
 
 export const usePopularMovies = () => {
     const [popularMovies, setPopularMovies] = useState({
-        status: "loading",
         data: [],
+        status: "loading",
     });
 
     useEffect(() => {
@@ -16,8 +16,8 @@ export const usePopularMovies = () => {
             try {
                 const response = await axios.get(url);
                 setPopularMovies({
-                    status: "success",
                     data: response.data,
+                    status: "success",
                 });
             } catch (error) {
                 setPopularMovies({
