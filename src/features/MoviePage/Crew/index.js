@@ -16,7 +16,7 @@ const Crew = () => {
                         id={person.id}
                         image={person.profile_path}
                         title={person.name}
-                        subtitle={person.character}
+                        subtitle={person.job}
                     />
                 ))}
             </Grid>
