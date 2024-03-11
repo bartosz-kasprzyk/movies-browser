@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-https://bartek-kasprzyk.github.io/movies-browser/index.html
+https://bartek-kasprzyk.github.io/movies-browser
 
 ## Available Scripts
 
