@@ -18,7 +18,7 @@ export const usePopularMovies = () => {
     });
 
     useEffect(() => {
-        const gettotalPagesMovies = async () => {
+        const getTotalPagesMovies = async () => {
             try {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
@@ -32,7 +32,7 @@ export const usePopularMovies = () => {
             }
         };
 
-        gettotalPagesMovies();
+        getTotalPagesMovies();
 
         const getPopularMovies = async () => {
             try {
