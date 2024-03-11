@@ -17,7 +17,7 @@ export const usePopularPeople = () => {
     });
 
     useEffect(() => {
-        const getTotalPages = async () => {
+        const getTotalPagesPeople = async () => {
             try {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
@@ -31,7 +31,7 @@ export const usePopularPeople = () => {
             }
         };
 
-        getTotalPages();
+        getTotalPagesPeople();
 
         const getPopularPeople = async () => {
             try {
