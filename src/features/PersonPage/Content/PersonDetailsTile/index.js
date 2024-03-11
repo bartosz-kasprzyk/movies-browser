@@ -7,25 +7,27 @@ import {
     Info,
     Tile
 } from './styled';
-import person from '../../../../images/person.png';
 import { useScreenWidth } from '../../../../useScreenWidth';
+import { usePersonDetails } from '../../usePersonDetails';
 
 export const PersonDetailsTile = () => {
     const screenWidth = useScreenWidth();
+    const { personDetails } = usePersonDetails();
+    const person = personDetails.data;
 
     return (
-        <Tile>
-            <Image src={person} alt="" />
+        <Tile key={person.id}>
+            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path} />
             <PersonalData>
-                <Name>Liu Yifei</Name>
+                <Name>{person.name}</Name>
                 <Birth>
-                    <div><Info>{screenWidth > 767 ? "Date of birth:" : "Birth:"}</Info> 25.08.1987</div>
-                    <div><Info>Place of birth:</Info> Wuhan, Hubei, China</div>
+                    <div><Info>{screenWidth > 767 ? "Date of birth:" : "Birth:"}</Info>{(new Date(person.birthday).toLocaleDateString())}</div>
+                    <div><Info>Place of birth:</Info>{person.place_of_birth}</div>
                 </Birth>
             </PersonalData>
             <Description>
-                Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.
+                {person.biography}
             </Description>
-        </Tile>
+        </Tile >
     )
 };

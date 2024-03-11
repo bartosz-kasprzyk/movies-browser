@@ -4,7 +4,7 @@ import { useMovieCredits } from '../useMovieCredits';
 
 const Crew = () => {
     const { movieCredits } = useMovieCredits();
-    const movie_crew = movieCredits.data?.crew;
+    const movie_crew = movieCredits.data.crew;
 
     return (
         <>

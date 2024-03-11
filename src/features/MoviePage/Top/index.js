@@ -8,26 +8,49 @@ import {
     Votes,
     Text,
     Vector,
-    Poster
+    Poster,
+    Plexa,
+    BlackBar
 } from './styled';
 import star from '../../../images/star.svg';
+import plexa from "../../../images/plexa.png";
+import { useMovieDetails } from '../useMovieDetails';
 
-const Top = () => (
-    <Wrapper>
-        <Poster>
-            <MainInfo>
-                <MainTitle>Mulan longer title</MainTitle>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} alt="" />
-                        <Text>7,8</Text>
-                    </Rating>
-                    <Ten>/ 10</Ten>
-                    <Votes>335 votes</Votes>
-                </Opinion>
-            </MainInfo>
-        </Poster>
-    </Wrapper>
-);
+const Top = () => {
+    const { movieDetails } = useMovieDetails();
+    const movie = movieDetails.data;
+
+    return (
+        <BlackBar>
+            <Wrapper>
+                <Poster src={"https://image.tmdb.org/t/p/original" + movie?.backdrop_path} />
+                <Plexa src={plexa} />
+                <MainInfo>
+                    <MainTitle>{movie?.title}</MainTitle>
+
+                    {movie?.vote_average
+                        ? <Opinion>
+                            <Rating>
+                                <Vector src={star} alt="" />
+                                <Text>{movie.vote_average.toFixed(1).replace(".", ",")}</Text>
+                            </Rating>
+                            <Ten>/ 10</Ten>
+                            <Votes>
+                                {movie.votes_count?.toLocaleString(undefined, {
+                                    useGrouping: true,
+                                })}
+                                {movie.votes_count === 1 ? " vote" : " votes"}
+                            </Votes>
+                        </Opinion>
+                        : <Opinion>
+                            <Votes>No votes yet</Votes>
+                        </Opinion>
+                    }
+
+                </MainInfo>
+            </Wrapper>
+        </BlackBar>
+    )
+};
 
 export default Top;
