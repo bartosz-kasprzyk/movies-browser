@@ -28,7 +28,7 @@ export const useMovieDetails = () => {
             }
         };
 
-        setTimeout(getMovieDetails, 1000);
+        setTimeout(getMovieDetails, 300);
     }, [url]);
 
     return { movieDetails };
