@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { url_back, url_front_person } from "../../movies/api";
+import { url_back, url_front_person } from "../../common/API/requests";
 
 export const usePopularPeople = () => {
     const location = useLocation();
