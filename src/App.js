@@ -1,4 +1,3 @@
-import { Container } from './common/Container';
 import { Header } from './common/Header';
 import MovieList from './features/MovieList';
 import MoviePage from './features/MoviePage';
@@ -29,26 +28,26 @@ function App() {
     <HashRouter basename="/movies-browser">
       <Header />
       <ScrollToTop />
-
       <Switch>
         <Route path={toMovie()}>
           <MoviePage />
         </Route>
+
         <Route path={toPerson()}>
           <PersonPage />
         </Route>
 
-        <Container>
-          <Route path={toMovies()}>
-            <MovieList />
-          </Route>
-          <Route path={toPeople()}>
-            <PersonList />
-          </Route>
-          <Route exact path="/">
-            <Redirect to={toMovies()} />
-          </Route>
-        </Container>
+        <Route path={toMovies()}>
+          <MovieList />
+        </Route>
+
+        <Route path={toPeople()}>
+          <PersonList />
+        </Route>
+
+        <Route exact path="/">
+          <Redirect to={toMovies()} />
+        </Route>
       </Switch>
     </HashRouter>
   )

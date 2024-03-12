@@ -1,28 +1,39 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
+    width: 1368px;
+    justify-content: center;
+    margin: auto;
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
     flex-direction: row;
+    
     align-items: flex-start;
     gap: 40px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        padding: 28px;
-        margin: auto;
-        gap: 28px;
-        width: 432px;
-        height: 100%;
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        width: 1016px;
+    }
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        width: 898px;
+        padding: 32px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        width: 660px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 100%;
+        padding: 24px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         padding: 16px;
         gap: 16px;
-        width: 288px;
-        height: 400px;
     }
 `;
 
@@ -42,8 +53,7 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
-    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-    }
+    flex-grow: 1;
 `;
 
 export const Title = styled.header`
@@ -191,7 +201,7 @@ export const Text = styled.span`
 export const Ten = styled.span`
     font-size: 14px;
     line-height: 37px;
-    margin: 9px 12px 3px 0;
+    margin: 9px 4px 3px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 12px;
@@ -207,7 +217,7 @@ export const Ten = styled.span`
 export const Votes = styled.span`
     font-size: 14px;
     line-height: 37px;
-    margin: 9px 12px 3px 0;
+    margin: 9px 12px 3px 8px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};  
@@ -217,7 +227,25 @@ export const Votes = styled.span`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        color: ${({ theme }) => theme.color.waterloo};
+        line-height: 0;
+        margin: 0 -2px 0 -22px;
+    }
+`;
+
+
+export const NoVotes = styled.span`
+    color: ${({ theme }) => theme.color.waterloo}; 
+    font-size: 14px;
+    line-height: 37px;
+    margin: 9px 12px 3px 8px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 13px;
+        line-height: 32px;
+        margin-left: -4px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         line-height: 0;
         margin: 0 -2px 0 -22px;
     }
@@ -226,16 +254,16 @@ export const Votes = styled.span`
 export const Description = styled.div`
     font-size: 20px;
     line-height: 1.6;
-
+    
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 17px;
-        width: 376px;
-        margin-left: -200px;
+        margin-top: 40px;
+        margin-left: -205px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
-        width: 256px;
+        margin-top: 30px;
         margin-left: -130px;
     }
 `;

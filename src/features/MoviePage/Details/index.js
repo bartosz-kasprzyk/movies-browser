@@ -1,10 +1,12 @@
 import { useScreenWidth } from '../../../useScreenWidth';
 import star from '../../../images/star.svg';
+import no_poster from '../../../images/no poster.png';
 import {
     Content,
     Description,
     Image,
     Info,
+    NoVotes,
     Opinion,
     Production,
     Rating,
@@ -27,12 +29,21 @@ const Details = () => {
 
     return (
         <Wrapper>
-            <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie?.poster_path} />
+            {movie?.poster_path
+                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path} />
+                : <Image src={no_poster} />
+            }
             <Content>
                 <Title>{movie?.title}</Title>
-                <Year>{(new Date(movie?.release_date).getFullYear())}</Year>
+                <Year>
+                    {movie?.release_date
+                        ? (new Date(movie.release_date).getFullYear())
+                        : ""
+                    }
+                </Year>
                 <Production>
-                    <div><Info>Production:</Info>
+                    <div>
+                        <Info>Production:</Info>
                         {movie?.production_countries
                             ? screenWidth > 767
                                 ? movie.production_countries.map((production) => production.name).join(", ")
@@ -40,30 +51,45 @@ const Details = () => {
                             : "Unknown"
                         }
                     </div>
-                    <div><Info>Release date:</Info>{(new Date(movie?.release_date).toLocaleDateString())}</div>
+                    <div>
+                        <Info>Release date:</Info>
+                        {movie?.release_date
+                            ? (new Date(movie.release_date).toLocaleDateString())
+                            : "Unknown"
+                        }
+                    </div>
                 </Production>
                 <Tags>
-                    {movie?.genres.map((genre) =>
-                        <Tag key={genre}>{genre.name}</Tag>) || []
+                    {Array.isArray(movie?.genres) && movie.genres.length > 0
+                        ? movie.genres.map((genre) => <Tag key={genre.id}>{genre.name}</Tag>)
+                        : "Unknown"
                     }
                 </Tags>
-                <Opinion>
-                    <Rating>
-                        <Vector src={star} />
-                        <Text>{movie?.vote_average.toFixed(1).replace(".", ",")}</Text>
-                    </Rating>
-                    <Ten>/ 10</Ten>
-                    <Votes>
-                        {movie?.votes_count?.toLocaleString(undefined, {
-                            useGrouping: true,
-                        })}
-                        {movie?.votes_count === 1 ? " vote" : " votes"}
-                    </Votes>
-                </Opinion>
+                {movie?.vote_average
+                    ? <Opinion>
+                        <Rating>
+                            <Vector src={star} alt="" />
+                            <Text>{movie.vote_average.toFixed(1).replace(".", ",")}</Text>
+                        </Rating>
+                        <Ten>/ 10</Ten>
+                        <Votes>
+                            {movie.vote_count?.toLocaleString(undefined, {
+                                useGrouping: true,
+                            })}
+                            {movie.vote_count === "1"
+                                ? " vote"
+                                : " votes"}
+                        </Votes>
+                    </Opinion>
+                    : <Opinion>
+                        <NoVotes> No votes yet</NoVotes>
+                    </Opinion>
+                }
+
                 <Description>{movie?.overview}</Description>
             </Content>
         </Wrapper>
-    )
+    );
 };
 
 export default Details;

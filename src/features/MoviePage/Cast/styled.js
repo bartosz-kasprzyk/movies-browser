@@ -26,7 +26,6 @@ export const Grid = styled.span`
     justify-content: center;
     padding-top: 32px;
 
-
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
         grid-template-columns: repeat(5, auto);
         grid-gap: 22px;

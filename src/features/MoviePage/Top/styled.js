@@ -54,7 +54,7 @@ export const Poster = styled.img`
 `;
 
 export const Plexa = styled.img`
-    max-width: 1920px;
+    max-width: 1368px;
     height: 770px;
     position: absolute;
 

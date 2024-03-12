@@ -36,10 +36,10 @@ const Top = () => {
                             </Rating>
                             <Ten>/ 10</Ten>
                             <Votes>
-                                {movie.votes_count?.toLocaleString(undefined, {
+                                {movie.vote_count.toLocaleString(undefined, {
                                     useGrouping: true,
                                 })}
-                                {movie.votes_count === 1 ? " vote" : " votes"}
+                                {movie.vote_count === 1 ? " vote" : " votes"}
                             </Votes>
                         </Opinion>
                         : <Opinion>
