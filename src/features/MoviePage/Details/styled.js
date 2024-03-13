@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.article`
     width: 1368px;
-    justify-content: center;
     margin: auto;
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     display: flex;
     flex-direction: row;
-    
     align-items: flex-start;
     gap: 40px;
 
@@ -232,7 +230,6 @@ export const Votes = styled.span`
     }
 `;
 
-
 export const NoVotes = styled.span`
     color: ${({ theme }) => theme.color.waterloo}; 
     font-size: 14px;
@@ -242,12 +239,11 @@ export const NoVotes = styled.span`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
         line-height: 32px;
-        margin-left: -4px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         line-height: 0;
-        margin: 0 -2px 0 -22px;
+        margin: 0 -2px 0 8px;
     }
 `;
 

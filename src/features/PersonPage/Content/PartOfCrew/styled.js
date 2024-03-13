@@ -21,27 +21,25 @@ export const Title = styled.header`
 `;
 
 export const Grid = styled.div`
+    width: 1368px;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(auto-fill, 324px);
     grid-gap: 24px;
     padding-top: 24px;
     justify-content: center;
+    margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
+        width: auto;
         grid-template-columns: repeat(3, auto);
-        grid-gap: 22px;
-        padding-top: 22px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         grid-template-columns: repeat(2, auto);
-        grid-gap: 20px;
-        padding-top: 20px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 16px;
-        padding-top: 12px;
     }
 `;
