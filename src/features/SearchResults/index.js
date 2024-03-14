@@ -20,7 +20,6 @@ const SearchResults = () => {
     const { searchResults } = useSearchResults();
     const search_quantity = searchResults.data.total_results;
     const search_list = searchResults.data.results;
-    const search_list_sorted = search_list?.sort((a, b) => b.popularity - a.popularity);
 
     const { genres } = useGenres();
     const genre_list = genres.data;
@@ -43,7 +42,7 @@ const SearchResults = () => {
                             <Container>
                                 <MainTitle>Search results for "{query}" ({searchResults ? search_quantity : ""})</MainTitle>
                                 <Content>
-                                    {search_list_sorted && search_list_sorted.map(movie => (
+                                    {search_list && search_list.map(movie => (
                                         <MovieTile
                                             key={movie.id}
                                             id={movie.id}
