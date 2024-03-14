@@ -15,7 +15,7 @@ const SearchResults = () => {
     const query = useQueryParameter("query");
 
     const location = useLocation();
-    const moviePage = location.pathname.includes("/movies");
+    const isMoviesPage = location.pathname.includes("/movies");
 
     const { searchResults } = useSearchResults();
     const search_quantity = searchResults.data.total_results;
@@ -39,7 +39,7 @@ const SearchResults = () => {
                     : search_quantity === 0 ? (
                         <NoResults />
                     )
-                        : moviePage ? (
+                        : isMoviesPage ? (
                             <Container>
                                 <MainTitle>Search results for "{query}" ({searchResults ? search_quantity : ""})</MainTitle>
                                 <Content>
