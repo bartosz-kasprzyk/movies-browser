@@ -25,10 +25,15 @@ export const useSearchResults = () => {
 
                 try {
                     const response = await axios.get(url);
-                    setSearchResults({ status: "success", data: response.data });
+                    setSearchResults({
+                        status: "success",
+                        data: response.data
+                    });
                 } catch (error) {
-                    setSearchResults({ status: "error", data: [] });
-                    console.error("Error fetching search results:", error);
+                    setSearchResults({
+                        status: "error",
+                    });
+                    console.error(error);
                 }
             }
         }, 500);
