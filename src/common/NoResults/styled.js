@@ -7,13 +7,13 @@ export const StyledHeader = styled.div`
 
 export const StyledImages = styled(Picture)`
  display: flex;
- width: 90%;
+ width: 668px;
  height: auto;
  justify-content: center;
  position: relative;
+ margin: auto;
 
  @media (max-width: ${({ theme }) => theme.breakpoint.phone}){
-    margin: auto;
     max-width: 100%;
  }
 `;
@@ -24,7 +24,12 @@ margin: 40px;
 font-size: 36px;
 font-weight: 600;
 
-@media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
+@media (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    margin: auto;
+    font-size: 25px;
+}
+
+@media (max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
     margin: auto;
     font-size: 14px;
 }
