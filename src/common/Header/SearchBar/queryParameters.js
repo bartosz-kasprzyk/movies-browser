@@ -12,6 +12,8 @@ export const useReplaceQueryParameter = () => {
     const history = useHistory();
     const searchParams = new URLSearchParams(location?.search || '');
 
+    const isMoviesPage = location.pathname.startsWith("/movies");
+
     return ({ key, value }) => {
         if (value === undefined) {
             searchParams.delete(key);
@@ -19,12 +21,10 @@ export const useReplaceQueryParameter = () => {
             searchParams.set(key, value);
         }
 
-        let newPath = location.pathname;
+        let newPath = isMoviesPage ? "/movies/search" : "/people/search";
 
-        if (key === 'query' && !value && newPath.endsWith('/search')) {
-            newPath = newPath.substring(0, newPath.lastIndexOf('/search'));
-        } else if (!newPath.includes('/search')) {
-            newPath += '/search';
+        if (key === "query" && !value) {
+            newPath = isMoviesPage ? "/movies" : "/people";
         }
 
         newPath += `?${searchParams.toString()}`;
