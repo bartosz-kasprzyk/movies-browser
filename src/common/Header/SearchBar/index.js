@@ -7,7 +7,7 @@ export const SearchBar = () => {
     const replaceQueryParameter = useReplaceQueryParameter();
 
     const location = useLocation();
-    const isMoviesPage = location.pathname.includes("/movies");
+    const isMoviesPage = location.pathname.startsWith("/movies");
 
     const onInputChange = ({ target }) => {
         replaceQueryParameter({

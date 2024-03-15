@@ -15,7 +15,7 @@ const SearchResults = () => {
     const query = useQueryParameter("query");
 
     const location = useLocation();
-    const isMoviesPage = location.pathname.includes("/movies");
+    const isMoviesPage = location.pathname.startsWith("/movies");
 
     const { searchResults } = useSearchResults();
     const search_quantity = searchResults.data.total_results;

@@ -9,7 +9,7 @@ export const useSearchResults = () => {
     const query = useQueryParameter("query");
 
     const location = useLocation();
-    const isMoviesPage = location.pathname.includes("/movies");
+    const isMoviesPage = location.pathname.startsWith("/movies");
 
     const [searchResults, setSearchResults] = useState({
         status: "loading",
