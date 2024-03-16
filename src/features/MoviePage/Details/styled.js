@@ -61,6 +61,10 @@ export const Image = styled.img`
         margin: 0 24px 4px 0;
     }
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
+        margin: 0 24px 16px 0;
+    }
+
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 114px;
         height: 169px;
@@ -82,6 +86,11 @@ export const Title = styled.header`
     margin-top: 12px;
     margin-bottom: 24px;
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        margin-top: 9px;
+        margin-bottom: 20px;
+    }
+
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-weight: 500;
         font-size: 26px;
@@ -98,7 +107,11 @@ export const Title = styled.header`
 
 export const Year = styled.div`
     font-size: 22px;
-    margin-bottom: 24px;    
+    margin-bottom: 24px;  
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        margin-bottom: 16px;
+    }
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};
@@ -108,6 +121,7 @@ export const Year = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 13px;
+        margin-bottom: 2px;
     }
 `;
 
@@ -120,7 +134,7 @@ export const Production = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 12px;
-        line-height: 20px;
+        line-height: 22px;
     }
 `;
 
@@ -139,14 +153,18 @@ export const Tags = styled.ul`
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    margin-top: 20px;
     gap: 16px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         gap: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        
+        margin-top: 4px;
+        margin-bottom: 18px;
     }
 `;
 
@@ -154,19 +172,16 @@ export const Tag = styled.li`
     background: ${({ theme }) => theme.color.mystic};
     font-size: 14px;
     padding: 8px 16px;
- 
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 12px;
         padding: 6px 12px;
-      
     }
         
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
         padding: 4px 8px;
-      
     }
 `;
 
@@ -276,17 +291,17 @@ export const NoVotes = styled.span`
 export const Description = styled.div`
     font-size: 20px;
     line-height: 32px;
-    margin-top: 24px;
+    margin-top: 12px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 17px;
         line-height: 27px;
-        margin-top: 12;
+        margin-top: 8px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
         line-height: 22px;
-        margin-top: 0;
+        margin-top: -10px;
     }
 `;
