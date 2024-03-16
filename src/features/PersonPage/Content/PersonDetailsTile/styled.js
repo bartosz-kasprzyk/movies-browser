@@ -6,7 +6,6 @@ export const Tile = styled.article`
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
-    justify-content: center;
     margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
