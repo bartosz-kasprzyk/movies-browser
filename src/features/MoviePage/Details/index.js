@@ -82,9 +82,8 @@ const Details = ({ image, title, year, production_countries, production, product
                         <NoVotes> No votes yet</NoVotes>
                     </Opinion>
                 }
-
-                <Description>{description}</Description>
             </Content>
+            <Description>{description}</Description>
         </Wrapper>
     );
 };
