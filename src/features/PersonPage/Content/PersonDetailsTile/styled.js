@@ -36,7 +36,7 @@ export const Tile = styled.article`
 export const Image = styled.img`
     width: 399px;
     height: 564px;
-    margin: 0 40px 40px 0;
+    margin: 0 40px 30px 0;
     float: left;
     border-radius: 5px;
     
