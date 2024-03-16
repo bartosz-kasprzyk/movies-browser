@@ -38,6 +38,7 @@ export const Wrapper = styled.article`
 export const Image = styled.img`
     width: 312px;
     height: 464px;
+    border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 176px;

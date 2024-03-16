@@ -23,9 +23,7 @@ export const MovieNavLink = styled(NavLink)`
         width: 100%;
         height: 201px;
         gap: 16px;
-    }
-
-    
+    }  
 `;
 
 export const Image = styled.img`
