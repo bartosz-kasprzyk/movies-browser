@@ -38,7 +38,7 @@ const Details = () => {
                 <Year>
                     {movie?.release_date
                         ? (new Date(movie.release_date).getFullYear())
-                        : ""
+                        : null
                     }
                 </Year>
                 <Production>
@@ -62,7 +62,7 @@ const Details = () => {
                 <Tags>
                     {Array.isArray(movie?.genres) && movie.genres.length > 0
                         ? movie.genres.map((genre) => <Tag key={genre.id}>{genre.name}</Tag>)
-                        : "Unknown"
+                        : null
                     }
                 </Tags>
                 {movie?.vote_average
