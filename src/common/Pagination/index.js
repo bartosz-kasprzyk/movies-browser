@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocation, useHistory } from "react-router-dom";
 import { useScreenWidth } from "../../useScreenWidth";
 import {
     Wrapper,
@@ -11,9 +11,9 @@ import {
     CounterText,
     CounterNumber
 } from "./styled";
-import { useLocation, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
 import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
+
 import { toMovies } from "../../routes";
 
 export const Pagination = () => {
@@ -25,11 +25,11 @@ export const Pagination = () => {
 
     const totalPages = location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
 
-    const [currentPage, setCurrentPage] = useState(1);
+    const searchParams = new URLSearchParams(location.search);
+    const currentPage = parseInt(searchParams.get("page")) || 1;
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            setCurrentPage(newPage);
             const newUrl = `${location.pathname}?page=${newPage}`;
             history.push(newUrl);
         }
