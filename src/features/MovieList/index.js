@@ -23,8 +23,8 @@ const MovieList = () => {
                 )
                     : (
                         <Container>
-                            <MainTitle>Popular movies</MainTitle>
                             <Content>
+                                <MainTitle>Popular movies</MainTitle>
                                 {movie_list && movie_list.map(movie => (
                                     <MovieTile
                                         key={movie.id}

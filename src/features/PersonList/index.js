@@ -21,8 +21,8 @@ export const PersonList = () => {
                     )
                         : (
                             <Container>
-                                <Heading>Popular people</Heading>
                                 <Grid>
+                                    <Heading>Popular people</Heading>
                                     {people_list && people_list.map((person) => (
                                         <PersonTile
                                             key={person.id}

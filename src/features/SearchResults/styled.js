@@ -20,7 +20,7 @@ export const Content = styled.span`
     margin-bottom: 40px;
     margin: auto;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.notebook}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
         grid-template-columns: repeat(3, auto);
         width: auto;
     }
