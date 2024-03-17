@@ -23,7 +23,8 @@ export const usePersonDetails = () => {
                 });
             } catch (error) {
                 setPersonDetails({
-                    status: "error"
+                    status: "error",
+                    error: error.message,
                 });
                 console.log(error);
             }

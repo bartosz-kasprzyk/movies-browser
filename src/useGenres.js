@@ -20,7 +20,8 @@ export const useGenres = () => {
                 });
             } catch (error) {
                 setGenres({
-                    status: "error"
+                    status: "error",
+                    error: error.message,
                 });
                 console.log(error);
             }

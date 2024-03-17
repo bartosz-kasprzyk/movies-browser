@@ -21,7 +21,8 @@ export const usePopularPeople = () => {
                 });
             } catch (error) {
                 setPopularPeople({
-                    status: "error"
+                    status: "error",
+                    error: error.message,
                 });
                 console.log(error);
             }

@@ -32,6 +32,7 @@ export const useSearchResults = () => {
                 } catch (error) {
                     setSearchResults({
                         status: "error",
+                        error: error.message,
                     });
                     console.error(error);
                 }
