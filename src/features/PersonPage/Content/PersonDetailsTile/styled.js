@@ -39,6 +39,7 @@ export const Image = styled.img`
     border-radius: 5px;
     margin: 0 40px 40px 0;
     float: left;
+    border-radius: 5px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         width: 210px;
@@ -48,13 +49,13 @@ export const Image = styled.img`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 169px;
-        height: 224px;
+        height: 244px;
         margin: 0 24px 4px 0;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        flex-basis: 114px;
-        height: 169px;
+        width: 116px;
+        height: 163px;
         margin: 0;
     }
 `;
@@ -92,6 +93,7 @@ export const Birth = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 15px;
+        gap: 2px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {

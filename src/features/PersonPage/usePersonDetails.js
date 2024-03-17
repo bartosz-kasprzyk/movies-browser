@@ -9,8 +9,8 @@ export const usePersonDetails = () => {
     const url = `${url_front_person}${person.id}${url_back}`;
 
     const [personDetails, setPersonDetails] = useState({
-        status: "loading",
         data: [],
+        status: "loading",
     });
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export const usePersonDetails = () => {
             try {
                 const response = await axios.get(url);
                 setPersonDetails({
-                    status: "success",
                     data: response.data,
+                    status: "success",
                 });
             } catch (error) {
                 setPersonDetails({
