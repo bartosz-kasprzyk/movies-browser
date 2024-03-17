@@ -28,6 +28,7 @@ function App() {
     <HashRouter basename="/movies-browser">
       <Header />
       <ScrollToTop />
+      
       <Switch>
         <Route path={toMovie()}>
           <MoviePage />
