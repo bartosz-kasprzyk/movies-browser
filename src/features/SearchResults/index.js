@@ -8,7 +8,7 @@ import Loading from '../../common/Loading';
 import Error from '../../common/Error';
 import { MovieTile } from '../../common/MovieTile';
 import NoResults from '../../common/NoResults';
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { useLocation } from 'react-router-dom';
 import { PersonTile } from '../../common/PersonTile';
 
 const SearchResults = () => {
@@ -40,7 +40,7 @@ const SearchResults = () => {
                     )
                         : isMoviesPage ? (
                             <Container>
-                                <MainTitle>Search results for "{query}" ({searchResults ? search_quantity : ""})</MainTitle>
+                                <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                 <Content>
                                     {search_list && search_list.map(movie => (
                                         <MovieTile
@@ -65,7 +65,7 @@ const SearchResults = () => {
                         )
                             : (
                                 <Container>
-                                    <MainTitle>Search results for "{query}" ({searchResults ? search_quantity : ""})</MainTitle>
+                                    <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                     <Grid>
                                         {search_list && search_list.map((person) => (
                                             <PersonTile

@@ -4,9 +4,8 @@ import MoviePage from './features/MoviePage';
 import SearchResults from './features/SearchResults';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { toMovie, toMovies, toPeople, toPerson } from './routes';
-import { Redirect, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
   return (
