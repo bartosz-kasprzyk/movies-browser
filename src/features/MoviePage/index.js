@@ -9,7 +9,6 @@ import { Container } from '../../common/Container';
 
 const MoviePage = () => {
     const { movieDetails } = useMovieDetails();
-    const movie = movieDetails.data;
 
     return (
         <>
@@ -21,41 +20,9 @@ const MoviePage = () => {
                 )
                     : (
                         <>
-                            {movie.backdrop_path
-                                ? <Top
-                                    poster={movie.backdrop_path}
-                                    title={movie.title}
-                                    rating={movie.vote_average}
-                                    votes={movie.vote_count}
-                                />
-                                : null
-                            }
+                            <Top />
                             <Container>
-                                <Details
-                                    image={movie.poster_path}
-                                    title={movie.title}
-                                    year={movie.release_date}
-                                    production_countries={movie.production_countries}
-                                    production={
-                                        movie.production_countries.map(
-                                            (place) => place.name
-                                        ).join(", ")
-                                    }
-                                    production_short={
-                                        movie.production_countries.map(
-                                            (place) => place.iso_3166_1
-                                        ).join(", ")
-                                    }
-                                    date={movie.release_date}
-                                    genres={
-                                        movie.genres.map((genre) =>
-                                            genre.name
-                                        )
-                                    }
-                                    rating={movie.vote_average}
-                                    votes={movie.vote_count}
-                                    description={movie.overview}
-                                />
+                                <Details />
                                 <Cast />
                                 <Crew />
                             </Container>

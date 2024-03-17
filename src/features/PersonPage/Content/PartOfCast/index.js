@@ -28,7 +28,7 @@ export const PartOfCast = () => {
                                     year={movie.release_date}
                                     genres={
                                         movie.genre_ids.map((number) =>
-                                            genre_list.find((item) =>
+                                            genre_list?.find((item) =>
                                                 item.id === number).name
                                         )
                                     }

@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const PersonNavLink = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.black};
+    transition: transform ease 300ms;
     text-decoration: none;
     width: 208px;
     min-height: 339px;
@@ -11,6 +12,10 @@ export const PersonNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;
     transition: transform ease 300ms;
+
+    &:hover {
+        transform: translate(0, -10px);
+    }
 
     &:hover {
         transform: translate(0, -10px);

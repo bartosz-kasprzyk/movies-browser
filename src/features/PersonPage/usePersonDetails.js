@@ -29,7 +29,7 @@ export const usePersonDetails = () => {
             }
         };
 
-        setTimeout(getPersonDetails, 1000);
+        setTimeout(getPersonDetails, 300);
     }, [url]);
 
     return { personDetails };

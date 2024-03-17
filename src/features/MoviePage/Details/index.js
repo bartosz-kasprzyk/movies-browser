@@ -20,60 +20,63 @@ import {
     Wrapper,
     Year
 } from './styled';
+import { useMovieDetails } from '../useMovieDetails';
 
-const Details = ({ image, title, year, production_countries, production, production_short, date, genres, rating, votes, description }) => {
+const Details = () => {
     const screenWidth = useScreenWidth();
+    const { movieDetails } = useMovieDetails();
+    const movie = movieDetails.data;
 
     return (
         <Wrapper>
-            {image
-                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
+            {movie?.poster_path
+                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path} />
                 : <Image src={no_poster} />
             }
             <Content>
-                <Title>{title}</Title>
+                <Title>{movie?.title}</Title>
                 <Year>
-                    {year
-                        ? (new Date(year).getFullYear())
-                        : ""
+                    {movie?.release_date
+                        ? (new Date(movie.release_date).getFullYear())
+                        : null
                     }
                 </Year>
                 <Production>
                     <div>
                         <Info>Production:</Info>
-                        {production_countries
+                        {movie?.production_countries
                             ? screenWidth > 767
-                                ? production
-                                : production_short
+                                ? movie.production_countries.map((production) => production.name).join(", ")
+                                : movie.production_countries.map((production) => production.iso_3166_1).join(", ")
                             : "Unknown"
                         }
                     </div>
                     <div>
                         <Info>Release date:</Info>
-                        {date
-                            ? (new Date(date).toLocaleDateString())
+                        {movie?.release_date
+                            ? (new Date(movie.release_date).toLocaleDateString())
                             : "Unknown"
                         }
                     </div>
                 </Production>
                 <Tags>
-                    {genres.map((genre) =>
-                        <Tag key={genre}>{genre}</Tag>) || []
+                    {Array.isArray(movie?.genres) && movie.genres.length > 0
+                        ? movie.genres.map((genre) => <Tag key={genre.id}>{genre.name}</Tag>)
+                        : null
                     }
                 </Tags>
-
-                {votes
+                {movie?.vote_average
                     ? <Opinion>
                         <Rating>
                             <Vector src={star} alt="" />
-                            <Text>{rating.toFixed(1).replace(".", ",")}</Text>
+                            <Text>{movie.vote_average.toFixed(1).replace(".", ",")}</Text>
                         </Rating>
                         <Ten>/ 10</Ten>
                         <Votes>
-                            {votes.toLocaleString(undefined, {
+                            {movie.vote_count?.toLocaleString(undefined, {
                                 useGrouping: true,
                             })}
-                            {votes.toLocaleString() === "1"
+                            {movie.vote_count === "1"
                                 ? " vote"
                                 : " votes"}
                         </Votes>
@@ -83,7 +86,7 @@ const Details = ({ image, title, year, production_countries, production, product
                     </Opinion>
                 }
 
-                <Description>{description}</Description>
+                <Description>{movie?.overview}</Description>
             </Content>
         </Wrapper>
     );
