@@ -23,7 +23,7 @@ export const usePopularMovies = () => {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
 
-                    if (response.data.results && response.data.results.length > 0) {
+                    if (response.data) {
                         setTotalPagesMovies(i);
                     }
                 }
