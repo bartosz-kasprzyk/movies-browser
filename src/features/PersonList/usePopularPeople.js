@@ -24,6 +24,7 @@ export const usePopularPeople = () => {
 
                     if (response.data) {
                         setTotalPagesPeople(i);
+                        break;
                     }
                 }
             } catch (error) {

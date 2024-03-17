@@ -25,6 +25,7 @@ export const usePopularMovies = () => {
 
                     if (response.data) {
                         setTotalPagesMovies(i);
+                        break;
                     }
                 }
             } catch (error) {
