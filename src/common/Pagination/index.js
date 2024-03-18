@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { useScreenWidth } from "../../useScreenWidth";
 import {
@@ -17,7 +18,7 @@ import { toMovies } from "../../routes";
 import { useSearchResults } from "../../features/SearchResults/useSearchResults";
 import { useQueryParameter } from "../Header/SearchBar/queryParameters";
 
-export const Pagination = (isMoviesPage) => {
+export const Pagination = ({ isMoviesPage }) => {
     const location = useLocation();
     const history = useHistory();
     const { searchResults } = useSearchResults();
@@ -33,6 +34,13 @@ export const Pagination = (isMoviesPage) => {
 
     const searchParams = new URLSearchParams(location.search);
     const currentPage = parseInt(searchParams.get("page")) || 1;
+
+    useEffect(() => {
+        if (isNaN(currentPage) || currentPage < 1 || currentPage > totalPages) {
+            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ''}page=1`;
+            history.replace(newUrl);
+        }
+    }, [currentPage, history, location.pathname, query, totalPages]);
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
@@ -90,5 +98,5 @@ export const Pagination = (isMoviesPage) => {
                 </ButtonTile>
             </ButtonSection>
         </Wrapper>
-    )
+    );
 };
