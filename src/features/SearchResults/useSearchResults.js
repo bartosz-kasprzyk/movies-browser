@@ -12,7 +12,7 @@ export const useSearchResults = () => {
     const isMoviesPage = location.pathname.startsWith("/movies");
 
     const [searchResults, setSearchResults] = useState({
-        status: "loading",
+        status: "",
         data: [],
     });
 
