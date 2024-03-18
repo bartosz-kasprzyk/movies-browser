@@ -21,20 +21,23 @@ export const Title = styled.header`
 `;
 
 export const Grid = styled.div`
+    width: 1368px;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 324px);
     grid-gap: 24px;
     padding-top: 24px;
     justify-content: center;
+    margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        grid-template-columns: repeat(3, auto);
+        width: auto;
+        grid-template-columns: repeat(3, 324px);
         grid-gap: 22px;
         padding-top: 22px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 324px);
         grid-gap: 20px;
         padding-top: 20px;
     }
