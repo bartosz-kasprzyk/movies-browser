@@ -14,19 +14,20 @@ export const Tile = styled.article`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         width: 668px;
-        min-height: 422px;
+        min-height: 360px;
         padding: 32px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 100%;
-        min-height: 272px;
+        min-height: 292px;
         padding: 24px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         display: flex;
         flex-wrap: wrap;
+        min-height: 195px;
         padding: 16px;
         gap: 16px;
     }

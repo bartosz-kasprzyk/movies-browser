@@ -271,7 +271,6 @@ export const Votes = styled.span`
     }
 `;
 
-
 export const NoVotes = styled.span`
     color: ${({ theme }) => theme.color.waterloo}; 
     font-size: 14px;

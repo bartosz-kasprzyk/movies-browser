@@ -5,6 +5,7 @@ export const MovieNavLink = styled(NavLink)`
     background: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;
+    transition: transform ease 300ms;
     width: 324px;
     height: auto;
     padding: 16px;
@@ -12,9 +13,6 @@ export const MovieNavLink = styled(NavLink)`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    color: ${({ theme }) => theme.color.black};
-    text-decoration: none;
-    transition: transform ease 300ms;
 
     &:hover {
         transform: translate(0, -10px);
@@ -25,9 +23,7 @@ export const MovieNavLink = styled(NavLink)`
         width: 100%;
         min-height: 201px;
         gap: 16px;
-    }
-
-    
+    }  
 `;
 
 export const Image = styled.img`

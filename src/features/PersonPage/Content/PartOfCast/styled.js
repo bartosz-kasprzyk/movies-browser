@@ -46,7 +46,6 @@ export const Grid = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 16px;
-        padding-top: 12px;
     }
 `;
 

@@ -1,3 +1,4 @@
+import { useLocation, useHistory } from "react-router-dom";
 import { useScreenWidth } from "../../useScreenWidth";
 import {
     Wrapper,
@@ -10,21 +11,43 @@ import {
     CounterText,
     CounterNumber
 } from "./styled";
+import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
+import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
+
+import { toMovies } from "../../routes";
 
 export const Pagination = () => {
+    const location = useLocation();
+    const history = useHistory();
+
+    const { totalPagesMovies } = usePopularMovies();
+    const { totalPagesPeople } = usePopularPeople();
+
+    const totalPages = location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
+
+    const searchParams = new URLSearchParams(location.search);
+    const currentPage = parseInt(searchParams.get("page")) || 1;
+
+    const changePage = (newPage) => {
+        if (1 <= newPage && newPage <= totalPages) {
+            const newUrl = `${location.pathname}?page=${newPage}`;
+            history.push(newUrl);
+        }
+    };
+
     const screenWidth = useScreenWidth();
 
     return (
         <Wrapper>
             <ButtonSection>
-                <ButtonTile disabled>
+                <ButtonTile disabled={currentPage === 1} onClick={() => changePage(1)}>
                     {screenWidth > 767 ? <Left /> : <><Left /><Left /></>}
                     <ButtonText>
                         First
                     </ButtonText>
                 </ButtonTile>
 
-                <ButtonTile disabled>
+                <ButtonTile disabled={currentPage === 1} onClick={() => changePage(currentPage - 1)}>
                     <Left />
                     <ButtonText>
                         Previous
@@ -34,20 +57,24 @@ export const Pagination = () => {
 
             <CounterWrapper>
                 <CounterText>Page</CounterText>
-                <CounterNumber>1</CounterNumber>
+                <CounterNumber>{currentPage.toLocaleString(undefined, {
+                    useGrouping: true,
+                })}</CounterNumber>
                 <CounterText>of</CounterText>
-                <CounterNumber>500</CounterNumber>
+                <CounterNumber>{totalPages.toLocaleString(undefined, {
+                    useGrouping: true,
+                })}</CounterNumber>
             </CounterWrapper>
 
             <ButtonSection>
-                <ButtonTile>
+                <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(currentPage + 1)}>
                     <ButtonText>
                         Next
                     </ButtonText>
                     <Right />
                 </ButtonTile>
 
-                <ButtonTile>
+                <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(totalPages)}>
                     <ButtonText>
                         Last
                     </ButtonText>

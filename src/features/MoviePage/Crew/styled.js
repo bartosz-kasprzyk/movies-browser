@@ -27,8 +27,6 @@ export const Title = styled.header`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        width: 288px;
-        margin: 0 auto;
         font-size: 20px;
         margin-top: 21px;   
         }
@@ -69,6 +67,7 @@ export const Grid = styled.span`
     @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
         grid-template-columns: repeat(3, 136px);
         grid-gap: 16px;
+        padding-top: 16px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
