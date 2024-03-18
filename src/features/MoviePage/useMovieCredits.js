@@ -24,9 +24,8 @@ export const useMovieCredits = () => {
             } catch (error) {
                 setMovieCredits({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
             }
         };
 

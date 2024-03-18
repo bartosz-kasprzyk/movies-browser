@@ -51,9 +51,8 @@ export const usePopularMovies = () => {
             } catch (error) {
                 setPopularMovies({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
             }
         };
 
