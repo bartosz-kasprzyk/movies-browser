@@ -37,7 +37,7 @@ export const useSearchResults = () => {
                     console.error(error);
                 }
             }
-        }, 500);
+        }, 300);
 
         return () => clearTimeout(debounce);
     }, [query, isMoviesPage]);
