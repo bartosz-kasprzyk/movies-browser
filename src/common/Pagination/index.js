@@ -32,12 +32,7 @@ export const Pagination = (isMoviesPage) => {
         : location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
 
     const searchParams = new URLSearchParams(location.search);
-    let currentPage;
-    if (!query) {
-        currentPage = parseInt(searchParams.get("page")) || 1;
-    } else {
-        currentPage = 1;
-    }
+    const currentPage = parseInt(searchParams.get("page")) || 1;
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
