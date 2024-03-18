@@ -14,6 +14,7 @@ export const usePopularPeople = () => {
 
     const [popularPeople, setPopularPeople] = useState({
         status: "loading",
+        data: [],
     });
 
     useEffect(() => {
