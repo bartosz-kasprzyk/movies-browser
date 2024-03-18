@@ -5,18 +5,18 @@ import SearchResults from './features/SearchResults';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
 import { HashRouter, Route, Redirect, Switch } from 'react-router-dom';
-import { toMovie, toMovies, toPeople, toPerson } from './routes';
+import { toMovie, toMovies, toMoviesSearch, toPeople, toPeopleSearch, toPerson } from './routes';
 
 function App() {
   return (
     <HashRouter>
       <Header />
       <Switch>
-        <Route path="/movies/search">
+        <Route path={toMoviesSearch()}>
           <SearchResults />
         </Route>
 
-        <Route path="/people/search">
+        <Route path={toPeopleSearch()}>
           <SearchResults />
         </Route>
 
