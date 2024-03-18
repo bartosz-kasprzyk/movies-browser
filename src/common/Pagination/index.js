@@ -13,24 +13,37 @@ import {
 } from "./styled";
 import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
 import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
-
 import { toMovies } from "../../routes";
+import { useSearchResults } from "../../features/SearchResults/useSearchResults";
+import { useQueryParameter } from "../Header/SearchBar/queryParameters";
 
-export const Pagination = () => {
+export const Pagination = (isMoviesPage) => {
     const location = useLocation();
     const history = useHistory();
+    const { searchResults } = useSearchResults();
+    const query = useQueryParameter("query");
 
     const { totalPagesMovies } = usePopularMovies();
     const { totalPagesPeople } = usePopularPeople();
+    const totalSearchPages = +searchResults.data?.total_pages;
 
-    const totalPages = location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
+    const totalPages = query
+        ? isMoviesPage ? totalSearchPages : totalSearchPages
+        : location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
 
     const searchParams = new URLSearchParams(location.search);
-    const currentPage = parseInt(searchParams.get("page")) || 1;
+    let currentPage;
+    if (!query) {
+        currentPage = parseInt(searchParams.get("page")) || 1;
+    } else {
+        currentPage = 1;
+    }
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            const newUrl = `${location.pathname}?page=${newPage}`;
+            const newUrl = query
+                ? `${location.pathname}?query=${query}&page=${newPage}`
+                : `${location.pathname}?page=${newPage}`;
             history.push(newUrl);
         }
     };

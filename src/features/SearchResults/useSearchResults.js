@@ -10,9 +10,11 @@ export const useSearchResults = () => {
 
     const location = useLocation();
     const isMoviesPage = location.pathname.startsWith("/movies");
+    
+    const currentPage = new URLSearchParams(location.search).get("page") || 1;
 
     const [searchResults, setSearchResults] = useState({
-        status: "",
+        status: "loading",
         data: [],
     });
 
@@ -21,7 +23,7 @@ export const useSearchResults = () => {
 
         const debounce = setTimeout(async () => {
             if (query) {
-                const url = `${url_front_search}${isMoviesPage ? "movie" : "person"}${url_back}&query=${query}&page=1`;
+                const url = `${url_front_search}${isMoviesPage ? "movie" : "person"}${url_back}&query=${query}&page=${currentPage}`;
 
                 try {
                     const response = await axios.get(url);
@@ -40,7 +42,7 @@ export const useSearchResults = () => {
         }, 300);
 
         return () => clearTimeout(debounce);
-    }, [query, isMoviesPage]);
+    }, [query, isMoviesPage, currentPage]);
 
     return { searchResults };
 };
