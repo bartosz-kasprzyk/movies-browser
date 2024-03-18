@@ -85,9 +85,8 @@ const Details = () => {
                         <NoVotes> No votes yet</NoVotes>
                     </Opinion>
                 }
-
-                <Description>{movie?.overview}</Description>
             </Content>
+            <Description>{movie?.overview}</Description>
         </Wrapper>
     );
 };

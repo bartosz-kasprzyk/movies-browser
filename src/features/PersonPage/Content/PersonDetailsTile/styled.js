@@ -6,7 +6,6 @@ export const Tile = styled.article`
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
-    justify-content: center;
     margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
@@ -15,19 +14,20 @@ export const Tile = styled.article`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         width: 668px;
-        min-height: 422px;
+        min-height: 360px;
         padding: 32px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 100%;
-        min-height: 272px;
+        min-height: 292px;
         padding: 24px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         display: flex;
         flex-wrap: wrap;
+        min-height: 195px;
         padding: 16px;
         gap: 16px;
     }
@@ -36,8 +36,7 @@ export const Tile = styled.article`
 export const Image = styled.img`
     width: 399px;
     height: 564px;
-    border-radius: 5px;
-    margin: 0 40px 40px 0;
+    margin: 0 40px 30px 0;
     float: left;
     border-radius: 5px;
     

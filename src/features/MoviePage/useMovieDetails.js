@@ -23,7 +23,8 @@ export const useMovieDetails = () => {
                 });
             } catch (error) {
                 setMovieDetails({
-                    status: "error"
+                    status: "error",
+                    error: error.message,
                 });
                 console.log(error);
             }

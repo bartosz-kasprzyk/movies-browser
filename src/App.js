@@ -1,12 +1,12 @@
 import { Header } from './common/Header';
 import MovieList from './features/MovieList';
 import MoviePage from './features/MoviePage';
+import SearchResults from './features/SearchResults';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
-import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { toMovie, toMovies, toPeople, toPerson } from './routes';
+import { HashRouter, Route, Redirect, Switch, useHistory } from 'react-router-dom';
+import { toMovie, toMovies, toMoviesSearch, toPeople, toPeopleSearch, toPerson } from './routes';
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function ScrollToTop() {
   const history = useHistory();
@@ -28,8 +28,16 @@ function App() {
     <HashRouter basename="/movies-browser">
       <Header />
       <ScrollToTop />
-      
+
       <Switch>
+        <Route path={toMoviesSearch()}>
+          <SearchResults />
+        </Route>
+
+        <Route path={toPeopleSearch()}>
+          <SearchResults />
+        </Route>
+
         <Route path={toMovie()}>
           <MoviePage />
         </Route>

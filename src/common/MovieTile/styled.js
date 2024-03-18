@@ -21,7 +21,7 @@ export const MovieNavLink = styled(NavLink)`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         flex-direction: row;
         width: 100%;
-        height: 201px;
+        min-height: 201px;
         gap: 16px;
     }  
 `;

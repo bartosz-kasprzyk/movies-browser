@@ -24,7 +24,7 @@ export const Title = styled.header`
 export const Grid = styled.div`
     width: 1368px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 324px);
+    grid-template-columns: repeat(4, 324px);
     grid-gap: 24px;
     padding-top: 24px;
     justify-content: center;
@@ -32,11 +32,15 @@ export const Grid = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
         width: auto;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 324px);
+        grid-gap: 22px;
+        padding-top: 22px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 324px);
+        grid-gap: 20px;
+        padding-top: 20px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
@@ -44,3 +48,4 @@ export const Grid = styled.div`
         grid-gap: 16px;
     }
 `;
+

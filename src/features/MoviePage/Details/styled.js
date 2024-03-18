@@ -1,35 +1,42 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.article`
+    min-height: 544px;
     width: 1368px;
-    margin: auto;
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 40px;
+    margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        width: 1016px;
+        width: 1128px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        width: 898px;
+        width: 892px;
+        min-height: 422px;
         padding: 32px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        width: 660px;
+        width: 678px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 100%;
+        width: 592px;
+        min-height: 272px;
         padding: 24px;
     }
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
+        width: 440px;
+    }
+
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 288px;
         padding: 16px;
         gap: 16px;
     }
@@ -38,21 +45,39 @@ export const Wrapper = styled.article`
 export const Image = styled.img`
     width: 312px;
     height: 464px;
+    margin: 0 40px 30px 0;
+    float: left;
     border-radius: 5px;
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        width: 210px;
+        height: 296px;
+        margin: 0 32px 4px 0;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 176px;
         height: 260px;
+        margin: 0 24px 4px 0;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
+        margin: 0 24px 16px 0;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         width: 114px;
         height: 169px;
+        margin: 0;
     }
 `;
 
 export const Content = styled.div`
     flex-grow: 1;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        width: calc(100% - 152px);
+    }
 `;
 
 export const Title = styled.header`
@@ -60,6 +85,11 @@ export const Title = styled.header`
     font-size: 36px;
     margin-top: 12px;
     margin-bottom: 24px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        margin-top: 9px;
+        margin-bottom: 20px;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-weight: 500;
@@ -77,7 +107,11 @@ export const Title = styled.header`
 
 export const Year = styled.div`
     font-size: 22px;
-    margin-bottom: 24px;    
+    margin-bottom: 24px;  
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        margin-bottom: 16px;
+    }
     
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         color: ${({ theme }) => theme.color.waterloo};
@@ -87,6 +121,7 @@ export const Year = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 13px;
+        margin-bottom: 2px;
     }
 `;
 
@@ -99,7 +134,7 @@ export const Production = styled.div`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 12px;
-        line-height: 20px;
+        line-height: 22px;
     }
 `;
 
@@ -118,10 +153,18 @@ export const Tags = styled.ul`
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
-    margin: 8px -8px;
+    margin-top: 20px;
+    gap: 16px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        gap: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        margin: 2px -8px 16px;
+        margin-top: 4px;
+        margin-bottom: 18px;
     }
 `;
 
@@ -129,19 +172,16 @@ export const Tag = styled.li`
     background: ${({ theme }) => theme.color.mystic};
     font-size: 14px;
     padding: 8px 16px;
-    margin: 8px;
     border-radius: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 12px;
         padding: 6px 12px;
-        margin: 6px 0 6px 8px;
     }
         
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 10px;
         padding: 4px 8px;
-        margin: 4px 0 4px 8px;
     }
 `;
 
@@ -157,7 +197,7 @@ export const Rating = styled.div`
     gap: 8px;
     width: 64px;
     height: 29px;
-    margin: 9px 8px 3px 8px;
+    margin: 9px 8px 3px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         flex-wrap: wrap;
@@ -167,7 +207,7 @@ export const Rating = styled.div`
 `;
 
 export const Vector = styled.img`
-    margin: 2.5px 0 2.5px;
+    margin: 2.5px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 20px;
@@ -205,7 +245,7 @@ export const Ten = styled.span`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 12px;
         line-height: 32px;
-        margin-left: -14px;
+        margin: 10px 12px 3px -14px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
@@ -244,23 +284,23 @@ export const NoVotes = styled.span`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         line-height: 0;
-        margin: 0 -2px 0 8px;
     }
 `;
 
 export const Description = styled.div`
     font-size: 20px;
-    line-height: 1.6;
-    
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    line-height: 32px;
+    margin-top: 12px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 17px;
-        margin-top: 40px;
-        margin-left: -205px;
+        line-height: 27px;
+        margin-top: 8px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 14px;
-        margin-top: 30px;
-        margin-left: -130px;
+        line-height: 22px;
+        margin-top: -10px;
     }
 `;

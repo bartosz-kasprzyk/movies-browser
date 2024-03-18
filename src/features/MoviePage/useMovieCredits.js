@@ -23,7 +23,8 @@ export const useMovieCredits = () => {
                 });
             } catch (error) {
                 setMovieCredits({
-                    status: "error"
+                    status: "error",
+                    error: error.message,
                 });
                 console.log(error);
             }
