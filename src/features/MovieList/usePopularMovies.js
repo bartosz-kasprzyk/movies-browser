@@ -13,11 +13,16 @@ export const usePopularMovies = () => {
     const url = `${url_front_movie}popular${url_back}`;
 
     const [popularMovies, setPopularMovies] = useState({
-        status: "loading",
+        status: "",
         data: [],
     });
 
     useEffect(() => {
+        setPopularMovies({
+            status: "loading",
+            data: [],
+        });
+
         const getTotalPagesMovies = async () => {
             try {
                 for (let i = 500; i <= 1000000; i++) {

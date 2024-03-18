@@ -17,7 +17,10 @@ export const useSearchResults = () => {
     });
 
     useEffect(() => {
-        setSearchResults({ status: "loading", data: [] });
+        setSearchResults({
+            status: "loading",
+            data: [],
+        });
 
         const debounce = setTimeout(async () => {
             if (query) {

@@ -13,11 +13,16 @@ export const usePopularPeople = () => {
     const url = `${url_front_person}popular${url_back}`;
 
     const [popularPeople, setPopularPeople] = useState({
-        status: "loading",
+        status: "",
         data: [],
     });
 
     useEffect(() => {
+        setPopularPeople({
+            status: "loading",
+            data: [],
+        });
+
         const getTotalPagesPeople = async () => {
             try {
                 for (let i = 500; i <= 1000000; i++) {
