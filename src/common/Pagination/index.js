@@ -37,7 +37,7 @@ export const Pagination = ({ isMoviesPage }) => {
 
     useEffect(() => {
         if (isNaN(currentPage) || currentPage < 1 || currentPage > totalPages) {
-            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ""}page=1`;
+            const newUrl = `${location.pathname}?${query ? `query=${query}&page=1` : ""}page=${currentPage}`;
             history.replace(newUrl);
         }
     }, [currentPage, history, location.pathname, query, totalPages]);
