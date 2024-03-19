@@ -18,12 +18,11 @@ export const usePopularMovies = () => {
     });
 
     useEffect(() => {
-        setPopularMovies({
-            status: "loading",
-            data: [],
-        });
-
         const getTotalPagesMovies = async () => {
+            setPopularMovies({
+                status: "loading",
+                data: [],
+            });
             try {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
