@@ -37,16 +37,14 @@ export const Pagination = ({ isMoviesPage }) => {
 
     useEffect(() => {
         if (isNaN(currentPage) || currentPage < 1 || currentPage > totalPages) {
-            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ''}page=1`;
+            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ""}page=1`;
             history.replace(newUrl);
         }
     }, [currentPage, history, location.pathname, query, totalPages]);
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            const newUrl = query
-                ? `${location.pathname}?query=${query}&page=${newPage}`
-                : `${location.pathname}?page=${newPage}`;
+            const newUrl =`${location.pathname}?${query ? `query=${query}&` : ""}page=${newPage}`
             history.push(newUrl);
         }
     };

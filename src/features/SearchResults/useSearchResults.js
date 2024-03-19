@@ -4,7 +4,6 @@ import { url_back, url_front_search } from "../../common/API/requests";
 import { useQueryParameter } from "../../common/Header/SearchBar/queryParameters";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
-
 export const useSearchResults = () => {
     const query = useQueryParameter("query");
 
