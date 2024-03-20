@@ -13,12 +13,16 @@ export const usePopularMovies = () => {
     const url = `${url_front_movie}popular${url_back}`;
 
     const [popularMovies, setPopularMovies] = useState({
-        status: "loading",
+        status: "",
         data: [],
     });
 
     useEffect(() => {
         const getTotalPagesMovies = async () => {
+            setPopularMovies({
+                status: "loading",
+                data: [],
+            });
             try {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
@@ -46,9 +50,8 @@ export const usePopularMovies = () => {
             } catch (error) {
                 setPopularMovies({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
             }
         };
 

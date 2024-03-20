@@ -13,12 +13,16 @@ export const usePopularPeople = () => {
     const url = `${url_front_person}popular${url_back}`;
 
     const [popularPeople, setPopularPeople] = useState({
-        status: "loading",
+        status: "",
         data: [],
     });
 
     useEffect(() => {
         const getTotalPagesPeople = async () => {
+            setPopularPeople({
+                status: "loading",
+                data: [],
+            });
             try {
                 for (let i = 500; i <= 1000000; i++) {
                     const response = await axios.get(`${url}&page=${i}`);
@@ -46,9 +50,8 @@ export const usePopularPeople = () => {
             } catch (error) {
                 setPopularPeople({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
             }
         };
 
