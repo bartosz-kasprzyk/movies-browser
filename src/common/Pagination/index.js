@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { useScreenWidth } from "../../useScreenWidth";
 import {
@@ -35,12 +35,15 @@ export const Pagination = ({ isMoviesPage }) => {
     const searchParams = new URLSearchParams(location.search);
     const currentPage = parseInt(searchParams.get("page")) || 1;
 
+    const [pageOne, setPageOne] = useState(false);
+
     useEffect(() => {
-        if (isNaN(currentPage) || currentPage < 1 || currentPage > totalPages) {
-            const newUrl = `${location.pathname}?${query ? `query=${query}&page=1` : ""}page=${currentPage}`;
+        if (query && !pageOne) {
+            const newUrl = `${location.pathname}?query=${query}&page=1`;
             history.replace(newUrl);
+            setPageOne(true);
         }
-    }, [currentPage, history, location.pathname, query, totalPages]);
+    }, [query, location.pathname, history, pageOne]);
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
