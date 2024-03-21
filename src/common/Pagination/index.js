@@ -47,7 +47,7 @@ export const Pagination = ({ isMoviesPage }) => {
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            const newUrl =`${location.pathname}?${query ? `query=${query}&` : ""}page=${newPage}`
+            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ""}page=${newPage}`
             history.push(newUrl);
         }
     };
