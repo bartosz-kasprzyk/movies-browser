@@ -10,10 +10,11 @@ import { Container } from '../../common/Container';
 const MoviePage = () => {
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
+    const { loading } = useMovieDetails();
 
     return (
         <>
-            {movieDetails.status === "loading" ? (
+            {loading === true ? (
                 <Loading />
             )
                 : movieDetails.status === "error" ? (
