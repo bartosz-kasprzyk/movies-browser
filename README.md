@@ -1,10 +1,31 @@
 # Movies Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Powered by <a href="https://www.themoviedb.org/"><img src="/src/images/tmdb.jpg" alt="TMDB logo" width="100"></a>
+
+Explore a vast collection of movies and personalities with ease using this intuitive, user-friendly browser, which harnesses the power of the extensive TMDB database. Effortlessly browse through a wide range of movies and explore the world of cinema to gain valuable insights and make exciting discoveries.
 
 ## Demo
 
 https://bartek-kasprzyk.github.io/movies-browser
+
+## Technologies 🛠️
+
+Project was created with technologies such as:
+* CSS
+* HTML
+* JavaScript (ES6+) features
+* BEM
+* Flexbox
+* Grid
+* Custom hooks
+* Styled components
+* Create React App
+* React-Redux
+* Redux-toolkit
+* React-Router
+* Axios
+
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -38,8 +59,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Authors
+## Authors 👥 
 
-This project was created by [Bartosz Kasprzyk](https://github.com/bartek-kasprzyk), [Przemysław Pacek](https://github.com/doncochino) and [Vitalii](https://github.com/VITALIKXXX).
+This project was created by
+
+- [Bartosz Kasprzyk](https://github.com/bartek-kasprzyk)  
+- [Przemysław Pacek](https://github.com/doncochino)  
+- [Vitalii](https://github.com/VITALIKXXX)
 
 Thank you for visiting our website!
