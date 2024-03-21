@@ -1,14 +1,15 @@
+import { Container } from "../Container";
 import { useQueryParameter } from "../Header/SearchBar/queryParameters";
-import { NoResultsText, StyledHeader, StyledImages } from "./styled";
+import { NoResultsText, StyledImages } from "./styled";
 
 const NoResults = () => {
     const query = useQueryParameter("query");
 
     return (
-        <StyledHeader>
+        <Container>
             <NoResultsText>Sorry, there are no results for "{query}"</NoResultsText>
             <StyledImages />
-        </StyledHeader>
+        </Container>
     );
 };
 
