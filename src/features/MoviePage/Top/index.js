@@ -42,9 +42,11 @@ const Top = () => {
                                 {movie.vote_count === 1 ? " vote" : " votes"}
                             </Votes>
                         </Opinion>
-                        : <Opinion>
-                            <Votes>No votes yet</Votes>
-                        </Opinion>
+                        : movie.backdrop_path
+                            ? <Opinion>
+                                <Votes>No votes yet</Votes>
+                            </Opinion>
+                            : null
                     }
 
                 </MainInfo>
