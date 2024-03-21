@@ -8,10 +8,11 @@ import Error from "../../common/Error";
 
 export const PersonPage = () => {
     const { personDetails } = usePersonDetails();
+    const { loading } = usePersonDetails();
 
     return (
         <>
-            {personDetails.status === "loading" ? (
+            {loading === true ? (
                 <Loading />
             )
                 : personDetails.status === "error" ? (

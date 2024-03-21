@@ -9,10 +9,12 @@ import { Container } from '../../common/Container';
 
 const MoviePage = () => {
     const { movieDetails } = useMovieDetails();
+    const movie = movieDetails.data;
+    const { loading } = useMovieDetails();
 
     return (
         <>
-            {movieDetails.status === "loading" ? (
+            {loading === true ? (
                 <Loading />
             )
                 : movieDetails.status === "error" ? (
@@ -20,7 +22,10 @@ const MoviePage = () => {
                 )
                     : (
                         <>
-                            <Top />
+                            {movie.backdrop_path ?
+                                <Top />
+                                : null
+                            }
                             <Container>
                                 <Details />
                                 <Cast />

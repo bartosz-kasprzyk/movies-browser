@@ -5,7 +5,7 @@ import { ReactComponent as Danger } from "../../images/Danger.svg";
 export const StyledDanger = styled(Danger)`
     width: 120px;
     height: 120px;
-    margin-top: 180px;
+    margin-top: 124px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
         width: 80px;
@@ -53,6 +53,7 @@ export const Button = styled(NavLink)`
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
+    font-family: "Open Sans", sans-serif;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
        font-size: 10px;

@@ -8,6 +8,8 @@ export const usePersonDetails = () => {
 
     const url = `${url_front_person}${person.id}${url_back}`;
 
+    const [loading, setLoading] = useState(true);
+
     const [personDetails, setPersonDetails] = useState({
         data: [],
         status: "loading",
@@ -24,14 +26,19 @@ export const usePersonDetails = () => {
             } catch (error) {
                 setPersonDetails({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
+            }
+            finally {
+                setTimeout(() => {
+                    setLoading(false);
+                }, 300);
+
             }
         };
 
-        setTimeout(getPersonDetails, 300);
+        setTimeout(getPersonDetails, 0);
     }, [url]);
 
-    return { personDetails };
+    return { loading, personDetails };
 };

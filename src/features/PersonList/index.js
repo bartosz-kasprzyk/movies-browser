@@ -8,7 +8,7 @@ import { Container } from '../../common/Container';
 
 export const PersonList = () => {
     const { popularPeople } = usePopularPeople();
-    const people_list = popularPeople.data.results;
+    const people_list = popularPeople.data;
 
     return (
         <>

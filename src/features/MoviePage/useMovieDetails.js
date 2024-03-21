@@ -8,6 +8,8 @@ export const useMovieDetails = () => {
 
     const url = `${url_front_movie}${movie.id}${url_back}`;
 
+    const [loading, setLoading] = useState(true);
+
     const [movieDetails, setMovieDetails] = useState({
         data: [],
         status: "loading",
@@ -24,14 +26,18 @@ export const useMovieDetails = () => {
             } catch (error) {
                 setMovieDetails({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
+            }
+            finally {
+                setTimeout(() => {
+                    setLoading(false);
+                }, 300);
             }
         };
 
-        setTimeout(getMovieDetails, 300);
+        setTimeout(getMovieDetails, 0);
     }, [url]);
 
-    return { movieDetails };
+    return { loading, movieDetails };
 };
