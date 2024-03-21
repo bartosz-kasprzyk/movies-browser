@@ -45,7 +45,7 @@ export const usePopularMovies = () => {
 
                 setPopularMovies({
                     status: "success",
-                    data: response.data,
+                    data: response.data.results,
                 });
             } catch (error) {
                 setPopularMovies({

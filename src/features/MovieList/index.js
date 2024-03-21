@@ -9,7 +9,7 @@ import { Container } from '../../common/Container';
 
 const MovieList = () => {
     const { popularMovies } = usePopularMovies();
-    const movie_list = popularMovies.data.results;
+    const movie_list = popularMovies.data;
     const { genres } = useGenres();
     const genre_list = genres.data;
 

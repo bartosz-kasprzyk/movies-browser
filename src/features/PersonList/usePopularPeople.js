@@ -45,7 +45,7 @@ export const usePopularPeople = () => {
 
                 setPopularPeople({
                     status: "success",
-                    data: response.data,
+                    data: response.data.results,
                 });
             } catch (error) {
                 setPopularPeople({
