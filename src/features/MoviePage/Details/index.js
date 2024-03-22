@@ -76,7 +76,7 @@ const Details = () => {
                             {movie.vote_count?.toLocaleString(undefined, {
                                 useGrouping: true,
                             })}
-                            {movie.vote_count === "1"
+                            {movie.vote_count === 1
                                 ? " vote"
                                 : " votes"}
                         </Votes>
