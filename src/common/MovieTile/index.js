@@ -58,7 +58,7 @@ export const MovieTile = ({ id, image, title, role, year, genres, rating, votes 
                             {votes.toLocaleString(undefined, {
                                 useGrouping: true,
                             })}
-                            {votes === "1"
+                            {votes === 1
                                 ? " vote"
                                 : " votes"}
                         </Votes>
