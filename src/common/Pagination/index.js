@@ -26,7 +26,7 @@ export const Pagination = ({ isMoviesPage }) => {
 
     const { totalPagesMovies } = usePopularMovies();
     const { totalPagesPeople } = usePopularPeople();
-    const totalSearchPages = +searchResults.data?.total_pages;
+    const totalSearchPages = +searchResults.data.total_pages;
 
     const totalPages = query
         ? isMoviesPage ? totalSearchPages : totalSearchPages
@@ -37,7 +37,6 @@ export const Pagination = ({ isMoviesPage }) => {
 
     useEffect(() => {
         if (query && query.length === 1) {
-            // Jeśli wprowadzono tylko jedną literę, automatycznie ustaw stronę na pierwszą
             const newUrl = `${location.pathname}?query=${query}&page=1`;
             history.replace(newUrl);
         }
