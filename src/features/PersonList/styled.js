@@ -22,7 +22,7 @@ export const Heading = styled.header`
     font-weight: 600;
     grid-column: 1 / -1;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 28px;
     }
 

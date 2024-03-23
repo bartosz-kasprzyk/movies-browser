@@ -5,6 +5,10 @@ export const MainTitle = styled.h1`
     font-size: 36px;
     margin-bottom: 24px;
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        font-size: 27px;
+    }
+    
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 18px;
         margin-bottom: 12px;
