@@ -16,7 +16,6 @@ import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
 import { toMovies } from "../../routes";
 import { useSearchResults } from "../../features/SearchResults/useSearchResults";
 import { useQueryParameter } from "../Header/SearchBar/queryParameters";
-import { useEffect, useState } from "react";
 
 export const Pagination = ({ isMoviesPage }) => {
     const location = useLocation();
@@ -34,16 +33,6 @@ export const Pagination = ({ isMoviesPage }) => {
 
     const searchParams = new URLSearchParams(location.search);
     const currentPage = parseInt(searchParams.get("page")) || 1;
-
-    const [pageOne, setPageOne] = useState(false);
-
-    useEffect(() => {
-        if (query && !pageOne && (isNaN(currentPage) || currentPage < 1 || currentPage > totalPages)) {
-            const newUrl = `${location.pathname}?query=${query}&page=1`;
-            history.replace(newUrl);
-            setPageOne(true);
-        }
-    }, [currentPage, pageOne, history, location.pathname, query, totalPages]);
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
