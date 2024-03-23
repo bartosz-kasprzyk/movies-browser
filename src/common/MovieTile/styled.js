@@ -6,8 +6,8 @@ export const MovieNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;
     transition: transform ease 300ms;
-    width: 324px;
-    height: auto;
+    position: relative;
+    width: 100%;
     padding: 16px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -18,7 +18,7 @@ export const MovieNavLink = styled(NavLink)`
         transform: translate(0, -10px);
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         flex-direction: row;
         width: 100%;
         min-height: 201px;
@@ -27,13 +27,13 @@ export const MovieNavLink = styled(NavLink)`
 `;
 
 export const Image = styled.img`
-    width: 292px;
-    height: 434px;
+    max-width: 292px;
+    max-height: 434px;
     border-radius: 5px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 114px;
-        height: 169px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        max-width: 114px;
+        max-height: 169px;
     }
 `;
 
@@ -50,7 +50,7 @@ export const Title = styled.header`
     line-height: 28.6px;
     margin: 16px 0 8px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 16px;
         margin: 0;
         line-height: 20.8px;
@@ -63,7 +63,7 @@ export const Subtitle = styled.div`
     margin-bottom: 8px;
     line-height: 24px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 13px;
         margin-bottom: 0;
     }
@@ -78,7 +78,7 @@ export const Tags = styled.ul`
     margin: 0;
     margin-bottom: 8px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         margin: 6px 0 8px;
 }
 `;
@@ -89,7 +89,7 @@ export const Tag = styled.li`
     padding: 8px 16px;
     border-radius: 5px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 10px;
         padding: 4px 8px;
 }
@@ -101,7 +101,7 @@ export const Opinion = styled.div`
     margin-top: auto;
     margin-bottom: -4px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         margin-top: 4px;
 }
 `;
@@ -110,7 +110,7 @@ export const Rating = styled.div`
     display: flex;
     gap: 12px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         gap: 8px; 
 }
 `;
@@ -119,7 +119,7 @@ export const Vector = styled.img`
     width: 24px;
     height: 24px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         width: 16px;
         height: 16px;
 }
@@ -130,7 +130,7 @@ export const Text = styled.div`
     font-weight: 600;
     line-height: 28px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 13px;
         line-height: 16.9px;
 }
@@ -141,7 +141,7 @@ export const Votes = styled.div`
     font-size: 16px;
     line-height: 28px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 13px;
         margin: -5.6px;
 }

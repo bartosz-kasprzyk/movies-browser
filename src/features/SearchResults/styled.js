@@ -18,18 +18,22 @@ export const MainTitle = styled.h1`
 export const Content = styled.span`
     width: 1368px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 324px);
+    grid-template-columns: repeat(4, 324px);
     justify-content: center;
     grid-gap: 24px;
     margin-bottom: 40px;
     margin: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        grid-template-columns: repeat(3, auto);
-        width: auto;
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        width: 100%;
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletOne}) {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         grid-template-columns: repeat(2, auto);
     }
 
@@ -41,18 +45,28 @@ export const Content = styled.span`
 
 export const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, 208px);
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
     grid-gap: 24px;
-    padding-top: 24px;
     justify-content: center;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        grid-template-columns: repeat(auto-fill, 136px);
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+        width: 100%;
+        grid-gap: 20px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
         grid-gap: 16px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
         padding-top: 16px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
         padding-top: 12px;
     }
 `;
