@@ -9,7 +9,8 @@ export const useSearchResults = () => {
 
     const location = useLocation();
     const isMoviesPage = location.pathname.startsWith("/movies");
-    const currentPage = new URLSearchParams(location.search).get("page") || 1;
+    const searchParams = new URLSearchParams(location.search);
+    const currentPage = parseInt(searchParams.get("page")) || 1;
 
     const [searchResults, setSearchResults] = useState({
         status: "",
