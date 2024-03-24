@@ -275,7 +275,7 @@ export const NoVotes = styled.span`
     color: ${({ theme }) => theme.color.waterloo}; 
     font-size: 14px;
     line-height: 37px;
-    margin: 9px 12px 3px 8px;
+    margin: 9px 12px 3px 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 13px;
@@ -284,6 +284,7 @@ export const NoVotes = styled.span`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         line-height: 0;
+        margin-left: 8px;
     }
 `;
 
