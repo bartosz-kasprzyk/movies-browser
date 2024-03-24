@@ -9,8 +9,8 @@ const Cast = () => {
     return (
         movie_cast && movie_cast.length !== 0
             ? <>
-                <Title>Cast</Title>
                 <Grid>
+                    <Title>Cast</Title>
                     {movie_cast && movie_cast.map((person) => (
                         <PersonTile
                             key={person.credit_id}

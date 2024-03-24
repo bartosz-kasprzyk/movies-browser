@@ -9,8 +9,8 @@ const Crew = () => {
     return (
         movie_crew && movie_crew.length !== 0
             ? <>
-                <Title>Crew</Title>
                 <Grid>
+                    <Title>Crew</Title>
                     {movie_crew && movie_crew.map((person) => (
                         <PersonTile
                             key={person.credit_id}

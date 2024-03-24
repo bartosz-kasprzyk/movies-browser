@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.header`
+    width: 1368px;
     font-weight: 600;
     font-size: 36px;
     margin: 64px auto 0 auto;
@@ -17,7 +18,7 @@ export const Title = styled.header`
         width: 100%;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 21px;   }
+        margin-top: 24px;   }
 `;
 
 export const Grid = styled.div`
@@ -45,5 +46,6 @@ export const Grid = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 16px;
+        padding-top: 16px;
     }
 `;

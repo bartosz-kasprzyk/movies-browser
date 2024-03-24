@@ -18,7 +18,7 @@ export const Title = styled.header`
         width: 100%;
         margin: 0 auto;
         font-size: 20px;
-        margin-top: 21px;   }
+        margin-top: 24px;   }
 `;
 
 export const Grid = styled.div`
@@ -46,6 +46,7 @@ export const Grid = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 16px;
+        padding-top: 16px;
     }
 `;
 
