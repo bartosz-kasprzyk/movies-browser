@@ -13,6 +13,7 @@ export const SearchBar = () => {
         replaceQueryParameter({
             key: "query",
             value: target.value.trim() !== "" ? target.value : undefined,
+            resetPage: true
         });
     };
 

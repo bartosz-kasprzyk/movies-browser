@@ -39,15 +39,18 @@ export const Pagination = ({ isMoviesPage }) => {
 
     useEffect(() => {
         if (query !== previousQuery) {
-            const newUrl = `${location.pathname}?query=${query}&page=1`;
+            const newUrl = `${location.pathname}?page=1&query=${query}`;
             history.replace(newUrl);
             setPreviousQuery(query);
+        } else if (!location.pathname.includes("search") && currentPage === 1) {
+            const newUrl = `${location.pathname}`;
+            history.replace(newUrl);
         }
-    }, [query, previousQuery, history, location.pathname]);
+    }, [currentPage, query, previousQuery, history, location.pathname]);
 
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ""}page=${newPage}`
+            const newUrl = `${location.pathname}?page=${newPage}${query ? `&query=${query}` : ""}`
             history.push(newUrl);
         }
     };
