@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const BlackBar = styled.div`
-    width: 100%;
     background: ${({ theme }) => theme.color.black};
+    width: 100%;
     margin-top: -56px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
@@ -15,63 +15,33 @@ export const BlackBar = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    max-width: 1368px;
-    position: relative;
     display: flex;
-    margin: 0 auto;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        max-width: 980px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        max-width: 780px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        width: 100%;
-    }
-`;
-
-export const Poster = styled.img`
+    justify-content: center;
+    position: relative;
+    width: 90%;
     max-width: 1368px;
-    height: 770px;
+    margin: 56px auto;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        max-width: 980px;
-        height: 560px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) { 
+        margin: 40px auto;
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        max-width: 780px;
-        height: 460px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        width: 100%;
-        height: auto;
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
+        margin: 24px auto;
     }
 `;
 
 export const Plexa = styled.img`
-    max-width: 1368px;
-    height: 770px;
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+`;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        max-width: 980px;
-        height: 560px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        max-width: 780px;
-        height: 460px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        width: 100%;
-        height: auto;
-    }
+export const Poster = styled.img`
+    width: 100%;
+    max-width: 1368px;
 `;
 
 export const MainInfo = styled.div`
@@ -85,13 +55,12 @@ export const MainInfo = styled.div`
         padding-bottom: 24px;
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        padding-left: 24px; 
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        padding-bottom: 12px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         padding-bottom: 8px;
-        padding-left: 16px;
     }
 `;
 
@@ -101,8 +70,13 @@ export const MainTitle = styled.div`
         padding-bottom: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+        font-size: 48px;
+        padding-bottom: 16px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         font-size: 36px;
-        padding-bottom: 4px;
+        padding-bottom: 8px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
