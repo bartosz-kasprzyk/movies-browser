@@ -34,7 +34,7 @@ export const Content = styled.span`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
