@@ -17,8 +17,8 @@ export const PartOfCrew = () => {
                 : (
                     person_crew && person_crew.length !== 0
                         ? <>
-                            <Title>Movies - Crew ({person_crew.length})</Title>
                             <Grid>
+                                <Title>Movies - Crew ({person_crew.length})</Title>
                                 {person_crew && person_crew.map((movie) => (
                                     <MovieTile
                                         key={movie.credit_id}

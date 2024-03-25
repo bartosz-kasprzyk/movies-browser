@@ -27,7 +27,7 @@ export const PersonDetailsTile = () => {
                 <Birth>
                     <div>
                         <Info>
-                            {screenWidth > 767 ? "Date of birth:" : "Birth:"}
+                            {screenWidth > 767 ? "Date of birth: " : "Birth: "}
                         </Info>
                         {person.birthday
                             ? (new Date(person.birthday)).toLocaleDateString()
@@ -35,7 +35,7 @@ export const PersonDetailsTile = () => {
                         }
                     </div>
                     <div>
-                        <Info>Place of birth:</Info>
+                        <Info>Place of birth: </Info>
                         {person.place_of_birth
                             ? person.place_of_birth
                             : "Unknown"
