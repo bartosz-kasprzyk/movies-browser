@@ -25,7 +25,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <HashRouter basename="/movies-browser">
+    <HashRouter>
       <Header />
       <ScrollToTop />
 
