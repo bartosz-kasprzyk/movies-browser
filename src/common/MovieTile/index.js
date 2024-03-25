@@ -10,7 +10,8 @@ import {
     Vector,
     Votes,
     Subtitle,
-    MovieNavLink
+    MovieNavLink,
+    NoVotes
 } from './styled';
 import star from '../../images/star.svg';
 import no_poster from '../../images/no poster.png'
@@ -64,7 +65,7 @@ export const MovieTile = ({ id, image, title, role, year, genres, rating, votes 
                         </Votes>
                     </Opinion>
                     : <Opinion>
-                        <Votes>No votes yet</Votes>
+                        <NoVotes>No votes yet</NoVotes>
                     </Opinion>
                 }
 

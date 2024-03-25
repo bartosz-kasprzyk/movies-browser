@@ -146,3 +146,13 @@ export const Votes = styled.div`
         margin: -5.6px;
 }
 `;
+
+export const NoVotes = styled.div`
+    color: ${({ theme }) => theme.color.waterloo};
+    font-size: 16px;
+    line-height: 28px;
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+        font-size: 13px;
+}
+`;
