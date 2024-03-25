@@ -8,6 +8,8 @@ Explore a vast collection of movies and personalities with ease using this intui
 
 https://bartek-kasprzyk.github.io/movies-browser
 
+![preview](/public/movies-browser.gif)
+
 ## Technologies 🛠️
 
 Project was created with technologies such as:
