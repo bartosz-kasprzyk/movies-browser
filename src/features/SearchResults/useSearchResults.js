@@ -4,12 +4,13 @@ import { url_back, url_front_search } from "../../common/API/requests";
 import { useQueryParameter } from "../../common/Header/SearchBar/queryParameters";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
-
 export const useSearchResults = () => {
     const query = useQueryParameter("query");
 
     const location = useLocation();
     const isMoviesPage = location.pathname.startsWith("/movies");
+    const searchParams = new URLSearchParams(location.search);
+    const currentPage = parseInt(searchParams.get("page")) || 1;
 
     const [searchResults, setSearchResults] = useState({
         status: "",
@@ -24,7 +25,7 @@ export const useSearchResults = () => {
 
         const debounce = setTimeout(async () => {
             if (query) {
-                const url = `${url_front_search}${isMoviesPage ? "movie" : "person"}${url_back}&query=${query}&page=1`;
+                const url = `${url_front_search}${isMoviesPage ? "movie" : "person"}${url_back}&query=${query}&page=${currentPage}`;
 
                 try {
                     const response = await axios.get(url);
@@ -42,7 +43,7 @@ export const useSearchResults = () => {
         }, 300);
 
         return () => clearTimeout(debounce);
-    }, [query, isMoviesPage]);
+    }, [query, isMoviesPage, currentPage]);
 
     return { searchResults };
 };

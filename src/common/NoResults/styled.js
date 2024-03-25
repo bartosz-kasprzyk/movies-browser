@@ -2,16 +2,16 @@ import styled from "styled-components";
 import { ReactComponent as Picture } from "../../images/Picture.svg"
 
 export const StyledImages = styled(Picture)`
- display: flex;
- width: 668px;
- height: auto;
- justify-content: center;
- position: relative;
- margin: auto;
+    display: flex;
+    width: 668px;
+    height: auto;
+    justify-content: center;
+    position: relative;
+    margin: auto;
 
- @media (max-width: ${({ theme }) => theme.breakpoint.phone}){
-    max-width: 100%;
- }
+    @media (max-width: ${({ theme }) => theme.breakpoint.phone}){
+        max-width: 100%;
+    }
 `;
 
 export const NoResultsText = styled.p`

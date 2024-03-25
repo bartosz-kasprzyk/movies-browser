@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { useScreenWidth } from "../../useScreenWidth";
 import {
@@ -13,24 +14,40 @@ import {
 } from "./styled";
 import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
 import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
-
 import { toMovies } from "../../routes";
+import { useSearchResults } from "../../features/SearchResults/useSearchResults";
+import { useQueryParameter } from "../Header/SearchBar/queryParameters";
 
-export const Pagination = () => {
+export const Pagination = ({ isMoviesPage }) => {
     const location = useLocation();
     const history = useHistory();
+    const { searchResults } = useSearchResults();
+    const query = useQueryParameter("query");
 
     const { totalPagesMovies } = usePopularMovies();
     const { totalPagesPeople } = usePopularPeople();
+    const totalSearchPages = +searchResults.data.total_pages;
 
-    const totalPages = location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
+    const totalPages = query
+        ? isMoviesPage ? totalSearchPages : totalSearchPages
+        : location.pathname === toMovies() ? totalPagesMovies : totalPagesPeople;
 
     const searchParams = new URLSearchParams(location.search);
     const currentPage = parseInt(searchParams.get("page")) || 1;
 
+    const [previousQuery, setPreviousQuery] = useState(query);
+
+    useEffect(() => {
+        if (query !== previousQuery) {
+            const newUrl = `${location.pathname}?query=${query}&page=1`;
+            history.replace(newUrl);
+            setPreviousQuery(query);
+        }
+    }, [query, previousQuery, history, location.pathname]);
+
     const changePage = (newPage) => {
         if (1 <= newPage && newPage <= totalPages) {
-            const newUrl = `${location.pathname}?page=${newPage}`;
+            const newUrl = `${location.pathname}?${query ? `query=${query}&` : ""}page=${newPage}`
             history.push(newUrl);
         }
     };
@@ -82,5 +99,5 @@ export const Pagination = () => {
                 </ButtonTile>
             </ButtonSection>
         </Wrapper>
-    )
+    );
 };

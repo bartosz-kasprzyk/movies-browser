@@ -44,4 +44,3 @@ export const Title = styled.span`
         font-size: 18px;
     }
 `;
-

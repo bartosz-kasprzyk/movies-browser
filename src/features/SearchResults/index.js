@@ -18,8 +18,8 @@ const SearchResults = () => {
     const isMoviesPage = location.pathname.startsWith("/movies");
 
     const { searchResults } = useSearchResults();
-    const search_quantity = searchResults.data.total_results;
-    const search_list = searchResults.data.results;
+    const search_quantity = searchResults.data?.total_results;
+    const search_list = searchResults.data?.results;
 
     const { genres } = useGenres();
     const genre_list = genres.data;
