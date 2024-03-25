@@ -24,9 +24,8 @@ export const usePersonCredits = () => {
             } catch (error) {
                 setPersonCredits({
                     status: "error",
-                    error: error.message,
                 });
-                console.log(error);
+                console.error(error.message);
             }
         };
 
