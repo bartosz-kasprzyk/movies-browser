@@ -2,24 +2,18 @@ import styled from "styled-components";
 
 export const Tile = styled.article`
     min-height: 644px;
-    width: 1368px;
+    width: 100%;
     background: ${({ theme }) => theme.color.white};
     padding: 40px;
     box-shadow: 0 4px 12px rgba(186, 199, 213, 0.5);
     margin: auto;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.laptop}) {
-        width: 1016px;
-    }
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        width: 668px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         min-height: 360px;
         padding: 32px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        width: 100%;
         min-height: 292px;
         padding: 24px;
     }
@@ -40,7 +34,7 @@ export const Image = styled.img`
     float: left;
     border-radius: 5px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         width: 210px;
         height: 296px;
         margin: 0 32px 4px 0;
@@ -69,7 +63,7 @@ export const Name = styled.header`
     line-height: 43px;
     margin: 8px 0 24px 0;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         font-size: 25px;
         line-height: 30px;
         margin: 6px 0 20px 0;
@@ -90,7 +84,7 @@ export const Birth = styled.div`
     font-size: 18px;
     line-height: 22px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         font-size: 15px;
         gap: 2px;
     }
@@ -104,8 +98,9 @@ export const Birth = styled.div`
 export const Info = styled.span`
     color: ${({ theme }) => theme.color.stormGrey};
     margin-right: 11px;
+    line-height: 22px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         margin-right: 8px;
     }
 
@@ -119,7 +114,7 @@ export const Description = styled.div`
     line-height: 32px;
     margin-top: 24px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         font-size: 17px;
         line-height: 27px;
         margin-top: 12;
