@@ -34,7 +34,7 @@ export const MainTitle = styled.span`
     font-weight: 600;
     font-size: 36px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 28px;
     }
 
