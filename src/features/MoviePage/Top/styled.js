@@ -1,17 +1,21 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const BlackBar = styled.div`
+const BlackBar = styled.div`
     background: ${({ theme }) => theme.color.black};
     width: 100%;
     margin-top: -56px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        margin-top: -40px;
-    }
+    ${({ loading }) => loading && css`
+        height: 770px;
+    `}
+`;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        margin-top: -24px;
-    }
+export const BlackBarWrapper = styled(({ dynamicHeight, ...rest }) => <BlackBar {...rest} />)`
+    ${({ dynamicHeight }) => dynamicHeight && css`
+        @media(max-width: 1536px) {
+            height: ${dynamicHeight}px;
+        }
+    `}
 `;
 
 export const Wrapper = styled.div`
@@ -29,6 +33,14 @@ export const Wrapper = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
         margin: 24px auto;
     }
+`;
+
+const Backdrop = styled.div`
+    transition: opacity 1s ease;
+`;
+
+export const BackdropWrapper = styled(({ loaded, ...rest }) => <Backdrop {...rest} />)`
+    opacity: ${({ loaded }) => (loaded ? 1 : 0)};
 `;
 
 export const Plexa = styled.img`

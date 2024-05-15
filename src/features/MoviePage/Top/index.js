@@ -8,50 +8,78 @@ import {
     Votes,
     Text,
     Vector,
-    Poster,
     Plexa,
-    BlackBar
+    BlackBarWrapper,
+    Poster,
+    BackdropWrapper
 } from './styled';
 import star from '../../../images/star.svg';
 import plexa from "../../../images/plexa.png";
 import { useMovieDetails } from '../useMovieDetails';
+import { useEffect, useState } from 'react';
 
 const Top = () => {
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
-    return (
-        <BlackBar>
-            <Wrapper>
-                <Poster src={"https://image.tmdb.org/t/p/original" + movie?.backdrop_path} />
-                <Plexa src={plexa} />
-                <MainInfo>
-                    <MainTitle>{movie?.title}</MainTitle>
+    const screenWidth = window.innerWidth;
+    const dynamicHeight = screenWidth / 1.9753;
 
-                    {movie?.vote_average
-                        ? <Opinion>
-                            <Rating>
-                                <Vector src={star} alt="" />
-                                <Text>{movie.vote_average.toFixed(1).replace(".", ",")}</Text>
-                            </Rating>
-                            <Ten>/ 10</Ten>
-                            <Votes>
-                                {movie.vote_count.toLocaleString(undefined, {
-                                    useGrouping: true,
-                                })}
-                                {movie.vote_count === 1 ? " vote" : " votes"}
-                            </Votes>
-                        </Opinion>
-                        : movie.backdrop_path
-                            ? <Opinion>
+    const [imageLoaded, setImageLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
+
+    const handleImageLoad = () => {
+        setLoaded(true);
+    };
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = "https://image.tmdb.org/t/p/original" + movie?.backdrop_path;
+        image.onload = () => {
+            setImageLoaded(true);
+        };
+    }, [movie.backdrop_path]);
+
+    return (
+        <BlackBarWrapper loading="true" dynamicHeight={dynamicHeight}>
+            <Wrapper>
+                <BackdropWrapper
+                    loaded={loaded}
+                >
+                    <Plexa src={plexa} />
+                    {imageLoaded && (
+                        <Poster
+                            src={"https://image.tmdb.org/t/p/original" + movie?.backdrop_path}
+                            onLoad={handleImageLoad}
+                        />
+                    )}
+                </BackdropWrapper>
+                {imageLoaded && (
+                    <MainInfo>
+                        <MainTitle>{movie?.title}</MainTitle>
+                        {movie?.vote_average ? (
+                            <Opinion>
+                                <Rating>
+                                    <Vector src={star} alt="" />
+                                    <Text>{movie.vote_average.toFixed(1).replace(".", ",")}</Text>
+                                </Rating>
+                                <Ten>/ 10</Ten>
+                                <Votes>
+                                    {movie.vote_count.toLocaleString(undefined, {
+                                        useGrouping: true,
+                                    })}
+                                    {movie.vote_count === 1 ? " vote" : " votes"}
+                                </Votes>
+                            </Opinion>
+                        ) : movie.backdrop_path ? (
+                            <Opinion>
                                 <Votes>No votes yet</Votes>
                             </Opinion>
-                            : null
-                    }
-
-                </MainInfo>
+                        ) : null}
+                    </MainInfo>
+                )}
             </Wrapper>
-        </BlackBar>
+        </BlackBarWrapper>
     )
 };
 
