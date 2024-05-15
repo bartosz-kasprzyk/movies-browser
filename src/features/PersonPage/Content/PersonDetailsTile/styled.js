@@ -27,12 +27,41 @@ export const Tile = styled.article`
     }
 `;
 
-export const Image = styled.img`
+export const PlaceholderImage = styled.img`
     width: 399px;
     height: 564px;
     margin: 0 40px 30px 0;
     float: left;
     border-radius: 5px;
+    display: ${({ $loaded }) => ($loaded ? 'none' : 'block')};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
+        width: 210px;
+        height: 296px;
+        margin: 0 32px 4px 0;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        width: 169px;
+        height: 244px;
+        margin: 0 24px 4px 0;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
+        width: 116px;
+        height: 163px;
+        margin: 0;
+    }
+`;
+
+export const StyledImage = styled.img`
+    width: 399px;
+    height: 564px;
+    margin: 0 40px 30px 0;
+    float: left;
+    border-radius: 5px;
+    opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
+    transition: opacity 0.3s ease-in-out;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         width: 210px;

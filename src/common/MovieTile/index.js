@@ -1,6 +1,5 @@
 import {
     Content,
-    Image,
     Opinion,
     Rating,
     Tag,
@@ -11,22 +10,45 @@ import {
     Votes,
     Subtitle,
     MovieNavLink,
-    NoVotes
+    NoVotes,
+    PlaceholderImage,
+    StyledImage
 } from './styled';
 import star from '../../images/star.svg';
 import no_poster from '../../images/no poster.png'
 import { useScreenWidth } from '../../useScreenWidth';
 import { toMovie } from '../../routes';
+import { useEffect, useState } from 'react';
 
-export const MovieTile = ({ id, image, title, role, year, genres, rating, votes }) => {
+export const MovieTile = ({ id, image_path, title, role, year, genres, rating, votes }) => {
     const screenWidth = useScreenWidth();
+
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = "https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image_path;
+        image.onload = () => {
+            setImageLoaded(true);
+        };
+    }, [image_path, screenWidth]);
 
     return (
         <MovieNavLink to={toMovie({ id })}>
-            {image
-                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image} />
-                : <Image src={no_poster} />
-            }
+            <>
+                {!imageLoaded && (
+                    <PlaceholderImage
+                        src={no_poster}
+                        $loaded={imageLoaded} />
+                )}
+                {imageLoaded && (
+                    <StyledImage
+                        src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + image_path}
+                        alt=""
+                        $loaded={imageLoaded}
+                    />
+                )}
+            </>
             <Content>
                 <Title>{title}</Title>
 

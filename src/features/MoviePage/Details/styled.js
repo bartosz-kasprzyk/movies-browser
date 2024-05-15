@@ -18,12 +18,29 @@ export const Wrapper = styled.article`
     }
 `;
 
-export const Image = styled.img`
+export const PlaceholderImage = styled.img`
     max-width: 312px;
     max-height: 464px;
     margin: 0 40px 30px 0;
     float: left;
     border-radius: 5px;
+    display: ${({ $loaded }) => ($loaded ? 'none' : 'block')};
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        max-width: 114px;
+        max-height: 169px;
+        margin: 0;
+    }
+`;
+
+export const StyledImage = styled.img`
+    max-width: 312px;
+    max-height: 464px;
+    margin: 0 40px 30px 0;
+    float: left;
+    border-radius: 5px;
+    opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
+    transition: opacity 0.3s ease-in-out;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         max-width: 114px;

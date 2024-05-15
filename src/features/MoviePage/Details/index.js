@@ -4,12 +4,13 @@ import no_poster from '../../../images/no poster.png';
 import {
     Content,
     Description,
-    Image,
     Info,
     NoVotes,
     Opinion,
+    PlaceholderImage,
     Production,
     Rating,
+    StyledImage,
     Tag,
     Tags,
     Ten,
@@ -21,18 +22,39 @@ import {
     Year
 } from './styled';
 import { useMovieDetails } from '../useMovieDetails';
+import { useEffect, useState } from 'react';
 
 const Details = () => {
     const screenWidth = useScreenWidth();
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = "https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path;
+        image.onload = () => {
+            setImageLoaded(true);
+        };
+    }, [movie.poster_path, screenWidth]);
+
     return (
         <Wrapper>
-            {movie?.poster_path
-                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path} />
-                : <Image src={no_poster} />
-            }
+            <>
+                {!imageLoaded && (
+                    <PlaceholderImage
+                        src={no_poster}
+                        $loaded={imageLoaded} />
+                )}
+                {imageLoaded && (
+                    <StyledImage
+                        src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path}
+                        alt=""
+                        $loaded={imageLoaded}
+                    />
+                )}
+            </>
             <Content>
                 <Title>{movie?.title}</Title>
                 <Year>

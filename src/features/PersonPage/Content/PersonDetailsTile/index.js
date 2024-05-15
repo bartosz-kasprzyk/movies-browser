@@ -2,26 +2,48 @@ import {
     Name,
     PersonalData,
     Description,
-    Image,
     Birth,
     Info,
-    Tile
+    Tile,
+    PlaceholderImage,
+    StyledImage
 } from './styled';
 import no_poster from '../../../../images/profile.png';
 import { useScreenWidth } from '../../../../useScreenWidth';
 import { usePersonDetails } from '../../usePersonDetails';
+import { useEffect, useState } from 'react';
 
 export const PersonDetailsTile = () => {
     const screenWidth = useScreenWidth();
     const { personDetails } = usePersonDetails();
     const person = personDetails.data;
 
+    const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+        const image = new Image();
+        image.src = "https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path;
+        image.onload = () => {
+            setImageLoaded(true);
+        };
+    }, [person.profile_path, screenWidth]);
+
     return (
         <Tile>
-            {person.profile_path
-                ? <Image src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path} />
-                : <Image src={no_poster} />
-            }
+            <>
+                {!imageLoaded && (
+                    <PlaceholderImage
+                        src={no_poster}
+                        $loaded={imageLoaded} />
+                )}
+                {imageLoaded && (
+                    <StyledImage
+                        src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path}
+                        alt=""
+                        $loaded={imageLoaded}
+                    />
+                )}
+            </>
             <PersonalData>
                 <Name>{person.name}</Name>
                 <Birth>

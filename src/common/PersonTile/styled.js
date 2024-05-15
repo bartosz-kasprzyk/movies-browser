@@ -34,10 +34,19 @@ export const Grid = styled.div`
     }
 `;
 
+export const PlaceholderImage = styled.img`
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: ${({ $loaded }) => ($loaded ? 'none' : 'block')};
+`;
+
 export const StyledImage = styled.img`
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
+    opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
+    transition: opacity 0.3s ease-in-out;
 `;
 
 export const Description = styled.div`
