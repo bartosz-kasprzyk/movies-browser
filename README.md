@@ -6,7 +6,7 @@ Explore a vast collection of movies and personalities with ease using this intui
 
 ## Demo
 
-https://bartek-kasprzyk.github.io/movies-browser
+https://bartosz-kasprzyk.github.io/movies-browser
 
 ![preview](/public/movies-browser.gif)
 
