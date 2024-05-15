@@ -23,7 +23,7 @@ export const PartOfCast = () => {
                                     <MovieTile
                                         key={movie.credit_id}
                                         id={movie.id}
-                                        image={movie.poster_path}
+                                        image_path={movie.poster_path}
                                         title={movie.title}
                                         role={movie.character}
                                         year={movie.release_date}

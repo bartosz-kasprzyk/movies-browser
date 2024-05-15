@@ -15,7 +15,7 @@ const Cast = () => {
                         <PersonTile
                             key={person.credit_id}
                             id={person.id}
-                            image={person.profile_path}
+                            image_path={person.profile_path}
                             title={person.name}
                             subtitle={person.character}
                         />

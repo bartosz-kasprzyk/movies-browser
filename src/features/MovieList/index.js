@@ -29,7 +29,7 @@ const MovieList = () => {
                                     <MovieTile
                                         key={movie.id}
                                         id={movie.id}
-                                        image={movie.poster_path}
+                                        image_path={movie.poster_path}
                                         title={movie.title}
                                         year={movie.release_date}
                                         genres={

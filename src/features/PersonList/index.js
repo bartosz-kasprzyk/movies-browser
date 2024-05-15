@@ -27,7 +27,7 @@ export const PersonList = () => {
                                         <PersonTile
                                             key={person.id}
                                             id={person.id}
-                                            image={person.profile_path}
+                                            image_path={person.profile_path}
                                             title={person.original_name}
                                         />
                                     ))}
