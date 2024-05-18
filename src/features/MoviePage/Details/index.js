@@ -39,7 +39,7 @@ const Details = () => {
         image.onload = () => {
             setImageLoaded(true);
         };
-    }, [movie.poster_path, screenWidth]);
+    }, [movie.poster_path, isLargeScreen]);
 
     return (
         <Wrapper>

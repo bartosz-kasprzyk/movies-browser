@@ -32,7 +32,7 @@ export const MovieTile = ({ id, image_path, title, role, year, genres, rating, v
         image.onload = () => {
             setImageLoaded(true);
         };
-    }, [image_path, screenWidth]);
+    }, [image_path, isLargeScreen]);
 
     return (
         <MovieNavLink to={toMovie({ id })}>

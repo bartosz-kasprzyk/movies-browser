@@ -28,7 +28,7 @@ export const PersonDetailsTile = () => {
         image.onload = () => {
             setImageLoaded(true);
         };
-    }, [person.profile_path, screenWidth]);
+    }, [person.profile_path, isLargeScreen]);
 
     return (
         <Tile>
