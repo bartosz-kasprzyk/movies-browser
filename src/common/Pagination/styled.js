@@ -39,10 +39,15 @@ export const ButtonTile = styled.button`
         gap: 4px;
     }
 
+    &:hover {
+       filter: brightness(90%);
+    }
+
     &:disabled {
         color: ${({ theme }) => theme.color.waterloo};
         background-color: ${({ theme }) => theme.color.mystic};
-        cursor: default;
+        cursor: not-allowed;
+        filter: unset;
     }
 `;
 
