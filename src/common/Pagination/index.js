@@ -56,12 +56,13 @@ export const Pagination = ({ isMoviesPage }) => {
     };
 
     const screenWidth = useScreenWidth();
+    const isLargeScreen = screenWidth > 767;
 
     return (
         <Wrapper>
             <ButtonSection>
                 <ButtonTile disabled={currentPage === 1} onClick={() => changePage(1)}>
-                    {screenWidth > 767 ? <Left /> : <><Left /><Left /></>}
+                    {isLargeScreen ? <Left /> : <><Left /><Left /></>}
                     <ButtonText>
                         First
                     </ButtonText>
@@ -98,7 +99,7 @@ export const Pagination = ({ isMoviesPage }) => {
                     <ButtonText>
                         Last
                     </ButtonText>
-                    {screenWidth > 767 ? <Right /> : <><Right /><Right /></>}
+                    {isLargeScreen ? <Right /> : <><Right /><Right /></>}
                 </ButtonTile>
             </ButtonSection>
         </Wrapper>

@@ -15,6 +15,8 @@ import { useEffect, useState } from 'react';
 
 export const PersonDetailsTile = () => {
     const screenWidth = useScreenWidth();
+    const isLargeScreen = screenWidth > 767;
+
     const { personDetails } = usePersonDetails();
     const person = personDetails.data;
 
@@ -22,7 +24,7 @@ export const PersonDetailsTile = () => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path;
+        image.src = "https://image.tmdb.org/t/p/" + (isLargeScreen ? "w500" : "w185") + person.profile_path;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -38,7 +40,7 @@ export const PersonDetailsTile = () => {
                 )}
                 {imageLoaded && (
                     <StyledImage
-                        src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w500" : "w185") + person.profile_path}
+                        src={"https://image.tmdb.org/t/p/" + (isLargeScreen ? "w500" : "w185") + person.profile_path}
                         alt=""
                         $loaded={imageLoaded}
                     />
@@ -49,7 +51,7 @@ export const PersonDetailsTile = () => {
                 <Birth>
                     <div>
                         <Info>
-                            {screenWidth > 767 ? "Date of birth: " : "Birth: "}
+                            {isLargeScreen ? "Date of birth: " : "Birth: "}
                         </Info>
                         {person.birthday
                             ? (new Date(person.birthday)).toLocaleDateString()

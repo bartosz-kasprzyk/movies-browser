@@ -26,6 +26,8 @@ import { useEffect, useState } from 'react';
 
 const Details = () => {
     const screenWidth = useScreenWidth();
+    const isLargeScreen = screenWidth > 767;
+
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
@@ -33,7 +35,7 @@ const Details = () => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path;
+        image.src = "https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + movie.poster_path;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -49,7 +51,7 @@ const Details = () => {
                 )}
                 {imageLoaded && (
                     <StyledImage
-                        src={"https://image.tmdb.org/t/p/" + (screenWidth > 767 ? "w342" : "w154") + movie.poster_path}
+                        src={"https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + movie.poster_path}
                         alt=""
                         $loaded={imageLoaded}
                     />
@@ -67,7 +69,7 @@ const Details = () => {
                     <div>
                         <Info>Production:</Info>
                         {movie?.production_countries
-                            ? screenWidth > 767
+                            ? isLargeScreen
                                 ? movie.production_countries.map((production) => production.name).join(", ")
                                 : movie.production_countries.map((production) => production.iso_3166_1).join(", ")
                             : "Unknown"
