@@ -90,19 +90,19 @@ export const Name = styled.header`
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;
-    margin: 8px 0 24px 0;
+    margin: 8px 0 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
         font-size: 25px;
         line-height: 30px;
-        margin: 6px 0 20px 0;
+        margin: 6px 0 20px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-weight: 500;
         font-size: 14px;
         line-height: 18px;
-        margin: 4px 0 16px 0;
+        margin: 4px 0 16px;
     }
 `;
 
