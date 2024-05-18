@@ -6,7 +6,7 @@ const BlackBar = styled.div`
     margin-top: -56px;
 
     ${({ loading }) => loading && css`
-        height: 770px;
+        height: 774px;
     `}
 `;
 

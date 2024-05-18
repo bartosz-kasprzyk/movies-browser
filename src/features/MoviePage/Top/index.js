@@ -17,12 +17,13 @@ import star from '../../../images/star.svg';
 import plexa from "../../../images/plexa.png";
 import { useMovieDetails } from '../useMovieDetails';
 import { useEffect, useState } from 'react';
+import { useScreenWidth } from '../../../useScreenWidth';
 
 const Top = () => {
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
 
-    const screenWidth = window.innerWidth;
+    const screenWidth = useScreenWidth();
     const dynamicHeight = screenWidth / 1.9753;
 
     const [imageLoaded, setImageLoaded] = useState(false);
