@@ -65,13 +65,14 @@ const SearchResults = () => {
                         )
                             : (
                                 <Container>
+                                    {console.log(search_list)}
                                     <Grid>
                                         <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                         {search_list && search_list.map((person) => (
                                             <PersonTile
                                                 key={person.id}
                                                 id={person.id}
-                                                image={person.profile_path}
+                                                image_path={person.profile_path}
                                                 title={person.original_name}
                                             />
                                         ))}
