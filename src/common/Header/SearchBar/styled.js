@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as Search } from "./Search.svg";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
     width: 432px;
     height: 48px;
     display: flex;

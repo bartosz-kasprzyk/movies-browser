@@ -40,8 +40,8 @@ const SearchResults = () => {
                     )
                         : isMoviesPage ? (
                             <Container>
-                                <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                 <Content>
+                                    <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                     {search_list && search_list.map(movie => (
                                         <MovieTile
                                             key={movie.id}
@@ -65,8 +65,8 @@ const SearchResults = () => {
                         )
                             : (
                                 <Container>
-                                    <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                     <Grid>
+                                        <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
                                         {search_list && search_list.map((person) => (
                                             <PersonTile
                                                 key={person.id}

@@ -21,7 +21,7 @@ const MoviePage = () => {
                     <Error />
                 )
                     : (
-                        <>
+                        <main>
                             {movie.backdrop_path ?
                                 <Top />
                                 : null
@@ -31,7 +31,7 @@ const MoviePage = () => {
                                 <Cast />
                                 <Crew />
                             </Container>
-                        </>
+                        </main>
                     )
             }
         </>

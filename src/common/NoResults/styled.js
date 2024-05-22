@@ -14,10 +14,10 @@ export const StyledImages = styled(Picture)`
     }
 `;
 
-export const NoResultsText = styled.p`
+export const NoResultsText = styled.h1`
     font-weight: 600;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
         font-size: 27px;

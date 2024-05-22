@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const BlackBar = styled.div`
+const BlackBar = styled.section`
     background: ${({ theme }) => theme.color.black};
     width: 100%;
     margin-top: -56px;
@@ -76,10 +76,11 @@ export const MainInfo = styled.div`
     }
 `;
 
-export const MainTitle = styled.div`
+export const MainTitle = styled.h1`
         font-weight: 600;
         font-size: 64px;
         padding-bottom: 24px;
+        margin: 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
         font-size: 48px;
@@ -96,7 +97,7 @@ export const MainTitle = styled.div`
     }
 `;
 
-export const Opinion = styled.section`
+export const Opinion = styled.div`
     width: 200px;
     height: 75px;
     display: flex;

@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const MainTitle = styled.h1`
+    grid-column: 1 / -1;
     font-weight: 600;
     font-size: 36px;
-    margin-bottom: 24px;
+    margin: 0;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        font-size: 27px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
+        font-size: 28px;
     }
-    
+
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: 18px;
-        margin-bottom: 12px;
     }
 `;
 
-export const Content = styled.span`
+export const Content = styled.main`
     width: 1368px;
     display: grid;
     grid-template-columns: repeat(4, 324px);
@@ -43,7 +43,7 @@ export const Content = styled.span`
     }
 `;
 
-export const Grid = styled.div`
+export const Grid = styled.main`
     display: grid;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
     grid-gap: 24px;

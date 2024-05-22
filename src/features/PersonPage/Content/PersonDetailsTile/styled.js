@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Tile = styled.article`
+export const Tile = styled.section`
     min-height: 644px;
     width: 100%;
     background: ${({ theme }) => theme.color.white};
@@ -86,7 +86,7 @@ export const PersonalData = styled.div`
     flex: 1;
 `;
 
-export const Name = styled.header`
+export const Name = styled.h1`
     font-weight: 600;
     font-size: 36px;
     line-height: 43px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.article`
+export const Wrapper = styled.section`
     width: 100%;
     min-height: 544px;
     background: ${({ theme }) => theme.color.white};
@@ -57,22 +57,19 @@ export const Content = styled.div`
     }
 `;
 
-export const Title = styled.header`
+export const Title = styled.h1`
     font-weight: 600;
     font-size: 36px;
-    margin-top: 12px;
-    margin-bottom: 24px;
+    margin: 12px 0 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        margin-top: 9px;
-        margin-bottom: 20px;
+        margin: 9px 0 20px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-weight: 500;
         font-size: 16px;
-        margin-top: 2px;
-        margin-bottom: 8px;
+        margin: 2px 0 8px;
     }
 `;
 

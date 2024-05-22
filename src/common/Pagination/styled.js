@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as Vector } from "./Vector.svg";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.footer`
     display: flex;
     gap: 24px;
     align-items: center;

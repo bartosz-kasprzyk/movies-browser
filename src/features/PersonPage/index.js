@@ -19,11 +19,13 @@ export const PersonPage = () => {
                     <Error />
                 )
                     : (
-                        <Container>
-                            <PersonDetailsTile />
-                            <PartOfCast />
-                            <PartOfCrew />
-                        </Container>
+                        <main>
+                            <Container>
+                                <PersonDetailsTile />
+                                <PartOfCast />
+                                <PartOfCrew />
+                            </Container>
+                        </main>
                     )
             }
         </>

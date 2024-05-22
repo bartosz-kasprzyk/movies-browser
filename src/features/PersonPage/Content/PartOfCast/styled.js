@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Grid = styled.span`
+export const Grid = styled.section`
     width: 1368px;
     display: grid;
     grid-template-columns: repeat(4, 324px);
@@ -29,11 +29,11 @@ export const Grid = styled.span`
 `;
 
 
-export const Title = styled.span`
+export const Title = styled.h1`
     grid-column: 1 / -1;
     font-weight: 600;
     font-size: 36px;
-    margin-top: 64px;
+    margin: 64px 0 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
         font-size: 28px;

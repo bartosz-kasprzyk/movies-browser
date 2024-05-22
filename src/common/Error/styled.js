@@ -2,6 +2,13 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as Danger } from "../../images/Danger.svg";
 
+export const ErrorMessage = styled.main`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+`;
+
 export const StyledDanger = styled(Danger)`
     width: 120px;
     height: 120px;
@@ -11,13 +18,6 @@ export const StyledDanger = styled(Danger)`
         width: 80px;
         height: 80px;
     }
-`;
-
-export const ErrorMasege = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
 `;
 
 export const Warning = styled.h1`
@@ -32,7 +32,7 @@ export const Warning = styled.h1`
     }
 `;
 
-export const Recomendation = styled.h2`
+export const Recommendation = styled.h2`
     font-weight: 500;
     font-size: 22px;
     line-height: 28.6px;
