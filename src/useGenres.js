@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_genre } from "../src/common/API/requests";
+import { url_common_query, url_front } from "./common/API/urlConstants";
 
-const url = `${url_front_genre}${url_back}`;
+const url = `${url_front}genre/movie/list${url_common_query}`;
 
 export const useGenres = () => {
     const [genres, setGenres] = useState({

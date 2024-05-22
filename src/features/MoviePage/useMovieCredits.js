@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_movie } from "../../common/API/requests";
+import { url_common_query, url_front } from "../../common/API/urlConstants";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const useMovieCredits = () => {
     const movie = useParams();
 
-    const url = `${url_front_movie}${movie.id}/credits${url_back}`;
+    const url = `${url_front}movie/${movie.id}/credits${url_common_query}`;
 
     const [movieCredits, setMovieCredits] = useState({
         data: [],

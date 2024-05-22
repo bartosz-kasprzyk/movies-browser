@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_back, url_front_person } from "../../common/API/requests";
+import { url_common_query, url_front } from "../../common/API/urlConstants";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export const usePersonDetails = () => {
     const person = useParams();
 
-    const url = `${url_front_person}${person.id}${url_back}`;
+    const url = `${url_front}person/${person.id}${url_common_query}`;
 
     const [loading, setLoading] = useState(true);
 

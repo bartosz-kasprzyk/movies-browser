@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
-import { url_back, url_front_movie } from "../../common/API/requests";
+import { url_common_query, url_front } from "../../common/API/urlConstants";
 
 export const usePopularMovies = () => {
     const location = useLocation();
@@ -10,7 +10,7 @@ export const usePopularMovies = () => {
 
     const [totalPagesMovies, setTotalPagesMovies] = useState(1);
 
-    const url = `${url_front_movie}popular${url_back}`;
+    const url = `${url_front}movie/popular${url_common_query}`;
 
     const [popularMovies, setPopularMovies] = useState({
         status: "",
