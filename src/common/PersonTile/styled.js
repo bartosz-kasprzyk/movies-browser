@@ -9,9 +9,6 @@ export const PersonNavLink = styled(NavLink)`
     position: relative;
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(186, 199, 213, 0.5);
-    color: ${({ theme }) => theme.color.black};
-    text-decoration: none;
-    transition: transform ease 300ms;
 
     &:hover {
         transform: translate(0, -10px);
