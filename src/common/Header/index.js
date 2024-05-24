@@ -1,12 +1,12 @@
-import { Background, Wrapper } from "./styled";
+import { StyledHeader, Wrapper } from "./styled";
 import { Navigation } from "./Navigation";
 import { SearchBar } from "./SearchBar";
 
 export const Header = () => (
-    <Background>
+    <StyledHeader>
         <Wrapper>
             <Navigation />
             <SearchBar />
         </Wrapper>
-    </Background>
+    </StyledHeader>
 );
