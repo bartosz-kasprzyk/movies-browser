@@ -35,7 +35,7 @@ const Details = () => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + movie.poster_path;
+        image.src = `https://image.tmdb.org/t/p/${isLargeScreen ? "w342" : "w154"}${movie.poster_path}`;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -51,7 +51,7 @@ const Details = () => {
                 )}
                 {imageLoaded && (
                     <StyledImage
-                        src={"https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + movie.poster_path}
+                        src={`https://image.tmdb.org/t/p/${isLargeScreen ? "w342" : "w154"}${movie.poster_path}`}
                         alt=""
                         $loaded={imageLoaded}
                     />

@@ -8,7 +8,7 @@ export const PersonTile = ({ id, image_path, title, subtitle }) => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/w185" + image_path;
+        image.src = `https://image.tmdb.org/t/p/w185${image_path}`;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -25,7 +25,7 @@ export const PersonTile = ({ id, image_path, title, subtitle }) => {
                     )}
                     {imageLoaded && (
                         <StyledImage
-                            src={"https://image.tmdb.org/t/p/w185" + image_path}
+                            src={`https://image.tmdb.org/t/p/w185${image_path}`}
                             alt=""
                             $loaded={imageLoaded}
                         />

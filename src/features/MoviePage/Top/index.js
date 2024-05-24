@@ -35,7 +35,7 @@ const Top = () => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/original" + movie?.backdrop_path;
+        image.src = `https://image.tmdb.org/t/p/original${movie?.backdrop_path}`;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -50,7 +50,7 @@ const Top = () => {
                     <Plexa src={plexa} />
                     {imageLoaded && (
                         <Poster
-                            src={"https://image.tmdb.org/t/p/original" + movie?.backdrop_path}
+                            src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
                             onLoad={handleImageLoad}
                         />
                     )}

@@ -24,7 +24,7 @@ export const PersonDetailsTile = () => {
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/" + (isLargeScreen ? "w500" : "w185") + person.profile_path;
+        image.src = `https://image.tmdb.org/t/p/${isLargeScreen ? "w500" : "w185"}${person.profile_path}`;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -40,7 +40,7 @@ export const PersonDetailsTile = () => {
                 )}
                 {imageLoaded && (
                     <StyledImage
-                        src={"https://image.tmdb.org/t/p/" + (isLargeScreen ? "w500" : "w185") + person.profile_path}
+                        src={`https://image.tmdb.org/t/p/${isLargeScreen ? "w500" : "w185"}${person.profile_path}`}
                         alt=""
                         $loaded={imageLoaded}
                     />

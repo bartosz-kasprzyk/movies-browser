@@ -28,7 +28,7 @@ export const MovieTile = ({ id, image_path, title, role, year, genres, rating, v
 
     useEffect(() => {
         const image = new Image();
-        image.src = "https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + image_path;
+        image.src = `https://image.tmdb.org/t/p/${isLargeScreen ? "w342" : "w154"}${image_path}`;
         image.onload = () => {
             setImageLoaded(true);
         };
@@ -44,7 +44,7 @@ export const MovieTile = ({ id, image_path, title, role, year, genres, rating, v
                 )}
                 {imageLoaded && (
                     <StyledImage
-                        src={"https://image.tmdb.org/t/p/" + (isLargeScreen ? "w342" : "w154") + image_path}
+                        src={`https://image.tmdb.org/t/p/${isLargeScreen ? "w342" : "w154"}${image_path}`}
                         alt=""
                         $loaded={imageLoaded}
                     />
@@ -56,7 +56,7 @@ export const MovieTile = ({ id, image_path, title, role, year, genres, rating, v
                 <Subtitle>
                     {role
                         ? (year
-                            ? (role + " (" + (new Date(year).getFullYear()) + ")")
+                            ? `${role} (${new Date(year).getFullYear()})`
                             : role)
                         : (year
                             ? (new Date(year).getFullYear())
