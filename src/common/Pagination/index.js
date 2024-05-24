@@ -59,49 +59,51 @@ export const Pagination = ({ isMoviesPage }) => {
     const isLargeScreen = screenWidth > 767;
 
     return (
-        <Wrapper>
-            <ButtonSection>
-                <ButtonTile disabled={currentPage === 1} onClick={() => changePage(1)}>
-                    {isLargeScreen ? <Left /> : <><Left /><Left /></>}
-                    <ButtonText>
-                        First
-                    </ButtonText>
-                </ButtonTile>
+        <footer>
+            <Wrapper>
+                <ButtonSection>
+                    <ButtonTile disabled={currentPage === 1} onClick={() => changePage(1)}>
+                        {isLargeScreen ? <Left /> : <><Left /><Left /></>}
+                        <ButtonText>
+                            First
+                        </ButtonText>
+                    </ButtonTile>
 
-                <ButtonTile disabled={currentPage === 1} onClick={() => changePage(currentPage - 1)}>
-                    <Left />
-                    <ButtonText>
-                        Previous
-                    </ButtonText>
-                </ButtonTile>
-            </ButtonSection>
+                    <ButtonTile disabled={currentPage === 1} onClick={() => changePage(currentPage - 1)}>
+                        <Left />
+                        <ButtonText>
+                            Previous
+                        </ButtonText>
+                    </ButtonTile>
+                </ButtonSection>
 
-            <CounterWrapper>
-                <CounterText>Page</CounterText>
-                <CounterNumber>{currentPage.toLocaleString(undefined, {
-                    useGrouping: true,
-                })}</CounterNumber>
-                <CounterText>of</CounterText>
-                <CounterNumber>{totalPages.toLocaleString(undefined, {
-                    useGrouping: true,
-                })}</CounterNumber>
-            </CounterWrapper>
+                <CounterWrapper>
+                    <CounterText>Page</CounterText>
+                    <CounterNumber>{currentPage.toLocaleString(undefined, {
+                        useGrouping: true,
+                    })}</CounterNumber>
+                    <CounterText>of</CounterText>
+                    <CounterNumber>{totalPages.toLocaleString(undefined, {
+                        useGrouping: true,
+                    })}</CounterNumber>
+                </CounterWrapper>
 
-            <ButtonSection>
-                <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(currentPage + 1)}>
-                    <ButtonText>
-                        Next
-                    </ButtonText>
-                    <Right />
-                </ButtonTile>
+                <ButtonSection>
+                    <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(currentPage + 1)}>
+                        <ButtonText>
+                            Next
+                        </ButtonText>
+                        <Right />
+                    </ButtonTile>
 
-                <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(totalPages)}>
-                    <ButtonText>
-                        Last
-                    </ButtonText>
-                    {isLargeScreen ? <Right /> : <><Right /><Right /></>}
-                </ButtonTile>
-            </ButtonSection>
-        </Wrapper>
+                    <ButtonTile disabled={currentPage === totalPages} onClick={() => changePage(totalPages)}>
+                        <ButtonText>
+                            Last
+                        </ButtonText>
+                        {isLargeScreen ? <Right /> : <><Right /><Right /></>}
+                    </ButtonTile>
+                </ButtonSection>
+            </Wrapper>
+        </footer>
     );
 };

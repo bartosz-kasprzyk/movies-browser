@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Background = styled.header`
+export const StyledHeader = styled.header`
     background: ${({ theme }) => theme.color.black};
 `
 export const Wrapper = styled.div`
