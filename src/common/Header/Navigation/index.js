@@ -1,4 +1,4 @@
-import { toMovies, toPeople } from "../../../routes";
+import { toMovies, toPeople } from "../../config/routes";
 import { LogoIcon, LogoText, LogoWrapper, NavSection, StyledNavLink, StyledNavigation } from "./styled";
 
 export const Navigation = () => (

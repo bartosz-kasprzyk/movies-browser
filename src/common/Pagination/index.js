@@ -11,7 +11,7 @@ import {
     CounterText,
     CounterNumber
 } from "./styled";
-import { toMovies } from "../../routes";
+import { toMovies } from "../config/routes";
 import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
 import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
 import { useSearchResults } from "../../features/SearchResults/useSearchResults";

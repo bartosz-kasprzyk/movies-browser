@@ -1,4 +1,4 @@
-import { toMovies } from "../../routes";
+import { toMovies } from "../config/routes";
 import { Button, ErrorMessage, Recommendation, StyledDanger, Warning } from "./styled";
 
 const Error = () => {

@@ -5,7 +5,7 @@ import SearchResults from './features/SearchResults';
 import { PersonPage } from './features/PersonPage';
 import { PersonList } from './features/PersonList';
 import { HashRouter, Route, Redirect, Switch, useHistory } from 'react-router-dom';
-import { toMovie, toMovies, toMoviesSearch, toPeople, toPeopleSearch, toPerson } from './routes';
+import { toMovie, toMovies, toMoviesSearch, toPeople, toPeopleSearch, toPerson } from './common/config/routes';
 import { useEffect } from 'react';
 
 function ScrollToTop() {

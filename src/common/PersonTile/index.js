@@ -1,4 +1,4 @@
-import { toPerson } from '../../routes';
+import { toPerson } from '../config/routes';
 import { Description, Grid, PersonNavLink, PlaceholderImage, StyledImage, StyledSubtitle, StyledTitle } from './styled';
 import no_poster from '../../images/profile.png';
 import { useEffect, useState } from 'react';

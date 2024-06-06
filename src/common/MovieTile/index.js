@@ -17,7 +17,7 @@ import {
 import star from '../../images/star.svg';
 import no_poster from '../../images/no poster.png'
 import { useScreenWidth } from '../hooks/useScreenWidth';
-import { toMovie } from '../../routes';
+import { toMovie } from '../config/routes';
 import { useEffect, useState } from 'react';
 
 export const MovieTile = ({ id, image_path, title, role, year, genres, rating, votes }) => {
