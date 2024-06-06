@@ -16,7 +16,7 @@ import {
 } from './styled';
 import star from '../../images/star.svg';
 import no_poster from '../../images/no poster.png'
-import { useScreenWidth } from '../../useScreenWidth';
+import { useScreenWidth } from '../hooks/useScreenWidth';
 import { toMovie } from '../../routes';
 import { useEffect, useState } from 'react';
 

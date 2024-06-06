@@ -3,7 +3,7 @@ import { Pagination } from '../../common/Pagination';
 import { Container } from '../../common/Container';
 import { useQueryParameter } from '../../common/Header/SearchBar/queryParameters';
 import { useSearchResults } from './useSearchResults';
-import { useGenres } from '../../useGenres';
+import { useGenres } from '../../common/hooks/useGenres';
 import Loading from '../../common/Loading';
 import Error from '../../common/Error';
 import { MovieTile } from '../../common/MovieTile';

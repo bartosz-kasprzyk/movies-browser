@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import no_poster from '../../../../images/profile.png';
 import {
     Name,
     PersonalData,
@@ -8,10 +10,8 @@ import {
     PlaceholderImage,
     StyledImage
 } from './styled';
-import no_poster from '../../../../images/profile.png';
-import { useScreenWidth } from '../../../../useScreenWidth';
+import { useScreenWidth } from '../../../../common/hooks/useScreenWidth';
 import { usePersonDetails } from '../../usePersonDetails';
-import { useEffect, useState } from 'react';
 
 export const PersonDetailsTile = () => {
     const screenWidth = useScreenWidth();

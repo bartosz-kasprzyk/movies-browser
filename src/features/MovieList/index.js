@@ -2,7 +2,7 @@ import { MainTitle, Content } from './styled';
 import { MovieTile } from '../../common/MovieTile';
 import { Pagination } from '../../common/Pagination';
 import { usePopularMovies } from './usePopularMovies';
-import { useGenres } from '../../useGenres';
+import { useGenres } from '../../common/hooks/useGenres';
 import Loading from '../../common/Loading';
 import Error from '../../common/Error';
 import { Container } from '../../common/Container';

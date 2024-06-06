@@ -1,7 +1,7 @@
 import { Title, Grid } from './styled';
 import { MovieTile } from '../../../../common/MovieTile';
 import { usePersonCredits } from '../../usePersonCredits';
-import { useGenres } from '../../../../useGenres';
+import { useGenres } from '../../../../common/hooks/useGenres';
 
 export const PartOfCrew = () => {
     const { personCredits } = usePersonCredits();

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { url_common_query, url_front } from "./common/API/urlConstants";
+import { url_common_query, url_front } from "../API/urlConstants";
 
 const url = `${url_front}genre/movie/list${url_common_query}`;
 

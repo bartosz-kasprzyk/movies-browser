@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import { useScreenWidth } from "../../useScreenWidth";
 import {
     Wrapper,
     Left,
@@ -12,11 +11,12 @@ import {
     CounterText,
     CounterNumber
 } from "./styled";
+import { toMovies } from "../../routes";
 import { usePopularMovies } from "../../features/MovieList/usePopularMovies";
 import { usePopularPeople } from "../../features/PersonList/usePopularPeople";
-import { toMovies } from "../../routes";
 import { useSearchResults } from "../../features/SearchResults/useSearchResults";
 import { useQueryParameter } from "../Header/SearchBar/queryParameters";
+import { useScreenWidth } from "../hooks/useScreenWidth";
 
 export const Pagination = ({ isMoviesPage }) => {
     const location = useLocation();

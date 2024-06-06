@@ -1,4 +1,4 @@
-import { useScreenWidth } from '../../../useScreenWidth';
+import { useEffect, useState } from 'react';
 import star from '../../../images/star.svg';
 import no_poster from '../../../images/no poster.png';
 import {
@@ -22,7 +22,7 @@ import {
     Year
 } from './styled';
 import { useMovieDetails } from '../useMovieDetails';
-import { useEffect, useState } from 'react';
+import { useScreenWidth } from '../../../common/hooks/useScreenWidth';
 
 const Details = () => {
     const screenWidth = useScreenWidth();

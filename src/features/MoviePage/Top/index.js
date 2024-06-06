@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import star from '../../../images/star.svg';
+import plexa from "../../../images/plexa.png";
 import {
     Wrapper,
     MainInfo,
@@ -13,11 +16,8 @@ import {
     Poster,
     BackdropWrapper
 } from './styled';
-import star from '../../../images/star.svg';
-import plexa from "../../../images/plexa.png";
 import { useMovieDetails } from '../useMovieDetails';
-import { useEffect, useState } from 'react';
-import { useScreenWidth } from '../../../useScreenWidth';
+import { useScreenWidth } from '../../../common/hooks/useScreenWidth';
 
 const Top = () => {
     const { movieDetails } = useMovieDetails();
