@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const MainTitle = styled.h1`
     grid-column: 1 / -1;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.xl6};
     margin: 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 28px;
+        font-size: ${({ theme }) => theme.fontSize.xl5};
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
     }
 `;
 

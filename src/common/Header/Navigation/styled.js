@@ -51,18 +51,18 @@ export const LogoIcon = styled(Video)`
 
 export const LogoText = styled.span`
     width: 168px;
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    font-size: ${({ theme }) => theme.fontSize.xl4};
     letter-spacing: -1.5px;
     color: ${({ theme }) => theme.color.white};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) { 
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
         letter-spacing: -1px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
-        font-size: 13px;
+        font-size: ${({ theme }) => theme.fontSize.sm};
         letter-spacing: -0.5px;
     }
 `;
@@ -85,8 +85,8 @@ export const NavSection = styled.ul`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.md};
     line-height: 21px;
     color: ${({ theme }) => theme.color.white};
     text-decoration: none;
@@ -94,13 +94,13 @@ export const StyledNavLink = styled(NavLink)`
     padding: 13.5px 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) { 
-        font-size: 13px;
+        font-size: ${({ theme }) => theme.fontSize.sm};
         line-height: 19.5px;
         padding: 10.75px 18px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
-        font-size: 12px;
+        font-size: ${({ theme }) => theme.fontSize.xs};
         line-height: 18px;
         padding: 8px 12px;
     }

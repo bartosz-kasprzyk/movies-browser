@@ -21,26 +21,26 @@ export const StyledDanger = styled(Danger)`
 `;
 
 export const Warning = styled.h1`
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.xl6};
     line-height: 43.2px;
     margin: auto;
     text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-    font-size: 26px;
+    font-size: ${({ theme }) => theme.fontSize.xl5};
     }
 `;
 
 export const Recommendation = styled.h2`
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
+    font-size: ${({ theme }) => theme.fontSize.xl3};
     line-height: 28.6px;
     text-align: center;
     margin: auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-       font-size: 15px; 
+       font-size: ${({ theme }) => theme.fontSize.lg}; 
     }
 `;
 
@@ -51,11 +51,11 @@ export const Button = styled(NavLink)`
     color: ${({ theme }) => theme.color.white};
     border: none;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: ${({ theme }) => theme.fontSize.md};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
     font-family: "Open Sans", sans-serif;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.phone}) {
-       font-size: 10px;
+       font-size: ${({ theme }) => theme.fontSize.xs};
     }
 `;

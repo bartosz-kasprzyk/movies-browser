@@ -52,8 +52,8 @@ export const ButtonTile = styled.button`
 `;
 
 export const ButtonText = styled.span`  
-    font-size: 14px;
-    font-weight: 400;
+    font-size: ${({ theme }) => theme.fontSize.md};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
     color: ${({ theme }) => theme.color.mineShaft};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
@@ -89,22 +89,22 @@ export const CounterWrapper = styled.span`
 `;
 
 export const CounterNumber = styled.span`
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.lg};
     line-height: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
-        font-size: 10px;
+        font-size: ${({ theme }) => theme.fontSize.xs};
     }
 `;
 
 export const CounterText = styled.span`
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-size: ${({ theme }) => theme.fontSize.lg};
     line-height: 24px;
     color: ${({ theme }) => theme.color.waterloo};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
-        font-size: 10px;
+        font-size: ${({ theme }) => theme.fontSize.xs};
     }
 `;

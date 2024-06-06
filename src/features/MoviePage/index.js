@@ -4,10 +4,12 @@ import Crew from './Crew';
 import Loading from '../../common/Loading';
 import Error from '../../common/Error';
 import Details from './Details';
+import { useMovieCredits } from './useMovieCredits';
 import { useMovieDetails } from './useMovieDetails';
 import { Container } from '../../common/Container';
 
 const MoviePage = () => {
+    const { movieCredits } = useMovieCredits();
     const { movieDetails } = useMovieDetails();
     const movie = movieDetails.data;
     const { loading } = useMovieDetails();
@@ -17,7 +19,7 @@ const MoviePage = () => {
             {loading === true ? (
                 <Loading />
             )
-                : movieDetails.status === "error" ? (
+                : movieCredits.status === "error" || movieDetails.status === "error" ? (
                     <Error />
                 )
                     : (

@@ -43,8 +43,8 @@ export const SearchIcon = styled(Search)`
 
 export const SearchInput = styled.input`
     flex-grow: 1;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
+    font-size: ${({ theme }) => theme.fontSize.lg};
     line-height: 24px;
     border: none;
 
@@ -54,7 +54,7 @@ export const SearchInput = styled.input`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) { 
-        font-size: 13px;
+        font-size: ${({ theme }) => theme.fontSize.sm};
         line-height: 17px;
     }
 

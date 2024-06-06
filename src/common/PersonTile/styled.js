@@ -52,35 +52,35 @@ export const Description = styled.div`
 `;
 
 export const StyledTitle = styled.div`
-    font-size: 22px;
-    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize.xl3};
+    font-weight: ${({ theme }) => theme.fontWeight.medium};
     line-height: 29px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
         line-height: 23px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 14px;
+        font-size: ${({ theme }) => theme.fontSize.md};
         line-height: 18px;
     }
 `;
 
 export const StyledSubtitle = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
-    font-size: 18px;
-    font-weight: 400;
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    font-weight: ${({ theme }) => theme.fontWeight.regular};
     line-height: 29px;
     margin-top: 5px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tablet}) {
-        font-size: 15px;
+        font-size: ${({ theme }) => theme.fontSize.lg};
         line-height: 23px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 13px;
+        font-size: ${({ theme }) => theme.fontSize.sm};
         line-height: 18px;
         margin-top: 3px;
     }

@@ -29,17 +29,17 @@ export const Grid = styled.section`
 `;
 
 export const Title = styled.h1`
-    font-size: 36px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.fontSize.xl6};
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
     grid-column: 1 / -1;
     margin: 64px 0 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phone}) {
-        font-size: 28px;
+        font-size: ${({ theme }) => theme.fontSize.xl5};
         margin-top: 21px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 20px;
+        font-size: ${({ theme }) => theme.fontSize.xl2};
     }
 `;

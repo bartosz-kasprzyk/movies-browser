@@ -15,16 +15,16 @@ export const StyledImages = styled(Picture)`
 `;
 
 export const NoResultsText = styled.h1`
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.xl6};
     margin: 0 0 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletPortrait}) {
-        font-size: 27px;
+        font-size: ${({ theme }) => theme.fontSize.xl5};
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
         margin-bottom: 12px;
     }
 `;

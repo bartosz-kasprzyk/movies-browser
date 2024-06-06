@@ -87,20 +87,20 @@ export const PersonalData = styled.div`
 `;
 
 export const Name = styled.h1`
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+    font-size: ${({ theme }) => theme.fontSize.xl6};
     line-height: 43px;
     margin: 8px 0 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
-        font-size: 25px;
+        font-size: ${({ theme }) => theme.fontSize.xl5};
         line-height: 30px;
         margin: 6px 0 20px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: ${({ theme }) => theme.fontWeight.medium};
+        font-size: ${({ theme }) => theme.fontSize.md};
         line-height: 18px;
         margin: 4px 0 16px;
     }
@@ -110,16 +110,16 @@ export const Birth = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.fontSize.xl};
     line-height: 22px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
-        font-size: 15px;
+        font-size: ${({ theme }) => theme.fontSize.lg};
         gap: 2px;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 12px;
+        font-size: ${({ theme }) => theme.fontSize.sm};
         line-height: 14px;
     }
 `;
@@ -139,18 +139,18 @@ export const Info = styled.span`
 `;
 
 export const Description = styled.div`
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.fontSize.xl2};
     line-height: 32px;
     margin-top: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletTwo}) {
-        font-size: 17px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
         line-height: 27px;
         margin-top: 12;
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
-        font-size: 14px;
+        font-size: ${({ theme }) => theme.fontSize.md};
         line-height: 22px;
         margin-top: 0;
     }
