@@ -20,6 +20,19 @@ import { useScreenWidth } from '../hooks/useScreenWidth';
 import { toMovie } from '../config/routes';
 import { useEffect, useState } from 'react';
 
+const getSubtitle = (role, year) => {
+    switch (true) {
+        case !role && !year:
+            return ""
+        case !role && year:
+            return (new Date(year).getFullYear());
+        case role && !year:
+            return role;
+        default:
+            return role + " (" + (new Date(year).getFullYear()) + ")"
+    }
+}
+
 export const MovieTile = ({ id, image_path, title, role, year, genres, rating, votes }) => {
     const screenWidth = useScreenWidth();
     const isLargeScreen = screenWidth > 767;
@@ -54,14 +67,7 @@ export const MovieTile = ({ id, image_path, title, role, year, genres, rating, v
                 <Title>{title}</Title>
 
                 <Subtitle>
-                    {role
-                        ? (year
-                            ? `${role} (${new Date(year).getFullYear()})`
-                            : role)
-                        : (year
-                            ? (new Date(year).getFullYear())
-                            : "")
-                    }
+                    {getSubtitle(role, year)}
                 </Subtitle>
 
                 <Tags>
