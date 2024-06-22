@@ -14,29 +14,26 @@ const MoviePage = () => {
     const movie = movieDetails.data;
     const { loading } = useMovieDetails();
 
+    if (loading === true) {
+        return <Loading />;
+    }
+
+    if (movieCredits.status === "error" || movieDetails.status === "error") {
+        return <Error />;
+    }
+
     return (
-        <>
-            {loading === true ? (
-                <Loading />
-            )
-                : movieCredits.status === "error" || movieDetails.status === "error" ? (
-                    <Error />
-                )
-                    : (
-                        <main>
-                            {movie.backdrop_path ?
-                                <Top />
-                                : null
-                            }
-                            <Container>
-                                <Details />
-                                <Cast />
-                                <Crew />
-                            </Container>
-                        </main>
-                    )
+        <main>
+            {movie.backdrop_path ?
+                <Top />
+                : null
             }
-        </>
+            <Container>
+                <Details />
+                <Cast />
+                <Crew />
+            </Container>
+        </main>
     )
 };
 
