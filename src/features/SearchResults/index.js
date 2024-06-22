@@ -24,63 +24,66 @@ const SearchResults = () => {
     const { genres } = useGenres();
     const genre_list = genres.data;
 
+    if (searchResults.status === "loading") {
+        return (
+            <Container>
+                <MainTitle>Search results for "{query}"</MainTitle>
+                <Loading />
+            </Container>
+        )
+    }
+
+    if (searchResults.status === "error") {
+        return <Error />;
+    }
+
+    if (search_quantity === 0) {
+        return <NoResults />;
+    }
+
+    if (isMoviesPage) {
+        return (
+            <Container>
+                <Content>
+                    <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
+                    {search_list && search_list.map(movie => (
+                        <MovieTile
+                            key={movie.id}
+                            id={movie.id}
+                            image_path={movie.poster_path}
+                            title={movie.title}
+                            year={movie.release_date}
+                            genres={
+                                movie.genre_ids?.map((number) =>
+                                    genre_list?.find((item) =>
+                                        item.id === number).name
+                                )
+                            }
+                            rating={movie.vote_average}
+                            votes={movie.vote_count}
+                        />
+                    ))}
+                </Content>
+                <Pagination />
+            </Container>
+        )
+    }
+
     return (
-        <>
-            {searchResults.status === "loading" ? (
-                <Container>
-                    <MainTitle>Search results for "{query}"</MainTitle>
-                    <Loading />
-                </Container>
-            )
-                : searchResults.status === "error" ? (
-                    <Error />
-                )
-                    : search_quantity === 0 ? (
-                        <NoResults />
-                    )
-                        : isMoviesPage ? (
-                            <Container>
-                                <Content>
-                                    <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
-                                    {search_list && search_list.map(movie => (
-                                        <MovieTile
-                                            key={movie.id}
-                                            id={movie.id}
-                                            image_path={movie.poster_path}
-                                            title={movie.title}
-                                            year={movie.release_date}
-                                            genres={
-                                                movie.genre_ids?.map((number) =>
-                                                    genre_list?.find((item) =>
-                                                        item.id === number).name
-                                                )
-                                            }
-                                            rating={movie.vote_average}
-                                            votes={movie.vote_count}
-                                        />
-                                    ))}
-                                </Content>
-                                <Pagination />
-                            </Container>
-                        )
-                            : (
-                                <Container>
-                                    <Grid>
-                                        <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
-                                        {search_list && search_list.map((person) => (
-                                            <PersonTile
-                                                key={person.id}
-                                                id={person.id}
-                                                image_path={person.profile_path}
-                                                title={person.original_name}
-                                            />
-                                        ))}
-                                    </Grid>
-                                    <Pagination />
-                                </Container>
-                            )
-            }
-        </>
+        <Container>
+            <Grid>
+                <MainTitle>Search results for "{query}" ({search_quantity})</MainTitle>
+                {search_list && search_list.map((person) => (
+                    <PersonTile
+                        key={person.id}
+                        id={person.id}
+                        image_path={person.profile_path}
+                        title={person.original_name}
+                    />
+                ))}
+            </Grid>
+            <Pagination />
+        </Container>
     )
 };
 
