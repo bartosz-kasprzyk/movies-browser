@@ -12,24 +12,21 @@ export const PersonPage = () => {
     const { personDetails } = usePersonDetails();
     const { loading } = usePersonDetails();
 
+    if (loading === true) {
+        return <Loading />;
+    }
+
+    if (personCredits.status === "error" || personDetails.status === "error") {
+        return <Error />;
+    }
+
     return (
-        <>
-            {loading === true ? (
-                <Loading />
-            )
-                : personCredits.status === "error" || personDetails.status === "error" ? (
-                    <Error />
-                )
-                    : (
-                        <main>
-                            <Container>
-                                <PersonDetailsTile />
-                                <PartOfCast />
-                                <PartOfCrew />
-                            </Container>
-                        </main>
-                    )
-            }
-        </>
+        <main>
+            <Container>
+                <PersonDetailsTile />
+                <PartOfCast />
+                <PartOfCrew />
+            </Container>
+        </main>
     )
 };
