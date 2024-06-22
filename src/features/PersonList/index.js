@@ -10,32 +10,28 @@ export const PersonList = () => {
     const { popularPeople } = usePopularPeople();
     const people_list = popularPeople.data;
 
+    if (popularPeople.status === "loading") {
+        return <Loading />;
+    }
+
+    if (popularPeople.status === "error") {
+        return <Error />;
+    }
+
     return (
-        <>
-            {
-                popularPeople.status === "loading" ? (
-                    <Loading />
-                )
-                    : popularPeople.status === "error" ? (
-                        <Error />
-                    )
-                        : (
-                            <Container>
-                                <Grid>
-                                    <Heading>Popular people</Heading>
-                                    {people_list && people_list.map((person) => (
-                                        <PersonTile
-                                            key={person.id}
-                                            id={person.id}
-                                            image_path={person.profile_path}
-                                            title={person.original_name}
-                                        />
-                                    ))}
-                                </Grid>
-                                <Pagination />
-                            </Container>
-                        )
-            }
-        </>
+        <Container>
+            <Grid>
+                <Heading>Popular people</Heading>
+                {people_list && people_list.map((person) => (
+                    <PersonTile
+                        key={person.id}
+                        id={person.id}
+                        image_path={person.profile_path}
+                        title={person.original_name}
+                    />
+                ))}
+            </Grid>
+            <Pagination />
+        </Container>
     )
 };
