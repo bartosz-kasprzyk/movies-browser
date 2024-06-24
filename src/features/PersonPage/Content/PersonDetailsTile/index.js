@@ -33,19 +33,20 @@ export const PersonDetailsTile = () => {
     return (
         <Tile>
             <>
-                {!imageLoaded && (
-                    <PlaceholderImage
-                        src={no_poster}
-                        $loaded={imageLoaded} />
-                )}
-                {imageLoaded && (
+                {imageLoaded ? (
                     <StyledImage
                         src={`https://image.tmdb.org/t/p/${isLargeScreen ? "w500" : "w185"}${person.profile_path}`}
                         alt=""
                         $loaded={imageLoaded}
                     />
+                ) : (
+                    <PlaceholderImage
+                        src={no_poster}
+                        $loaded={imageLoaded}
+                    />
                 )}
             </>
+
             <PersonalData>
                 <Name>{person.name}</Name>
                 <Birth>
@@ -67,6 +68,7 @@ export const PersonDetailsTile = () => {
                     </div>
                 </Birth>
             </PersonalData>
+
             <Description>
                 {person.biography}
             </Description>
