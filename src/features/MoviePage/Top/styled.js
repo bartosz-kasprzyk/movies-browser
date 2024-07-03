@@ -92,6 +92,10 @@ export const MainTitle = styled.h1`
         padding-bottom: 8px;
     }
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.phoneTwo}) {
+        font-size: ${({ theme }) => theme.fontSize.xl5};
+    }
+
     @media(max-width: ${({ theme }) => theme.breakpoint.phonePortrait}) {
         font-size: ${({ theme }) => theme.fontSize.xl4};
     }
