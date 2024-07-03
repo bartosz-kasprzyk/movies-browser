@@ -24,7 +24,7 @@ const Top = () => {
     const movie = movieDetails.data;
 
     const screenWidth = useScreenWidth();
-    const dynamicHeight = screenWidth / 1.9753;
+    const dynamicHeight = screenWidth / 1.9232;
 
     const [imageLoaded, setImageLoaded] = useState(false);
     const [loaded, setLoaded] = useState(false);
