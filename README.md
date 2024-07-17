@@ -69,4 +69,4 @@ This project was created by: <br>*(in alphabetical order)*
 - [Przemysław Pacek](https://github.com/przemyslaw-pacek)  
 - [Vitalii](https://github.com/VITALIKXXX)
 
-Thank you for visiting our website!
+Thank you for visiting our website! ✨
