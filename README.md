@@ -1,8 +1,8 @@
 # <img width="30px" src="/public/icon192.png" /> Movies Browser
 
-Powered by <a href="https://www.themoviedb.org/"><img src="/src/images/tmdb.png" alt="TMDB logo" width="100"></a>
+Powered by <a href="https://www.themoviedb.org/"><img src="/src/images/tmdb.png" alt="TMDB logo" width="95"></a>
 
-Explore a vast collection of movies and personalities with ease using this intuitive, user-friendly browser, which harnesses the power of the extensive TMDB database. Effortlessly browse through a wide range of movies and explore the world of cinema to gain valuable insights and make exciting discoveries.
+Explore a vast collection of movies and personalities with ease using this intuitive, user-friendly browser, which harnesses the power of the extensive TMDB database. Effortlessly browse through a wide range of movies and famous people and explore the world of cinema to gain valuable insights and make exciting discoveries.
 
 ## Demo 🎬
 
@@ -69,4 +69,4 @@ This project was created by: <br>*(in alphabetical order)*
 - [Przemysław Pacek](https://github.com/przemyslaw-pacek)  
 - [Vitalii](https://github.com/VITALIKXXX)
 
-Thank you for visiting our website!
+Thank you for visiting our website! ✨
