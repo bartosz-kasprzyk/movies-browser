@@ -21,17 +21,16 @@ import { toMovie } from '../config/routes';
 import { useEffect, useState } from 'react';
 
 const getSubtitle = (role, year) => {
-    switch (true) {
-        case !role && !year:
-            return ""
-        case !role && year:
-            return (new Date(year).getFullYear());
-        case role && !year:
-            return role;
-        default:
-            return role + " (" + (new Date(year).getFullYear()) + ")"
+    if (!role && !year) {
+        return "";
+    } else if (!role && year) {
+        return new Date(year).getFullYear();
+    } else if (role && !year) {
+        return role;
+    } else {
+        return `${role} (${new Date(year).getFullYear()})`;
     }
-}
+};
 
 export const MovieTile = ({ id, image_path, title, role, year, genres, rating, votes }) => {
     const screenWidth = useScreenWidth();
