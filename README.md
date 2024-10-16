@@ -1,4 +1,4 @@
-# <img width="30px" src="/public/icon192.png" /> Movies Browser
+# <img width="25px" src="/public/icon192.png" /> Movies Browser
 
 Powered by <a href="https://www.themoviedb.org/"><img src="/src/images/tmdb.png" alt="TMDB logo" width="95"></a>
 
