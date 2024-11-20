@@ -22,8 +22,7 @@ Project was created with technologies such as:
 * Custom hooks
 * Styled components
 * Create React App
-* React-Redux
-* Redux-toolkit
+* React
 * React-Router
 * Axios
 
